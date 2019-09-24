@@ -1,0 +1,41 @@
+<ion-content>
+		<ion-item-divider>
+			<ion-label>
+				<ion-icon name="book"></ion-icon> Lese
+			</ion-label>
+		</ion-item-divider>
+		
+		<div *ngFor="let item of games.lese">
+			<app-game-card [item] = "item"></app-game-card>
+		</div>
+		
+		<ion-item-divider>
+			<ion-label>
+				<ion-icon name="create"></ion-icon> Skrive
+			</ion-label>
+		</ion-item-divider>
+
+		<div *ngFor="let item of games.skrive">
+			<app-game-card [item] = "item"></app-game-card>
+		</div>
+
+		<ion-item-divider>
+			<ion-label>
+				<ion-icon name="volume-high"></ion-icon> Lytte
+			</ion-label>
+		</ion-item-divider>
+
+		<div *ngFor="let item of games.lytte">
+			<app-game-card [item] = "item"></app-game-card>
+		</div>
+
+		<ion-item-divider>
+			<ion-label>
+				<ion-icon name="pulse"></ion-icon> Hjernetrim
+			</ion-label>
+		</ion-item-divider>
+
+		<div *ngFor="let item of games.hjernetrim">
+			<app-game-card [item] = "item"></app-game-card>
+		</div>
+</ion-content>

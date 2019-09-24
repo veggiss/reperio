@@ -1,0 +1,13 @@
+<ion-content>
+	<app-xp-bar></app-xp-bar>
+
+	<ion-item-divider>
+		<ion-label>
+			Favoritter
+		</ion-label>
+	</ion-item-divider>
+
+	<div *ngFor="let item of favorites">
+		<app-game-card [item] = "item"></app-game-card>
+	</div>
+</ion-content>

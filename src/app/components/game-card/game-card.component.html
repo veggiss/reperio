@@ -1,0 +1,17 @@
+<ion-card (click)="go(item.id)" routerDirection="forward">
+	<img src="./assets/img/cat.jpg"/>
+    <div class="overlay">
+    	<div class="left">
+    		<ion-card-subtitle>{{item.title}}</ion-card-subtitle>
+    	</div>
+    	<div class="right">
+    		<ion-card-subtitle>
+    			<ion-icon name="{{
+                    item.category == 1 ? 'book' :
+                    item.category == 2 ? 'create' :
+                    item.category == 3 ? 'volume-high' : 'pulse'
+                }}"></ion-icon>
+    		</ion-card-subtitle>
+    	</div>
+    </div>
+</ion-card>
