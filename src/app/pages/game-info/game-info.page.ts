@@ -27,4 +27,7 @@ export class GameInfoPage implements OnInit {
 		console.log(this.item);
 	}
 
+	go() {
+		this.router.navigate(['match']);
+	}
 }
