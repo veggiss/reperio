@@ -14,7 +14,7 @@ import { XpBarComponent } from './xp-bar.component';
       radius: 25,
       space: -5,
       outerStrokeWidth: 5,
-      outerStrokeColor: "#4882c2",
+      outerStrokeColor: "#31AFB4",
       innerStrokeColor: "#e7e8ea",
       innerStrokeWidth: 5,
       showBackground: false,

@@ -1,7 +1,12 @@
-ion-item-divider {
+ion-item {
 	margin-bottom: 15px;
+	font-size: 22px;
 }
 
-ion-label > ion-icon {
-	margin-bottom: -2px;
+.icon {
+	margin-bottom: -3px;
+}
+
+.gameCards {
+	display: inline-block;
 }

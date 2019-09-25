@@ -9,14 +9,11 @@
 <ion-content fullscreen>
 	<div class="screenWidth">
 		<img class="titleImg" src="./assets/img/cat.jpg"/>
-		<ion-list lines="none">
-			<ion-item color="dark">
-				<ion-icon slot="end" [name]="item.icon"></ion-icon>
-				<ion-text>
-					<h4>{{ item.title }}</h4>
-				</ion-text>
-			</ion-item>
-		</ion-list>
+
+        <ion-item color="dark" style="margin-top: -5px;">
+			<ion-icon color="medium" slot="end" [name]="item.icon"></ion-icon>
+			<ion-label color="primary">{{ item.title }}</ion-label>
+        </ion-item>
 
 		<ion-text>
 			<p>{{ item.description }}</p>
@@ -25,7 +22,7 @@
 
 	<div class="footer">
 		<ion-toolbar color="primary" position="bottom">
-			<ion-button size="large" expand="full">Spill</ion-button>
+			<ion-button size="large" expand="full"><ion-text color="light">Spill</ion-text></ion-button>
 		</ion-toolbar>
 	</div>
 </ion-content>

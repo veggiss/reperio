@@ -8,6 +8,7 @@
 
 .titleImg {
 	width: 100%;
+	margin: 0px;
 }
 
 .footer {
@@ -16,6 +17,15 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+ion-item {
+	font-size: 25px;
+}
+
+ion-toolbar > .button {
+	font-size: 35px;
+	height: 50px;
 }
 
 ion-text > p {
