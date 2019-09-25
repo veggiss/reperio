@@ -1,5 +1,45 @@
 <ion-grid>
-  <ion-row class="ion-align-items-center ion-justify-content-center">
-    <circle-progress [percent]="59"></circle-progress>
-  </ion-row>
+	<ion-row>		
+		<ion-progress-bar value="0.5" class="progressBar"></ion-progress-bar>
+		<ion-col class="ion-text-start">
+			<p>500</p>
+		</ion-col>
+		<ion-col class="ion-text-center">
+			<h3>Level 5</h3>
+		</ion-col>
+		<ion-col class="ion-text-end">
+			<p>1200</p>
+		</ion-col>
+	</ion-row>
+
+	<ion-row>
+		<ion-col>
+			<div class="progressIcon ion-text-center">
+				<ion-icon name="book"></ion-icon>
+				<circle-progress class="center" percent="25"></circle-progress>
+				<ion-text><h5>8</h5></ion-text>
+			</div>
+		</ion-col>
+		<ion-col>
+			<div class="progressIcon ion-text-center">
+				<ion-icon name="create"></ion-icon>
+				<circle-progress class="center" percent="34"></circle-progress>
+				<ion-text><h5>2</h5></ion-text>
+			</div>
+		</ion-col>
+		<ion-col>
+			<div class="progressIcon ion-text-center">
+				<ion-icon name="volume-high"></ion-icon>
+				<circle-progress class="center" percent="86"></circle-progress>
+				<ion-text><h5>6</h5></ion-text>
+			</div>
+		</ion-col>
+		<ion-col>
+			<div class="progressIcon ion-text-center">
+				<ion-icon name="pulse" color="dark"></ion-icon>
+				<circle-progress class="center" percent="15"></circle-progress>
+				<ion-text><h5>3</h5></ion-text>
+			</div>
+		</ion-col>
+	</ion-row>
 </ion-grid>
