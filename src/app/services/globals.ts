@@ -1,4 +1,3 @@
-// 1: lese, 2: skrive, 3: lytte, 4: hjernetrim
 export const GAMES_LIST = [{
 	id: 1,
 	category: 1,
@@ -37,6 +36,26 @@ export const GAMES_LIST = [{
 	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
 }];
 
-export let favorites = [3, 1];
+export const categories = {
+	1: {
+		type: 'lese',
+		icon: 'book'
+	},
+	2: {
+		type: 'skrive',
+		icon: 'create'
+	},
+	3: {
+		type: 'lytte',
+		icon: 'volume-high'
+	},
+	4: {
+		type: 'hjernetrim',
+		icon: 'pulse'
+	}
+}
 
 export const getGame = (id:number) => GAMES_LIST.filter(e => e.id === id);
+
+//TODO: Add this to storage
+export let favorites = [3, 1];

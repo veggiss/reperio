@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { MatchPage } from './match.page';
-import { GameMenuComponent } from '../../../components/game-menu/game-menu.component.ts';
+import { GameMenuComponent } from '../../../components/game-menu/game-menu.component';
 
 const routes: Routes = [
   {
