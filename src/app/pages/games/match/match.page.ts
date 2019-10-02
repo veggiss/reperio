@@ -20,7 +20,7 @@ export class MatchPage {
   game: GameInstance = {
     width: "100%",
     height: "100%",
-    type: Phaser.CANVAS,
+    type: Phaser.WEBGL,
     scene: BootScene,
     instance: null
   }

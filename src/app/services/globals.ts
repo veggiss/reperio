@@ -60,7 +60,49 @@ export const getGame = (id:number) => GAMES_LIST.filter(e => e.id === id);
 //TODO: Add this to storage
 export let favorites = [3, 1];
 
-export let imagesJson = { 
+export const getMatchImage = (category: string, tags: any, complexity: number, rounds: number) => {
+   let roundList = [];
+   let images = IMAGE_LIST[category];
+   let list = images.filter(e => e.data.complexity == 1);
+   let getAlt = () => {
+      let alternatives = images[Math.floor(Math.random() * images.length)].data.alternatives;
+      return alternatives[Math.floor(Math.random() * alternatives.length)];
+   }
+
+   while(rounds--) {
+      let image = list[Math.floor(Math.random() * list.length)];
+      let answer = image.data.alternatives[complexity];
+      let alternatives = [answer];
+
+      for (let i = 0; i < 3; i++) {
+         let alt = getAlt();
+   
+         while (alt == answer || alternatives.includes(alt)) {
+            alt = getAlt();
+         }
+   
+         alternatives.push(alt);
+      }
+
+      // TODO: Change shuffle method. This is redundant
+      for (let i = alternatives.length - 1; i > 0; i--) {
+         let j = Math.floor(Math.random() * i);
+         let temp = alternatives[i];
+         alternatives[i] = alternatives[j];
+         alternatives[j] = temp;
+      }
+
+      roundList.push({
+         alternatives: alternatives,
+         image: image,
+         answer: answer
+      })
+   }
+
+   return roundList;
+}
+
+export const IMAGE_LIST = { 
    "food": [ 
       { 
          "id":0,
