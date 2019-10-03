@@ -1,18 +1,187 @@
 [
     {
-        "id": "1",
-        "category.str": "mat",
-        "tags.arr": "pizza, italy",
-        "complexity.int": "1",
-        "alternatives-arr": "Pizza, Pepperoni, Italiensk mat",
-        "src.str": "alan-hardman-SU1LFoeEUkk-unsplash.jpg"
+        "id": 1,
+        "category": "mat",
+        "src": "alan-hardman-SU1LFoeEUkk-unsplash.jpg",
+        "tags": [
+            "pizza",
+            "italia"
+        ],
+        "complexity": 1,
+        "alternatives": [
+            "Pizza",
+            "Pepperoni",
+            "Italiensk mat"
+        ]
     },
     {
-        "id": "2",
-        "category.str": "geografi",
-        "tags.arr": "something",
-        "complexity.int": "100",
-        "alternatives-arr": "dette, er, en, test",
-        "src.str": "nisse.jpg"
+        "id": 2,
+        "category": "mat",
+        "src": "alexander-mils-aiIANaSK9DQ-unsplash.jpg",
+        "tags": [
+            "pai",
+            "dessert",
+            "bestikk"
+        ],
+        "complexity": 2,
+        "alternatives": [
+            "Pai",
+            "Dessert",
+            "Dekket bord"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "mat",
+        "src": "amir-hanna-y73ExyLsveA-unsplash.jpg",
+        "tags": [
+            "brokkoli",
+            "matlaging"
+        ],
+        "complexity": 2,
+        "alternatives": [
+            "Brokkoli",
+            "Grønnsak",
+            "Kuttet brokkoli"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "mat",
+        "src": "anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg",
+        "tags": [
+            "reker",
+            "sjømat"
+        ],
+        "complexity": 3,
+        "alternatives": [
+            "Reker",
+            "Sjømat",
+            "Isdisk med sjømat"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "mat",
+        "src": "annie-spratt-bB0EsYazzXY-unsplash.jpg",
+        "tags": [
+            "bær",
+            "bringebær",
+            "hender"
+        ],
+        "complexity": 2,
+        "alternatives": [
+            "Bær",
+            "Bringebær",
+            "Han holder bær"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "mat",
+        "src": "bao-menglong-TqD7M_uwwdE-unsplash.jpg",
+        "tags": [
+            "ape",
+            "spise",
+            "mais"
+        ],
+        "complexity": 3,
+        "alternatives": [
+            "Spise",
+            "Mais",
+            "Apen spiser"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "mat",
+        "src": "ben-kolde-FFqNATH27EM-unsplash.jpg",
+        "tags": [
+            "egg",
+            "frokost",
+            "spise"
+        ],
+        "complexity": 2,
+        "alternatives": [
+            "Egg",
+            "Frokost",
+            "Egg på brødskive"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "mat",
+        "src": "bonnie-kittle-XAsG0EZEsyA-unsplash.jpg",
+        "tags": [
+            "gresskar",
+            "høst",
+            "grønnsak"
+        ],
+        "complexity": 2,
+        "alternatives": [
+            "Gresskar",
+            "Orange frukt",
+            "Gresskar på gresset"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "mat",
+        "src": "burhan-rexhepi-gAIhUvHv0f0-unsplash.jpg",
+        "tags": [
+            "løk",
+            "grønnsak"
+        ],
+        "complexity": 1,
+        "alternatives": [
+            "Løk",
+            "Rødløk",
+            "Rødløk i båter"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "mat",
+        "src": "caroline-attwood-kC9KUtSiflw-unsplash.jpg",
+        "tags": [
+            "Fisk",
+            "matlaging"
+        ],
+        "complexity": 2,
+        "alternatives": [
+            "Laks",
+            "Laksefileter",
+            "Laks til middag"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "mat",
+        "src": "charles-ogJNR_jhxS8-unsplash.jpg",
+        "tags": [
+            "Grønnsak",
+            "lilla"
+        ],
+        "complexity": 1,
+        "alternatives": [
+            "Grønnsak",
+            "Aubergine",
+            "Lilla Grønnsak"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "musikk",
+        "src": "",
+        "tags": [
+            "hodetelefoner",
+            "headset"
+        ],
+        "complexity": 1,
+        "alternatives": [
+            "hodetelefoner",
+            "svarte hodetelefoner",
+            "store hodetelefoner"
+        ]
     }
 ]
