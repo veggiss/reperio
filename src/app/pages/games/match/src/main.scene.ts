@@ -9,6 +9,7 @@ export class MainScene extends Phaser.Scene {
   states: any;
   canvas: any;
   state: number;
+  getState: any;
   bgSprite: any;
   polaroid: any;
   mainImage: any;

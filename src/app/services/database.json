@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "category.str": "mat",
+        "tags.arr": "pizza, italy",
+        "complexity.int": "1",
+        "alternatives-arr": "Pizza, Pepperoni, Italiensk mat",
+        "src.str": "alan-hardman-SU1LFoeEUkk-unsplash.jpg"
+    },
+    {
+        "id": "2",
+        "category.str": "geografi",
+        "tags.arr": "something",
+        "complexity.int": "100",
+        "alternatives-arr": "dette, er, en, test",
+        "src.str": "nisse.jpg"
+    }
+]
