@@ -4,7 +4,7 @@ import { getMatchImage } from '../../../../services/globals';
 export class MainScene extends Phaser.Scene {
   roundData: any = getMatchImage('food', [], 1, 10);
   round: number = 0;
-
+  getState: any;
   text: any;
   states: any;
   canvas: any;
