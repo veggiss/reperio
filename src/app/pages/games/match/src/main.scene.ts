@@ -13,8 +13,8 @@ export class MainScene extends Phaser.Scene {
     2: 'guessing'
   };
   
-  public roundData: any = getMatchImage(this.category, [], 1.6, 10);
-  public round: number = 1;
+  public roundData: any = getMatchImage(this.category, [], 2.5, 10);
+  public round: number = 0;
   public bgSprite: any;
   public polaroid: any;
   public image: any;

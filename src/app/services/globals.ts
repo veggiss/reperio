@@ -80,15 +80,14 @@ export const getMatchImage = (category: string, tags: any, complexRate: number, 
 	let listByCategory = shuffle(database.filter(e => e.category === category));
 	let complexity;
 	let list = [];
-	console.log(Math.round((complexRate % 1) * rounds));
 	
 	for (let i = 0; i < rounds; i++) {
 		if (i < Math.round((complexRate % 1) * rounds)) {
 			complexity = Math.ceil(complexRate);
-			console.log("1", complexity)
+			console.log(complexity)
 		} else {
 			complexity = Math.floor(complexRate);
-			console.log("2", complexity)
+			console.log(complexity)
 		}
 		
 		let image = listByCategory.find((e, i, arr) => {
@@ -98,14 +97,14 @@ export const getMatchImage = (category: string, tags: any, complexRate: number, 
 		});
 		
 		if (image) {
-			let alternatives = [image.alternatives[complexity - 1]];
+			let alternatives = [image.alternatives[Math.round(complexRate) - 1]];
 			let alternativeList = [...listByCategory];
 			
 			for (let idx = 0; idx < 3; idx++) {
 				let obj = alternativeList.splice(Math.floor(Math.random() * alternativeList.length), 1)[0];
 				
 				if (obj) {
-					alternatives.push(obj["alternatives"][complexity - 1]);
+					alternatives.push(obj["alternatives"][Math.round(complexRate) - 1]);
 				}
 			}
 			
@@ -113,7 +112,7 @@ export const getMatchImage = (category: string, tags: any, complexRate: number, 
 				list.push({
 					src: image.src,
 					alternatives: shuffle(alternatives),
-					answer: image.alternatives[complexity - 1]
+					answer: image.alternatives[Math.round(complexRate) - 1]
 				})
 			}
 		}

@@ -44,8 +44,7 @@ function runImport() {
 
         let fileList = await getList();
         let nameList = fileList.map(file => file.name);
-        let filesCreated = 0;
-        let promises = [];        
+        let filesCreated = 0;    
         
         for (let image of json) {
             if (nameList.includes(image.src)) {
@@ -62,8 +61,3 @@ function runImport() {
 }
 
 runImport();
-
-/*
-    id: '1V2hzdz-uVvbG5Cxmm3-wcJOWuJOvO0ws'
-    name: 'stefano-alemani-RISb03J0GK0-unsplash.jpg'
- */

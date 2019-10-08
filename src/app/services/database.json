@@ -103,8 +103,8 @@
         ],
         "complexity": 2,
         "alternatives": [
-            "Egg",
             "Frokost",
+            "Stekt egg",
             "Egg på brødskive"
         ]
     },
@@ -457,7 +457,7 @@
         ],
         "complexity": 3,
         "alternatives": [
-            "Pizza",
+            "Italiensk mat",
             "Restaurant",
             "Spise på restaurant"
         ]
