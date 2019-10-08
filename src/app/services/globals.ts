@@ -1,3 +1,5 @@
+import database from "./database.json";
+
 export const GAMES_LIST = [{
 	id: 1,
 	category: 1,
@@ -53,281 +55,71 @@ export const categories = {
 		type: 'hjernetrim',
 		icon: 'pulse'
 	}
-}
+};
 
 export const getGame = (id:number) => GAMES_LIST.filter(e => e.id === id);
 
 //TODO: Add this to storage
 export let favorites = [3, 1];
 
-export const getMatchImage = (category: string, tags: any, complexity: number, rounds: number) => {
-   let roundList = [];
-   let images = IMAGE_LIST[category];
-   let list = images.filter(e => e.data.complexity == 1);
-   let getAlt = () => {
-      let alternatives = images[Math.floor(Math.random() * images.length)].data.alternatives;
-      return alternatives[Math.floor(Math.random() * alternatives.length)];
+const legalComplexity = n => n >= 1 && n <= 3;
+
+export const shuffle = array => {
+   for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * i);
+      let temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
    }
-
-   while(rounds--) {
-      let image = list[Math.floor(Math.random() * list.length)];
-      let answer = image.data.alternatives[complexity];
-      let alternatives = [answer];
-
-      for (let i = 0; i < 3; i++) {
-         let alt = getAlt();
    
-         while (alt == answer || alternatives.includes(alt)) {
-            alt = getAlt();
-         }
-   
-         alternatives.push(alt);
-      }
+   return array;
+};
 
-      // TODO: Change shuffle method. This is redundant
-      for (let i = alternatives.length - 1; i > 0; i--) {
-         let j = Math.floor(Math.random() * i);
-         let temp = alternatives[i];
-         alternatives[i] = alternatives[j];
-         alternatives[j] = temp;
-      }
-
-      roundList.push({
-         alternatives: alternatives,
-         image: image,
-         answer: answer
-      })
-   }
-
-   return roundList;
-}
-
-export const IMAGE_LIST = { 
-   "food": [ 
-      { 
-         "id":0,
-         "data":{ 
-            "src":"alan-hardman-SU1LFoeEUkk-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "pizza",
-               "italy"
-            ],
-            "complexity":1,
-            "alternatives":[ 
-               "Pizza",
-               "Pepperoni pizza",
-               "Italiensk mat"
-            ]
-         }
-      },
-      { 
-         "id":1,
-         "data":{ 
-            "src":"alexander-mils-aiIANaSK9DQ-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "pie",
-               "dessert"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Pai",
-               "Dessert",
-               "Dekket bord"
-            ]
-         }
-      },
-      { 
-         "id":2,
-         "data":{ 
-            "src":"amir-hanna-y73ExyLsveA-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "broccoli",
-               "knife",
-               "vegetable"
-            ],
-            "complexity":1,
-            "alternatives":[ 
-               "Brokkoli",
-               "Grønnsak",
-               "Kutte"
-            ]
-         }
-      },
-      { 
-         "id":3,
-         "data":{ 
-            "src":"anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "shrimp",
-               "seafood",
-               "lobster",
-               "market",
-               "octopus"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Reker",
-               "Sjømat",
-               "Blekksprut"
-            ]
-         }
-      },
-      { 
-         "id":4,
-         "data":{ 
-            "src":"annie-spratt-bB0EsYazzXY-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "berry",
-               "berries",
-               "hands",
-               "hold"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Bær",
-               "Bringebær",
-               "Han holder bær"
-            ]
-         }
-      },
-      { 
-         "id":5,
-         "data":{ 
-            "src":"bao-menglong-TqD7M_uwwdE-unsplash.jpg",
-            "categories":[ 
-               "food",
-               "animals"
-            ],
-            "tags":[ 
-               "monkey",
-               "animal",
-               "eating",
-               "corn"
-            ],
-            "complexity":3,
-            "alternatives":[ 
-               "Spise",
-               "Apen spiser",
-               "Jungeldyr"
-            ]
-         }
-      },
-      { 
-         "id":6,
-         "data":{ 
-            "src":"ben-kolde-FFqNATH27EM-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "egg",
-               "breakfast",
-               "eating",
-               "lunch"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Egg",
-               "Brødskive",
-               "Frokost"
-            ]
-         }
-      },
-      { 
-         "id":7,
-         "data":{ 
-            "src":"bonnie-kittle-XAsG0EZEsyA-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "fall",
-               "autumn",
-               "pumpkin",
-               "vegetable"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Gresskar",
-               "Orange frukt",
-               "Innhøsting"
-            ]
-         }
-      },
-      { 
-         "id":8,
-         "data":{ 
-            "src":"burhan-rexhepi-gAIhUvHv0f0-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "onion",
-               "red",
-               "vegetable"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Løk",
-               "Rød løk",
-               "Grønnsak i båter"
-            ]
-         }
-      },
-      { 
-         "id":9,
-         "data":{ 
-            "src":"caroline-attwood-kC9KUtSiflw-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "salmon",
-               "fish",
-               "cooking"
-            ],
-            "complexity":2,
-            "alternatives":[ 
-               "Laks",
-               "Laksefileter",
-               "Matlaging"
-            ]
-         }
-      },
-      { 
-         "id":10,
-         "data":{ 
-            "src":"charles-ogJNR_jhxS8-unsplash.jpg",
-            "categories":[ 
-               "food"
-            ],
-            "tags":[ 
-               "vegetable",
-               "eggplant",
-               "purple"
-            ],
-            "complexity":1,
-            "alternatives":[ 
-               "Grønnsak",
-               "Aubergine",
-               "Lilla grønnsak"
-            ]
-         }
-      }
-   ]
-}
+//TODO: this could probably be a bit cleaner
+export const getMatchImage = (category: string, tags: any, complexRate: number, rounds: number) => {
+	let listByCategory = shuffle(database.filter(e => e.category === category));
+	let complexity;
+	let list = [];
+	console.log(Math.round((complexRate % 1) * rounds));
+	
+	for (let i = 0; i < rounds; i++) {
+		if (i < Math.round((complexRate % 1) * rounds)) {
+			complexity = Math.ceil(complexRate);
+			console.log("1", complexity)
+		} else {
+			complexity = Math.floor(complexRate);
+			console.log("2", complexity)
+		}
+		
+		let image = listByCategory.find((e, i, arr) => {
+			if (e.complexity === complexity) {
+				return arr.splice(i, 1);
+			}
+		});
+		
+		if (image) {
+			let alternatives = [image.alternatives[complexity - 1]];
+			let alternativeList = [...listByCategory];
+			
+			for (let idx = 0; idx < 3; idx++) {
+				let obj = alternativeList.splice(Math.floor(Math.random() * alternativeList.length), 1)[0];
+				
+				if (obj) {
+					alternatives.push(obj["alternatives"][complexity - 1]);
+				}
+			}
+			
+			if (alternatives.length === 4) {
+				list.push({
+					src: image.src,
+					alternatives: shuffle(alternatives),
+					answer: image.alternatives[complexity - 1]
+				})
+			}
+		}
+	}
+	
+	console.log(list);
+	
+	return shuffle(list);
+};

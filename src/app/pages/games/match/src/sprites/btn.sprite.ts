@@ -1,14 +1,46 @@
 ﻿import * as Phaser from "phaser";
 
 export default class Btn extends Phaser.GameObjects.Sprite {
-    private delay: number = 0;
-    public text: any;
+    public isAnswer: any;
+    
+    private text: any;
     private tweenIn: any;
     private tweenOut: any;
+    private tweenCorrect: any;
+    private index: any;
+    private roundData: any;
+    private round: any;
+    private getButtons: any;
+    private getMainState: any;
+    private setMainState: any;
+    private getBtnText: any;
+    private delay: number;
+    private scaleText: any;
     
     constructor(props) {
         super(props.scene, props.x, props.y, 'alternative');
-        
+        props.scene.add.existing(this);
+
+        this.getButtons = props.scene.getButtons;
+        this.roundData = props.scene.roundData;
+        this.getMainState = props.scene.getMainState;
+        this.getBtnText = props.scene.getBtnText;
+        this.round = props.scene.round;
+        this.index = props.index;
+        this.setMainState = props.scene.setMainState;
+        this.isAnswer = () => props.scene.btnIsAnswer(this.index);
+            
+        this.scaleText = () => {
+            if (this.text.displayWidth >= this.displayWidth) {
+                this.text.displayWidth = this.displayWidth - (this.displayWidth * 0.1);
+                this.text.scaleY = this.text.scaleX;
+            } else {
+                this.text.scale = this.scale;
+            }
+        };
+
+        this.setVisible(false);
+        this.setScale(0);
         this.setInteractive();
         this.setOrigin(0.5);
         this.text = this.scene.make.text({
@@ -41,38 +73,53 @@ export default class Btn extends Phaser.GameObjects.Sprite {
             delay: 100,
             duration: 500,
             onStart: () => {
-                console.log("lolololasdasd");
+                this.setVisible(true);
+                this.clearTint();
+                this.scale = 0;
                 this.alpha = 1;
+                this.text.scale = 0;
                 this.text.alpha = 1;
-                //text.text = this.scene.roundData[this.round].alternatives[i];
+                this.text.text = this.getBtnText(this.index);
             },
-            onUpdate: () => {
-                if (this.text.displayWidth >= this.displayWidth) {
-                    this.text.displayWidth = this.displayWidth - (this.displayWidth * 0.1);
-                    this.text.scaleY = this.text.scaleX;
-                } else {
-                    this.text.scale = this.scale;
-                }
-            }
-            //onComplete: () => {
-            //    this.state = 2;
-            //}
+            onUpdate: () => this.scaleText()
         });
         
-        this.tweenOut = () => this.scene.tweens.add({
+        this.tweenOut = delay => this.scene.tweens.add({
             targets: [this, this.text],
             paused: true,
             alpha: {
-                start: 1,
                 from: 1,
                 to: 0
             },
             ease: 'Cubic.Out',
-            delay: 2500,
+            delay: delay,
             duration: 500,
-            //onComplete: () => {
-            //    if (this.isCorrect) this.polaroid.tween.out.restart();
-            //}
+            onComplete: () => this.emit('complete')
+        });
+
+        this.tweenCorrect = () => this.scene.tweens.add({
+            targets: this,
+            paused: true,
+            scaleX: {
+                from: this.scaleX,
+                to: this.scaleX * 1.1
+            },
+            scaleY: {
+                from: this.scaleY,
+                to: this.scaleY * 1.1
+            },
+            ease: 'Cubic.Out',
+            delay: this.delay,
+            duration: 200,
+            yoyo: true,
+            onUpdate: () => this.scaleText()
+        });
+        
+        this.on('pointerdown', () => {
+            if (this.getMainState() == 'guessing') {
+                this.setMainState(1);
+                this.emit('answer', this.isAnswer(), this);
+            }
         });
     }
 }

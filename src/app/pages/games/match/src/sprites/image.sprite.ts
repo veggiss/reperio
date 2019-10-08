@@ -1,10 +1,18 @@
 ﻿import * as Phaser from "phaser";
 
 export default class Image extends Phaser.GameObjects.Sprite {
+    private getPolaroid: any;
+    private getButtons: any;
     private tweenIn: any;
+    private getRound: any;
     
     constructor(props) {
         super(props.scene, props.x, props.y, null);
+        this.setActive(false);
+        
+        this.getPolaroid = props.scene.getPolaroid;
+        this.getButtons = props.scene.getButtons;
+        this.getRound = props.scene.getRound;
         
         this.displayHeight = this.scene.game.canvas.height * 0.4;
         this.scaleX = this.scaleY;
@@ -20,12 +28,18 @@ export default class Image extends Phaser.GameObjects.Sprite {
             },
             ease: 'Cubic.InOut',
             duration: 500,
-            //onUpdate: () => {
-            //    image.angle = this.polaroid.angle;
-            //    image.x = this.polaroid.x;
-            //    image.y = this.polaroid.y;
-            //},
-            //onComplete: () => this.alternatives.forEach(btn => btn.tween.in.play())
+            onStart: () => {
+                this.setTexture('image_' + this.getRound());
+                this.displayHeight = this.scene.game.canvas.height * 0.4;
+                this.scaleX = this.scaleY;
+            },
+            onUpdate: () => {
+                this.angle = this.getPolaroid().angle;
+                this.x = this.getPolaroid().x;
+                this.y = this.getPolaroid().y;
+            }
         });
+
+        props.scene.add.existing(this);
     }
 }
