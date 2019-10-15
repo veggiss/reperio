@@ -1,0 +1,145 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-game-info-game-info-module~pages-games-games-module~pages-games-match-match-module~pag~850beeb6"],{
+
+/***/ "./src/app/services/database.json":
+/*!****************************************!*\
+  !*** ./src/app/services/database.json ***!
+  \****************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, default */
+/***/ (function(module) {
+
+module.exports = [{"id":1,"category":"mat","src":"alan-hardman-SU1LFoeEUkk-unsplash.jpg","tags":["pizza","italia"],"complexity":1,"alternatives":["Pizza","Pepperoni","Italiensk mat"]},{"id":2,"category":"mat","src":"alexander-mils-aiIANaSK9DQ-unsplash.jpg","tags":["pai","dessert","bestikk"],"complexity":2,"alternatives":["Pai","Dessert","Dekket bord"]},{"id":3,"category":"mat","src":"amir-hanna-y73ExyLsveA-unsplash.jpg","tags":["brokkoli","matlaging"],"complexity":2,"alternatives":["Brokkoli","Grønnsak","Kuttet brokkoli"]},{"id":4,"category":"mat","src":"anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg","tags":["reker","sjømat"],"complexity":3,"alternatives":["Reker","Blekksprut","Isdisk med sjømat"]},{"id":5,"category":"mat","src":"annie-spratt-bB0EsYazzXY-unsplash.jpg","tags":["bær","bringebær","hender"],"complexity":2,"alternatives":["Bær","Bringebær","Hender holder bringebær"]},{"id":6,"category":"mat","src":"bao-menglong-TqD7M_uwwdE-unsplash.jpg","tags":["ape","spise","mais"],"complexity":3,"alternatives":["Spise","Mais","Apen spiser"]},{"id":7,"category":"mat","src":"ben-kolde-FFqNATH27EM-unsplash.jpg","tags":["egg","frokost","spise"],"complexity":2,"alternatives":["Frokost","Stekt egg","Egg på brødskive"]},{"id":8,"category":"mat","src":"bonnie-kittle-XAsG0EZEsyA-unsplash.jpg","tags":["gresskar","høst","grønnsak"],"complexity":2,"alternatives":["Gresskar","Orange frukt","Gresskar på gresset"]},{"id":9,"category":"mat","src":"burhan-rexhepi-gAIhUvHv0f0-unsplash.jpg","tags":["løk","grønnsak"],"complexity":1,"alternatives":["Løk","Rødløk","Rødløk i båter"]},{"id":10,"category":"mat","src":"caroline-attwood-kC9KUtSiflw-unsplash.jpg","tags":["Fisk","matlaging"],"complexity":2,"alternatives":["Laks","Laksefileter","Laks til middag"]},{"id":11,"category":"mat","src":"charles-ogJNR_jhxS8-unsplash.jpg","tags":["Grønnsak","lilla"],"complexity":1,"alternatives":["Grønnsak","Aubergine","Lilla Grønnsak"]},{"id":12,"category":"musikk","src":"001-2.png","tags":["hodetelefoner","headset","lyd"],"complexity":1,"alternatives":["Hodetelefoner","Store hodetelefoner","Svarte hodetelefoner"]},{"id":13,"category":"musikk","src":"002-3.png","tags":["gitar","instrument"],"complexity":1,"alternatives":["Gitar","Instrument","Akkustisk gitar"]},{"id":14,"category":"mat","src":"artur-rutkowski-GdTLaWamFHw-unsplash.jpg","tags":["Bær","jordær","hender"],"complexity":2,"alternatives":["Jordbær","Mange jordbær","Hender holder jordbær"]},{"id":15,"category":"mat","src":"dmitry-dreyer-K4ERT_IYazw-unsplash.jpg","tags":["grønnsak","salat","krydder"],"complexity":3,"alternatives":["Salat","Salat i bolle","Salt og pepper"]},{"id":16,"category":"musikk","src":"003-11.png","tags":["cello","instrument","spiller"],"complexity":2,"alternatives":["Cello","Cello med bue","Mann spiller cello"]},{"id":17,"category":"mat","src":"elena-koycheva-lWrD_CskDBU-unsplash.jpg","tags":["frukt","banan"],"complexity":1,"alternatives":["Bananer","Bananklase","Prikkete bananer"]},{"id":18,"category":"musikk","src":"008-13.png","tags":["saksofon","instrument","spille"],"complexity":2,"alternatives":["Blåse instrument","Saksofon","Mann spiller saksofon"]},{"id":19,"category":"musikk","src":"007-16.png","tags":["sanger","mikrofon","vokalist"],"complexity":2,"alternatives":["sanger","vokalist","Mann synger i mikrofon"]},{"id":20,"category":"musikk","src":"009-6.png","tags":["instrument","piano","spille"],"complexity":2,"alternatives":["Piano","Tangenter","Person spiller piano"]},{"id":21,"category":"musikk","src":"010-18.png","tags":["musikk produksjon","miksebord"],"complexity":3,"alternatives":["Musikk utstyr","Miksepult","Lydmiksebord"]},{"id":22,"category":"mat","src":"ddp-hE78-lM4PkA-unsplash.jpg","tags":["frukt","appelsin"],"complexity":1,"alternatives":["Appelsin","Sitrusfrukt","Mange appelsiner"]},{"id":23,"category":"musikk","src":"011-12.png","tags":["instrument","banjo","spille"],"complexity":2,"alternatives":["Banjo","Streng instrument","Person spiller banjo"]},{"id":24,"category":"mat","src":"danielle-macinnes-AFkahTPyM9o-unsplash.jpg","tags":["egg"],"complexity":1,"alternatives":["Egg","Flere egg","Brune og hvite egg"]},{"id":25,"category":"musikk","src":"012-17.png","tags":["trommer","instrument"],"complexity":1,"alternatives":["Trommer","Trommesett","Svarte trommer"]},{"id":26,"category":"mat","src":"elevate-7omeJVzcgTE-unsplash.jpg","tags":["drikke","jente"],"complexity":3,"alternatives":["Øl","Bar","Jente serverer øl"]},{"id":27,"category":"musikk","src":"013-7.png","tags":["instrument","gitar"],"complexity":2,"alternatives":["Gitar","Grønn gitar","El-gitar"]},{"id":28,"category":"mat","src":"jeff-siepman-hK9hIPgF3QU-unsplash.jpg","tags":["drikke","vin"],"complexity":2,"alternatives":["Vin","Rødvin","Helle rødvin"]},{"id":30,"category":"mat","src":"josephine-baran-g4wzhY8qiMw-unsplash.jpg","tags":["Grønnsak","tomat"],"complexity":1,"alternatives":["Tomater","Røde tomater","Kurv med tomater"]},{"id":31,"category":"mat","src":"fallon-travels-W01Qwuhb_l4-unsplash.jpg","tags":["spise","vin","pizza"],"complexity":3,"alternatives":["Italiensk mat","Restaurant","Spise på restaurant"]},{"id":32,"category":"musikk","src":"017-4.png","tags":["instrument","spille","trompet"],"complexity":2,"alternatives":["trompet","mann spiller trompet","messing trompet"]},{"id":33,"category":"musikk","src":"018-5.png","tags":["instrument","spille","fiolin"],"complexity":2,"alternatives":["Fiolin","Rød fiolin","Gutt spiller fiolin"]},{"id":34,"category":"mat","src":"toa-heftiba-YeOMRwgvPv4-unsplash.jpg","tags":["sjømat"],"complexity":1,"alternatives":["Hummer","Rød hummer","Hummer på tallerken"]},{"id":35,"category":"musikk","src":"019-48.png","tags":["lyd","hodetelefoner"],"complexity":1,"alternatives":["Hodetelefoner","Hvite hodetelefoner","Hodetelfoner kastes i lufta"]},{"id":36,"category":"musikk","src":"020-76.png","tags":["lyd","instrument","gitar"],"complexity":2,"alternatives":["Gitar og Forsterker","El-gitar og Forsterker","Svart El-gitar og svart forsterker"]},{"id":37,"category":"musikk","src":"021-63.png","tags":["musikker","gitar","mikrofon"],"complexity":2,"alternatives":["Gitar spiller","Gatesanger","Mann spiller gitar og synger"]},{"id":38,"category":"musikk","src":"022-73.png","tags":["lyd","instrument","keyboard"],"complexity":2,"alternatives":["Keyboard","Svart Keyboard","Mann holder keyboard"]},{"id":39,"category":"musikk","src":"023-72.png","tags":["lyd","instrument","sitar"],"complexity":3,"alternatives":["Rødt instrument","Sitar","Mann spiller sitar"]},{"id":40,"category":"mat","src":"mae-mu-rXDCb-Bmgdg-unsplash.jpg","tags":["sjømat","krabbe"],"complexity":2,"alternatives":["Krabbe","Rød krabbe","Krabbe på bord"]},{"id":41,"category":"musikk","src":"024-55.png","tags":["hodetelefoner","lyd"],"complexity":1,"alternatives":["Hodetelefoner","Svarte hodetelefoner","Hodetelefoner henger på en stol"]},{"id":42,"category":"musikk","src":"025-59.png","tags":["lyd"],"complexity":2,"alternatives":["Kassetter","Lyd kassetter","Tre kassetter"]},{"id":43,"category":"musikk","src":"030-39.png","tags":["lyd","instrument"],"complexity":3,"alternatives":["DJ","DJ-kontroller","DJ spiller musikk"]},{"id":44,"category":"musikk","src":"031-82.png","tags":["lyd","CD"],"complexity":1,"alternatives":["CD","CD-cover","Fem CD'er"]},{"id":45,"category":"musikk","src":"035-36.png","tags":["lyd","instrument"],"complexity":3,"alternatives":["Trekkspill","Svart trekkspill","Mann spiller trekkspill"]},{"id":46,"category":"musikk","src":"036-42.png","tags":["instrument","fiolin"],"complexity":1,"alternatives":["Fiolin","Rød fiolin","Streng instrument"]},{"id":47,"category":"musikk","src":"038-52.png","tags":["instrumenter","gitar","spille"],"complexity":2,"alternatives":["Gitar spillere","To gitarer","To gutter spiller gitar i skogen"]},{"id":48,"category":"musikk","src":"039-22.png","tags":["lyd","noter","orkester"],"complexity":3,"alternatives":["Noter","Notebok","Rød notebok"]},{"id":49,"category":"musikk","src":"040-21.png","tags":["instrument","lyd","spille"],"complexity":2,"alternatives":["Fløyte","Svart fløyte","Mann spiller fløyte"]},{"id":50,"category":"musikk","src":"042-34.png","tags":["instrument"],"complexity":3,"alternatives":["Strenger","Gitarstrenger","Seks gitarstrenger"]},{"id":51,"category":"musikk","src":"043-56.png","tags":["lyd"],"complexity":1,"alternatives":["Mikrofon","Grå og svart mikrofon","Èn mikrofon"]},{"id":52,"category":"musikk","src":"044-19.png","tags":["instrument","fiolin"],"complexity":2,"alternatives":["Fiolin","Fiolin og Bue","Mann spiller fiolin"]},{"id":53,"category":"musikk","src":"045-37.png","tags":["instrument","trommer"],"complexity":3,"alternatives":["Trommer","Mann spiller trommer","Trommeslager"]},{"id":54,"category":"musikk","src":"047-83.png","tags":["lyd"],"complexity":3,"alternatives":["Vinylplate","Mann holder vinylplate","Èn vinylplate"]},{"id":55,"category":"musikk","src":"leo-wieling-pEEHFSX1vak-unsplash-1.png","tags":["lyd","musikk","spiller"],"complexity":2,"alternatives":["Platespiller","Vinyl spiller","Platespiller i tre"]},{"id":56,"category":"musikk","src":"051-61.png","tags":["lyd","instrument","spiller"],"complexity":3,"alternatives":["Piano","Hvit piano","Robot spiller piano"]},{"id":57,"category":"musikk","src":"055-62.png","tags":["instrument","spiller"],"complexity":3,"alternatives":["Gitar","Gitarspiller","Mann spiller gitar for baby"]},{"id":58,"category":"musikk","src":"056-53.png","tags":["instrument"],"complexity":3,"alternatives":["Harpe","Harpe i tre","Harpe står i stua"]},{"id":59,"category":"musikk","src":"057-80.png","tags":["lyd","spiller"],"complexity":2,"alternatives":["Musikk spiller","Jukeboks","Retro Jukeboks"]},{"id":60,"category":"musikk","src":"059-33.png","tags":["instrument","spille"],"complexity":2,"alternatives":["Korps","Musikk korps","Trommeslagere i rød uniform"]},{"id":61,"category":"musikk","src":"060-79.png","tags":["instrument","spille"],"complexity":2,"alternatives":["Trekkspill","Mann med hatt spiller trekkspill","Mann spiller trekkspill ute"]},{"id":62,"category":"musikk","src":"061-44.png","tags":["instrument","spille"],"complexity":3,"alternatives":["Xylofon","Farget xylofon","Baby spiller xylofon"]},{"id":63,"category":"musikk","src":"062-30.png","tags":["instrument","spille"],"complexity":3,"alternatives":["Gitar","Mann spiller gitar","mann spiller gitar i skogen"]},{"id":64,"category":"musikk","src":"063-35.png","tags":["instrument","spille"],"complexity":3,"alternatives":["Piano","Piano i parken","Mann spiller piano i parken"]},{"id":65,"category":"musikk","src":"068-75.png","tags":["lyd"],"complexity":1,"alternatives":["Høytaler","Bærbar høytaler","Svart bærbar høytaler"]},{"id":66,"category":"musikk","src":"069-50.png","tags":["instrument","spille"],"complexity":3,"alternatives":["Fiolin","Orkester","Orkester spiller fioliner"]},{"id":67,"category":"musikk","src":"071-32.png","tags":["lyd","spiller"],"complexity":2,"alternatives":["Musikkspiller","Musikk spiller i skogen","Musikk spiller med hodetelefoner"]},{"id":68,"category":"musikk","src":"073-41.png","tags":["instrument","spille"],"complexity":1,"alternatives":["Tromme","Trommeslager","Bongotromme"]},{"id":69,"category":"musikk","src":"076-45.png","tags":["konsert","publikum"],"complexity":2,"alternatives":["Publikum","Syngende publikum","Konsert publikum"]},{"id":70,"category":"musikk","src":"078-70.png","tags":["konsert"],"complexity":2,"alternatives":["Vokalist","Kvinne synger","Kvinne i gul kjole synger"]},{"id":71,"category":"musikk","src":"079-28.png","tags":["musikker","spille"],"complexity":3,"alternatives":["Pedal","Gitarpedal","Musikker trykker gitarpedal"]},{"id":72,"category":"musikk","src":"083-40.png","tags":["lyd"],"complexity":2,"alternatives":["Vinylplate","Samling av vinyl","Person løfter vinylplate"]},{"id":73,"category":"musikk","src":"084-24.png","tags":["instrument","lyd","spille"],"complexity":2,"alternatives":["Klarinett","Jente spiller klarinett","Jente spiller klarinett ute"]},{"id":74,"category":"musikk","src":"092-38.png","tags":["konsert"],"complexity":3,"alternatives":["Konserthall","Tom konserthall","Konserthall uten publikum"]},{"id":75,"category":"musikk","src":"093-57.png","tags":["spille","instrument"],"complexity":2,"alternatives":["Musikkere","Band","Gatemusikkere"]},{"id":76,"category":"musikk","src":"095-68.png","tags":["spille","instrument"],"complexity":2,"alternatives":["Gitar","To gitarer","To menn i hatt spiller gitar"]},{"id":77,"category":"musikk","src":"097-27.png","tags":["instrument","konsert"],"complexity":3,"alternatives":["Orgel","Stort Orgel","Orgel i en kirke"]},{"id":78,"category":"musikk","src":"098-69.png","tags":["instrument"],"complexity":2,"alternatives":["Tuba","Mann kaster tuba","Tuba kastes i lufta"]},{"id":79,"category":"musikk","src":"100-65.png","tags":["lyd","spiller"],"complexity":2,"alternatives":["Grammofon","Gammel grammofon","Grammofon i gull"]},{"id":80,"category":"musikk","src":"089-60.png","tags":["lyd"],"complexity":2,"alternatives":["Høytaler","Svart høytaler","Svart høytaler på et bord"]},{"id":81,"category":"musikk","src":"086-23.png","tags":["spille","instrument"],"complexity":2,"alternatives":["Piano","Hender på piano","Kvinne og gutt spiller piano"]},{"id":82,"category":"musikk","src":"088-31.png","tags":["spille","instrument"],"complexity":2,"alternatives":["Panfløyte","Blåseinstrument","Mann spiller panfløyte"]},{"id":83,"category":"sport","src":"alexander-redl-d3bYmnZ0ank-unsplash.jpg","tags":["løpe","mann"],"complexity":2,"alternatives":["Jogge","Knyte joggesko","Mann knytter joggesko"]},{"id":84,"category":"sport","src":"andy-hall-ZH9NCQKLyMg-unsplash.jpg","tags":["personer"],"complexity":2,"alternatives":["Ishockey","Målvakt","Målvakt i ishockey"]},{"id":85,"category":"sport","src":"annie-spratt-jY9mXvA15W0-unsplash.jpg","tags":["mann","person"],"complexity":2,"alternatives":["Bueskyting","Skyte på blink","Mann skyter på blink"]},{"id":86,"category":"sport","src":"arisa-chattasa-HZbqhd5aK3I-unsplash.jpg","tags":["boksing"],"complexity":1,"alternatives":["Boksehansker","Rosa boksehansker","Boksehansker på bakken"]},{"id":87,"category":"sport","src":"attentie-attentie-ig7vN6OkGNE-unsplash.jpg","tags":["boksing"],"complexity":3,"alternatives":["Boksing","Boksekamp","Mann på boksekamp"]},{"id":88,"category":"sport","src":"bruce-mars-gJtDg6WfMlQ-unsplash.jpg","tags":["kvinne","person"],"complexity":1,"alternatives":["Trene","Kvinne trener","Kvinne trener på matte"]},{"id":89,"category":"dyr","src":"alex-azabache-A59RzUpx9jA-unsplash-9.png","tags":["landskap","lama"],"complexity":2,"alternatives":["Alpakka","Hvit Alpakka","Alpakka i fjellet"]},{"id":90,"category":"dyr","src":"allison-christine-8j-2d94Orlc-unsplash-8.png","tags":["hund"],"complexity":1,"alternatives":["Hund","Valp","Grå valp"]},{"id":100,"category":"dyr","src":"amber-kipp-EwJMBIshgXU-unsplash-75.png","tags":["gård","antall","gris"],"complexity":1,"alternatives":["Gris","Tre griser","Griser på en gård"]},{"id":101,"category":"dyr","src":"amy-reed-XB5E4D-Ipco-unsplash-72.png","tags":["stein","gress","gorilla"],"complexity":1,"alternatives":["Gorilla","Silverback","Svart Gorilla"]},{"id":102,"category":"dyr","src":"angelo-pantazis-wT3lf5qweEI-unsplash-25.png","tags":["hav","sport","farge"],"complexity":2,"alternatives":["Hund","Hund på sjøen","Hund på en kajakk"]},{"id":103,"category":"dyr","src":"anita-austvika-J4pBYVlBxh4-unsplash-17.png","tags":["bakke","vei","asfalt"],"complexity":1,"alternatives":["And","Grå and","And på veien"]},{"id":104,"category":"dyr","src":"annie-spratt-SkvPuo5jxVM-unsplash-48.png","tags":["snø","bjørn"],"complexity":1,"alternatives":["Isbjørn","Hvit isbjørn","Isbjørn leker i snøen"]},{"id":105,"category":"dyr","src":"apostolos-vamvouras-FjvIsYAqoic-unsplash-10.png","tags":["farge","hest"],"complexity":1,"alternatives":["Hest","Beige hest","Hest i landskapet"]},{"id":106,"category":"dyr","src":"arjan-stalpers-Ap3eTe7eFrA-unsplash-63.png","tags":["farge","ull"],"complexity":1,"alternatives":["Sau","Lam","Lam i gresset"]},{"id":107,"category":"sport","src":"chris-chow--NDHn3ownBU-unsplash.jpg","tags":["ball","personer"],"complexity":3,"alternatives":["Baseball","Baseball på bane","Menn spiller baseball"]},{"id":108,"category":"sport","src":"christopher-burns-YSfTcJZR-ws-unsplash.jpg","tags":["personer"],"complexity":2,"alternatives":["Tennis","Blå tennisbane","Mann spiller tennis"]},{"id":109,"category":"sport","src":"cmdr-shane-wa2kYVQaOdc-unsplash.jpg","tags":["ball"],"complexity":2,"alternatives":["Biljard","Grønt biljardbord","Biljardkø og kuler"]},{"id":110,"category":"sport","src":"court-prather-Nka1wVAQWa4-unsplash.jpg","tags":["personer"],"complexity":1,"alternatives":["Golf","Spille golf","Han spiller golf"]},{"id":111,"category":"sport","src":"federico-persiani-XvPuZ2Q71GA-unsplash.jpg","tags":["personer"],"complexity":1,"alternatives":["Snøbrett","Alpinsport","Han står på snøbrett"]},{"id":112,"category":"sport","src":"gentrit-sylejmani-JjUyjE-oEbM-unsplash.jpg","tags":["person"],"complexity":1,"alternatives":["Svømme","Han svømmer",""]},{"id":113,"category":"dyr","src":"arjan-stalpers-hPGkorH0blg-unsplash-21.png","tags":["antall","fulg"],"complexity":2,"alternatives":["Fulg","Fugler","Tre fugler sitter på en gren"]},{"id":114,"category":"sport","src":"guy-kawasaki-iij-QvyRAnM-unsplash.jpg","tags":["person","vann"],"complexity":2,"alternatives":["Surfe","Han surfer","Surfing i solnedgang"]},{"id":115,"category":"dyr","src":"balint-szajki-_rzasuFVs5Y-unsplash-31.png","tags":["fugl"],"complexity":1,"alternatives":["Ugle","Ugle med gule øyne","Ugle med brune fjær"]},{"id":116,"category":"sport","src":"ildar-garifullin-XEFfYl44Abo-unsplash.jpg","tags":["personer"],"complexity":3,"alternatives":["Volleyball","Strandvolleyball","Volleyball i sanden"]},{"id":117,"category":"dyr","src":"ben-freiholz-72vYm4Q3dCg-unsplash-59.png","tags":["fugl"],"complexity":1,"alternatives":["Pelikan","Rosa pelikan","Rosa pelikaner"]},{"id":118,"category":"dyr","src":"christian-holzinger-_94wpXx6C4g-unsplash-73.png","tags":["øgle"],"complexity":1,"alternatives":["Øgle","Brun øgle","Øgle på en stein"]},{"id":119,"category":"sport","src":"j-g-d-vHZte5Wl3Fg-unsplash.jpg","tags":["ski","person"],"complexity":2,"alternatives":["Langrenn","Tur på langrenn","Gutt står på langrenn"]},{"id":120,"category":"sport","src":"jeremy-bishop-hCPAKaX9Azo-unsplash.jpg","tags":["Vann","person"],"complexity":2,"alternatives":["Dykke","Fridykking","Mann under vann"]},{"id":121,"category":"dyr","src":"daniel-hansen-pn_TY-8_Pbk-unsplash-51.png","tags":["ape","ball"],"complexity":2,"alternatives":["Sjimpanser","Svart sjimpanser","Sjimpanser holder en ball"]},{"id":122,"category":"sport","src":"joe-neric-HHunRG19kF8-unsplash.jpg","tags":["motor","personer"],"complexity":3,"alternatives":["Motorsykkel","Motorsykkelbane","Motorsykkelsport på bane"]},{"id":123,"category":"dyr","src":"dave-mullen-tolcU--dvuw-unsplash-37.png","tags":["hest","snø"],"complexity":1,"alternatives":["Hest","Brun hest","Hest i snølandskap"]},{"id":124,"category":"sport","src":"john-verhoestra-Yh2UPFrdYoU-unsplash.jpg","tags":["person"],"complexity":2,"alternatives":["Skate","Stå på skateboard","Ungdom hopper med skateboard"]},{"id":125,"category":"dyr","src":"dave-pullis-brKCHU0Xo5s-unsplash-29.png","tags":["skall","nebb","dyr"],"complexity":1,"alternatives":["Skilpadde","Grønn skilpadde","Skilpadden"]},{"id":126,"category":"sport","src":"karla-rivera-TS2_PvGhGgs-unsplash.jpg","tags":["ball"],"complexity":2,"alternatives":["Bowling","Bowlingbane","Bowlingball treffer kjeglene"]},{"id":127,"category":"dyr","src":"david-clode-RAfIk-ZKbPk-unsplash-60.png","tags":["reptil"],"complexity":1,"alternatives":["Slange","Pytonslange","Slange på en gren"]},{"id":128,"category":"sport","src":"kasya-shahovskaya-hTd7AEBfn_U-unsplash.jpg","tags":["snø","personer"],"complexity":3,"alternatives":["Slalom","Slalomsbakke","Han står på slalom"]},{"id":129,"category":"dyr","src":"david-clode-wRt8myE0W00-unsplash-26.png","tags":["farge","dyr"],"complexity":2,"alternatives":["Bie","Bie som svever","Bie svever over gul blomst"]},{"id":130,"category":"sport","src":"markus-spiske-WUehAgqO5hE-unsplash.jpg","tags":["sykkel","personer"],"complexity":3,"alternatives":["Sykling","Sykkelløp","De konkurrerer på sykkel"]},{"id":131,"category":"dyr","src":"dawid-matyszczyk-1dyo6hFEU_8-unsplash-42.png","tags":["gress","farge"],"complexity":2,"alternatives":["And","Grå and","Anden ligger i gresset"]},{"id":132,"category":"dyr","src":"dimitar-donovski-RyvVnWaWbjI-unsplash-38.png","tags":["farge","fugl"],"complexity":1,"alternatives":["Fugl","Kråke","Svart kråke"]},{"id":133,"category":"sport","src":"matteo-vistocco-Dph00R2SwFo-unsplash.jpg","tags":["båt","personer","vann"],"complexity":2,"alternatives":["Roing","Rosport","De ror på vannet"]},{"id":134,"category":"sport","src":"miguel-puig-phU8NHF85rU-unsplash.jpg","tags":["person","ball"],"complexity":3,"alternatives":["Håndball","Kaste ball","Han kaster ballen"]},{"id":135,"category":"dyr","src":"dominik-lange-BFsm5vldl2I-unsplash-53.png","tags":["farge","gren","fugl"],"complexity":2,"alternatives":["Papegøye","Blå papegøye","Papegøye sitter på en gren"]},{"id":136,"category":"sport","src":"vince-fleming-aZVpxRydiJk-unsplash.jpg","tags":["personer"],"complexity":3,"alternatives":["Ballspill","Innendørs volleyball","Jenter vinner spill"]},{"id":137,"category":"dyr","src":"eduard-delputte-LTG3VYE6X7U-unsplash-6.png","tags":["katt","pels","farge"],"complexity":2,"alternatives":["Katt","Gul katt","Katt står i døra"]},{"id":138,"category":"dyr","src":"elmarie-van-rooyen-x_4JsZD3768-unsplash-33.png","tags":["ape","pels","antall"],"complexity":2,"alternatives":["Sjimpanser","Svart sjimpanser","To sjimpansere"]},{"id":139,"category":"dyr","src":"emma-waleij-uqZwU264TmU-unsplash-43.png","tags":["vei","reinsdyr"],"complexity":2,"alternatives":["Reinsdyr","Reinsdyr på veien","Reinsdyr går over veien"]},{"id":140,"category":"dyr","src":"fabian-burghardt-A81818EFqGQ-unsplash-52.png","tags":["hest","landskap","antall"],"complexity":2,"alternatives":["Hester","Tre hester","Hester på markene"]},{"id":141,"category":"dyr","src":"fabio-riva-Gw24zwEK81M-unsplash-76.png","tags":["kattedyr"],"complexity":2,"alternatives":["Geopard","Flekkete geopard","Geopard i naturen"]},{"id":142,"category":"dyr","src":"fabrizio-frigeni-pCMsbkittX8-unsplash-86.png","tags":["pattedyr","vann"],"complexity":1,"alternatives":["Delfin","Delfin i et basseng","Delfin med åpen munn"]},{"id":143,"category":"dyr","src":"fezbot2000-B-wYmhZGIsw-unsplash-3.png","tags":["hund"],"complexity":1,"alternatives":["Hund","Hårete hund","Hunden ligger på senga"]},{"id":144,"category":"dyr","src":"florian-van-duyn-J9wZ6D2kYPw-unsplash-94.png","tags":["geit","landskap"],"complexity":2,"alternatives":["Geit","Brun og Hvit geit","Geit i fjellet"]}];
+
+/***/ }),
+
+/***/ "./src/app/services/globals.ts":
+/*!*************************************!*\
+  !*** ./src/app/services/globals.ts ***!
+  \*************************************/
+/*! exports provided: GAMES_LIST, categories, getGame, favorites, shuffle, getMatchImage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GAMES_LIST", function() { return GAMES_LIST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "categories", function() { return categories; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGame", function() { return getGame; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "favorites", function() { return favorites; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shuffle", function() { return shuffle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMatchImage", function() { return getMatchImage; });
+/* harmony import */ var _database_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./database.json */ "./src/app/services/database.json");
+var _database_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./database.json */ "./src/app/services/database.json", 1);
+
+var GAMES_LIST = [{
+        id: 1,
+        category: 1,
+        title: 'Match - bilde',
+        icon: 'book',
+        description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+    }, {
+        id: 6,
+        category: 1,
+        title: 'Ord fall',
+        icon: 'book',
+        description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+    }, {
+        id: 2,
+        category: 1,
+        title: 'Ord rulett',
+        icon: 'book',
+        description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+    }, {
+        id: 3,
+        category: 2,
+        title: 'Fyll inn x',
+        icon: 'create',
+        description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+    }, {
+        id: 4,
+        category: 3,
+        title: 'Match - lyd',
+        icon: 'volume-high',
+        description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+    }, {
+        id: 5,
+        category: 4,
+        title: 'Match - farge',
+        icon: 'pulse',
+        description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+    }];
+var categories = {
+    1: {
+        type: 'lese',
+        icon: 'book'
+    },
+    2: {
+        type: 'skrive',
+        icon: 'create'
+    },
+    3: {
+        type: 'lytte',
+        icon: 'volume-high'
+    },
+    4: {
+        type: 'hjernetrim',
+        icon: 'pulse'
+    }
+};
+var getGame = function (id) { return GAMES_LIST.filter(function (e) { return e.id === id; }); };
+//TODO: Add this to storage
+var favorites = [3, 1];
+var legalComplexity = function (n) { return n >= 1 && n <= 3; };
+var shuffle = function (array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * i);
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+};
+//TODO: this could probably be a bit cleaner
+var getMatchImage = function (category, tags, complexRate, rounds) {
+    var listByCategory = shuffle(_database_json__WEBPACK_IMPORTED_MODULE_0__.filter(function (e) { return e.category === category; }));
+    var complexity;
+    var list = [];
+    for (var i = 0; i < rounds; i++) {
+        if (i < Math.round((complexRate % 1) * rounds)) {
+            complexity = Math.ceil(complexRate);
+            console.log(complexity);
+        }
+        else {
+            complexity = Math.floor(complexRate);
+            console.log(complexity);
+        }
+        var image = listByCategory.find(function (e, i, arr) {
+            if (e.complexity === complexity) {
+                return arr.splice(i, 1);
+            }
+        });
+        if (image) {
+            var alternatives = [image.alternatives[Math.round(complexRate) - 1]];
+            var alternativeList = listByCategory.slice();
+            for (var idx = 0; idx < 3; idx++) {
+                var obj = alternativeList.splice(Math.floor(Math.random() * alternativeList.length), 1)[0];
+                if (obj) {
+                    alternatives.push(obj["alternatives"][Math.round(complexRate) - 1]);
+                }
+            }
+            if (alternatives.length === 4) {
+                list.push({
+                    src: image.src,
+                    alternatives: shuffle(alternatives),
+                    answer: image.alternatives[Math.round(complexRate) - 1]
+                });
+            }
+        }
+    }
+    console.log(list);
+    return shuffle(list);
+};
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=default~pages-game-info-game-info-module~pages-games-games-module~pages-games-match-match-module~pag~850beeb6-es5.js.map
