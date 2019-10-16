@@ -29,8 +29,7 @@ export class MatchPage {
 
   async presentPopover() {
     const popover = await this.popoverController.create({
-      component: GameMenuComponent,
-      event
+      component: GameMenuComponent
     })
     return await popover.present();
   }

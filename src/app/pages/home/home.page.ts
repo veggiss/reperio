@@ -7,7 +7,7 @@ import { GAMES_LIST, favorites } from '../../services/globals';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-	private favorites: Array<any>;
+	public favorites: Array<any>;
 
 	constructor() {
 		this.favorites = GAMES_LIST.filter(e => favorites.includes(e.id));

@@ -10,8 +10,23 @@
         "complexity": 1,
         "alternatives": [
             "Pizza",
-            "Pepperoni",
+            "Pepperoni pizza",
             "Italiensk mat"
+        ],
+        "wrongalt1": [
+            "Pai",
+            "Eple",
+            "Pære"
+        ],
+        "wrongalt2": [
+            "Paprika",
+            "Pepper",
+            "Panini"
+        ],
+        "wrongalt3": [
+            "Gresk mat",
+            "Finsk middagsrett",
+            "Olivenolje"
         ]
     },
     {
@@ -28,6 +43,21 @@
             "Pai",
             "Dessert",
             "Dekket bord"
+        ],
+        "wrongalt1": [
+            "Brød",
+            "Persille",
+            "Blomst"
+        ],
+        "wrongalt2": [
+            "Dressing",
+            "Smeltet ost",
+            "Gresskar"
+        ],
+        "wrongalt3": [
+            "Piske krem",
+            "Kjøttkniv",
+            "Drysse melis"
         ]
     },
     {
@@ -43,6 +73,21 @@
             "Brokkoli",
             "Grønnsak",
             "Kuttet brokkoli"
+        ],
+        "wrongalt1": [
+            "Blomkål",
+            "Chili",
+            "Agurk"
+        ],
+        "wrongalt2": [
+            "Frukt",
+            "Gresskarsuppe",
+            "Spinatblader"
+        ],
+        "wrongalt3": [
+            "Frukt cocktail",
+            "Koke krabber",
+            "Syltetøy"
         ]
     },
     {
@@ -58,6 +103,21 @@
             "Reker",
             "Blekksprut",
             "Isdisk med sjømat"
+        ],
+        "wrongalt1": [
+            "Gulrot",
+            "Mel",
+            "Gryte"
+        ],
+        "wrongalt2": [
+            "Kjøttkaker",
+            "Ostefat",
+            "Bananer"
+        ],
+        "wrongalt3": [
+            "Boks med iskrem",
+            "Blåskjellsuppe",
+            "Iskremdisk"
         ]
     },
     {
@@ -74,6 +134,21 @@
             "Bær",
             "Bringebær",
             "Hender holder bringebær"
+        ],
+        "wrongalt1": [
+            "Smør",
+            "Busk",
+            "Egg"
+        ],
+        "wrongalt2": [
+            "Blåbær",
+            "Tyttebær",
+            "Solbær"
+        ],
+        "wrongalt3": [
+            "Hun plukker epler",
+            "Hun lager pasta",
+            "Sausen koker"
         ]
     },
     {
@@ -88,8 +163,23 @@
         "complexity": 3,
         "alternatives": [
             "Spise",
-            "Mais",
-            "Apen spiser"
+            "Maiskolbe",
+            "Apen spiser mais"
+        ],
+        "wrongalt1": [
+            "Snakke",
+            "Kjøkken",
+            "Sove"
+        ],
+        "wrongalt2": [
+            "Muslinger",
+            "Grillspyd",
+            "Kutte epler"
+        ],
+        "wrongalt3": [
+            "Hun kutter blomkål",
+            "Steke i panne",
+            "Apen kaster banan"
         ]
     },
     {
@@ -106,6 +196,21 @@
             "Frokost",
             "Stekt egg",
             "Egg på brødskive"
+        ],
+        "wrongalt1": [
+            "Frukt",
+            "Melk",
+            "Kål"
+        ],
+        "wrongalt2": [
+            "Stangselleri",
+            "Eggerøre",
+            "Soppkniv"
+        ],
+        "wrongalt3": [
+            "Kakestykke på tallerken",
+            "Rense bær",
+            "Helle rødvin"
         ]
     },
     {
@@ -122,6 +227,21 @@
             "Gresskar",
             "Orange frukt",
             "Gresskar på gresset"
+        ],
+        "wrongalt1": [
+            "Gressløk",
+            "Agurk",
+            "Appelsin"
+        ],
+        "wrongalt2": [
+            "Grønt gresskar",
+            "Kokt fisk",
+            "Spise middag"
+        ],
+        "wrongalt3": [
+            "Hun kutter gresskar",
+            "Han lager mat",
+            "Matboks"
         ]
     },
     {
@@ -137,6 +257,21 @@
             "Løk",
             "Rødløk",
             "Rødløk i båter"
+        ],
+        "wrongalt1": [
+            "Lefse",
+            "Øl",
+            "Suppe"
+        ],
+        "wrongalt2": [
+            "Gul løk",
+            "Vårløk",
+            "Hvitløk"
+        ],
+        "wrongalt3": [
+            "Rødløk i wok",
+            "Hun baker kake",
+            "Kokende vann"
         ]
     },
     {
@@ -152,6 +287,21 @@
             "Laks",
             "Laksefileter",
             "Laks til middag"
+        ],
+        "wrongalt1": [
+            "Salt",
+            "Saks",
+            "Potet"
+        ],
+        "wrongalt2": [
+            "Indrefilet",
+            "Fiskekake",
+            "Sjokolade"
+        ],
+        "wrongalt3": [
+            "Bake brød",
+            "Kuttet frukt",
+            "Eggeskall"
         ]
     },
     {
@@ -166,7 +316,22 @@
         "alternatives": [
             "Grønnsak",
             "Aubergine",
-            "Lilla Grønnsak"
+            "Lilla grønnsak"
+        ],
+        "wrongalt1": [
+            "Vin",
+            "Tomat",
+            "Løk"
+        ],
+        "wrongalt2": [
+            "Antikk",
+            "Orange frukt",
+            "Jordbær"
+        ],
+        "wrongalt3": [
+            "Grønn grønnsak",
+            "Valnøtter i skål",
+            "Bakepapir"
         ]
     },
     {
@@ -183,6 +348,21 @@
             "Hodetelefoner",
             "Store hodetelefoner",
             "Svarte hodetelefoner"
+        ],
+        "wrongalt1": [
+            "Hodeskalle",
+            "Hodelus",
+            "Telefon"
+        ],
+        "wrongalt2": [
+            "Små hodetelefoner",
+            "små hodeskaller",
+            "store telefoner"
+        ],
+        "wrongalt3": [
+            "Lilla hodetelefoner",
+            "blå telefoner",
+            "svart hode"
         ]
     },
     {
@@ -196,8 +376,23 @@
         "complexity": 1,
         "alternatives": [
             "Gitar",
-            "Instrument",
+            "Brun gitar",
             "Akkustisk gitar"
+        ],
+        "wrongalt1": [
+            "Cello",
+            "El-gitar",
+            "Strenger"
+        ],
+        "wrongalt2": [
+            "Metall gitar",
+            "Ødelagt gitar",
+            "Ukulele"
+        ],
+        "wrongalt3": [
+            "Gul gitar",
+            "Akkustisk våpen",
+            "Blåseinstrument"
         ]
     },
     {
@@ -214,6 +409,21 @@
             "Jordbær",
             "Mange jordbær",
             "Hender holder jordbær"
+        ],
+        "wrongalt1": [
+            "Plommer",
+            "Vann",
+            "Jordskokk"
+        ],
+        "wrongalt2": [
+            "Blåbærplukking",
+            "Syltetøykrukke",
+            "Peanøtter"
+        ],
+        "wrongalt3": [
+            "Skål med nøtter",
+            "Hun kutter løk",
+            "Bakt potet"
         ]
     },
     {
@@ -230,6 +440,21 @@
             "Salat",
             "Salat i bolle",
             "Salt og pepper"
+        ],
+        "wrongalt1": [
+            "Suppe",
+            "Lat",
+            "Spinat"
+        ],
+        "wrongalt2": [
+            "Bake boller",
+            "Spaghetti",
+            "Ovnsbakt potet"
+        ],
+        "wrongalt3": [
+            "Rømme og salsa",
+            "Hun lager mat",
+            "Kjøttsuppe"
         ]
     },
     {
@@ -246,6 +471,21 @@
             "Cello",
             "Cello med bue",
             "Mann spiller cello"
+        ],
+        "wrongalt1": [
+            "Cellofan",
+            "Cellulose",
+            "Fele"
+        ],
+        "wrongalt2": [
+            "Cello med fjær",
+            "Gitar med fele",
+            "Regnbue"
+        ],
+        "wrongalt3": [
+            "Brun streng",
+            "5 strenger",
+            "Stor fele"
         ]
     },
     {
@@ -261,6 +501,21 @@
             "Bananer",
             "Bananklase",
             "Prikkete bananer"
+        ],
+        "wrongalt1": [
+            "Appelsin",
+            "Bær",
+            "Sitron"
+        ],
+        "wrongalt2": [
+            "Brun pære",
+            "Grønn agurk",
+            "Klasetomat"
+        ],
+        "wrongalt3": [
+            "Sjokoladekake",
+            "Fløte i kaffe",
+            "Blomstervase"
         ]
     },
     {
@@ -277,6 +532,21 @@
             "Blåse instrument",
             "Saksofon",
             "Mann spiller saksofon"
+        ],
+        "wrongalt1": [
+            "Blåse",
+            "Saks",
+            "Silhuett"
+        ],
+        "wrongalt2": [
+            "Klarinett",
+            "Trompet",
+            "Trekkspill"
+        ],
+        "wrongalt3": [
+            "Mann skriver",
+            "Person hopper",
+            "Dame blåser"
         ]
     },
     {
@@ -290,9 +560,24 @@
         ],
         "complexity": 2,
         "alternatives": [
-            "sanger",
-            "vokalist",
+            "Sanger",
+            "Vokalist",
             "Mann synger i mikrofon"
+        ],
+        "wrongalt1": [
+            "Anger",
+            "Standup",
+            "Sag"
+        ],
+        "wrongalt2": [
+            "Kor",
+            "Pianist",
+            "Instrument"
+        ],
+        "wrongalt3": [
+            "Dame synger",
+            "Dame skriver",
+            "Mikrofon spiller"
         ]
     },
     {
@@ -309,6 +594,21 @@
             "Piano",
             "Tangenter",
             "Person spiller piano"
+        ],
+        "wrongalt1": [
+            "Trekkspill",
+            "Pinne",
+            "Panne"
+        ],
+        "wrongalt2": [
+            "Tenner",
+            "Noter",
+            "Føtter"
+        ],
+        "wrongalt3": [
+            "Hender sprenger",
+            "Person synger",
+            "Tangenter trekkes"
         ]
     },
     {
@@ -324,6 +624,21 @@
             "Musikk utstyr",
             "Miksepult",
             "Lydmiksebord"
+        ],
+        "wrongalt1": [
+            "Museum",
+            "Musevise",
+            "Musikk utgiver"
+        ],
+        "wrongalt2": [
+            "Miksmaster",
+            "Strykeinstrument",
+            "Knappenål"
+        ],
+        "wrongalt3": [
+            "Lydstol",
+            "Lyttebord",
+            "Lydknapp"
         ]
     },
     {
@@ -339,6 +654,21 @@
             "Appelsin",
             "Sitrusfrukt",
             "Mange appelsiner"
+        ],
+        "wrongalt1": [
+            "Ape",
+            "Pølser",
+            "Pannekake"
+        ],
+        "wrongalt2": [
+            "Sildesmørbrød",
+            "Bananfluer",
+            "Vannmelon"
+        ],
+        "wrongalt3": [
+            "Bakte rotgrønnsaker",
+            "Appelsinmarmelade",
+            "Kyllingfileter"
         ]
     },
     {
@@ -355,6 +685,21 @@
             "Banjo",
             "Streng instrument",
             "Person spiller banjo"
+        ],
+        "wrongalt1": [
+            "Banan",
+            "Banne",
+            "Fele"
+        ],
+        "wrongalt2": [
+            "Strykebord",
+            "Skjortevask",
+            "Vaskebrett"
+        ],
+        "wrongalt3": [
+            "Person trykker",
+            "Mann strekker",
+            "Hender vrikker"
         ]
     },
     {
@@ -369,6 +714,21 @@
             "Egg",
             "Flere egg",
             "Brune og hvite egg"
+        ],
+        "wrongalt1": [
+            "Klegg",
+            "Eple",
+            "Eng"
+        ],
+        "wrongalt2": [
+            "Omelett",
+            "Fiskefilet",
+            "Eggehvite"
+        ],
+        "wrongalt3": [
+            "Piske egg",
+            "Brødskive med pålegg",
+            "Pannestekt flyndre"
         ]
     },
     {
@@ -384,6 +744,21 @@
             "Trommer",
             "Trommesett",
             "Svarte trommer"
+        ],
+        "wrongalt1": [
+            "Bomber",
+            "Trampoline",
+            "Trompet"
+        ],
+        "wrongalt2": [
+            "Trommeslager",
+            "Slagstykke",
+            "Slange"
+        ],
+        "wrongalt3": [
+            "Rosa trommer",
+            "Små trommer",
+            "Strenge trommer"
         ]
     },
     {
@@ -399,6 +774,21 @@
             "Øl",
             "Bar",
             "Jente serverer øl"
+        ],
+        "wrongalt1": [
+            "Løk",
+            "Løp",
+            "Ål"
+        ],
+        "wrongalt2": [
+            "Banan",
+            "Pannekaker",
+            "Urtehage"
+        ],
+        "wrongalt3": [
+            "Spise frokost",
+            "Glass med oliven",
+            "Julebord"
         ]
     },
     {
@@ -414,6 +804,21 @@
             "Gitar",
             "Grønn gitar",
             "El-gitar"
+        ],
+        "wrongalt1": [
+            "Sitar",
+            "Fele",
+            "Elv"
+        ],
+        "wrongalt2": [
+            "Grønt garn",
+            "svart instrument",
+            "måleinstrument"
+        ],
+        "wrongalt3": [
+            "El-verk",
+            "Gispe",
+            "Elev"
         ]
     },
     {
@@ -429,6 +834,21 @@
             "Vin",
             "Rødvin",
             "Helle rødvin"
+        ],
+        "wrongalt1": [
+            "Fin",
+            "Vann",
+            "Skjell"
+        ],
+        "wrongalt2": [
+            "Hvitvin",
+            "Rødløk",
+            "Rømmebeger"
+        ],
+        "wrongalt3": [
+            "Vaske sopp",
+            "Handle mat",
+            "De spiser mat"
         ]
     },
     {
@@ -444,6 +864,21 @@
             "Tomater",
             "Røde tomater",
             "Kurv med tomater"
+        ],
+        "wrongalt1": [
+            "Mate",
+            "Bringebær",
+            "Ris"
+        ],
+        "wrongalt2": [
+            "Gule tomater",
+            "Tomatpure",
+            "Tomatsuppe"
+        ],
+        "wrongalt3": [
+            "Hvitløksbåter",
+            "Blomkålsuppe",
+            "Sardiner i olje"
         ]
     },
     {
@@ -457,9 +892,24 @@
         ],
         "complexity": 3,
         "alternatives": [
-            "Italiensk mat",
             "Restaurant",
+            "Italiensk mat",
             "Spise på restaurant"
+        ],
+        "wrongalt1": [
+            "Rødbeter",
+            "Reddik",
+            "Is"
+        ],
+        "wrongalt2": [
+            "Iskrem",
+            "Matpakke",
+            "Smørbrød"
+        ],
+        "wrongalt3": [
+            "Kaste mat",
+            "Presse hvitløk",
+            "Fransk løksuppe"
         ]
     },
     {
@@ -476,6 +926,21 @@
             "trompet",
             "mann spiller trompet",
             "messing trompet"
+        ],
+        "wrongalt1": [
+            "Tromme",
+            "Trampoline",
+            "Ompa"
+        ],
+        "wrongalt2": [
+            "Mann synger",
+            "person trekker",
+            "dame blåser"
+        ],
+        "wrongalt3": [
+            "Gullkorn",
+            "Gul tram",
+            "Messe"
         ]
     },
     {
@@ -492,6 +957,15 @@
             "Fiolin",
             "Rød fiolin",
             "Gutt spiller fiolin"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -506,6 +980,21 @@
             "Hummer",
             "Rød hummer",
             "Hummer på tallerken"
+        ],
+        "wrongalt1": [
+            "Rømme",
+            "Handle",
+            "Hanske"
+        ],
+        "wrongalt2": [
+            "Blå brokkoli",
+            "Rød chili",
+            "Krabbeskjell"
+        ],
+        "wrongalt3": [
+            "Kopp og skål",
+            "Kjøttkaker i brun saus",
+            "Pai med bacon"
         ]
     },
     {
@@ -521,6 +1010,21 @@
             "Hodetelefoner",
             "Hvite hodetelefoner",
             "Hodetelfoner kastes i lufta"
+        ],
+        "wrongalt1": [
+            "Telefon",
+            "Hodepine",
+            "Høytaler"
+        ],
+        "wrongalt2": [
+            "Hvit snø",
+            "Gule hodetelefoner",
+            "Hvite Ørevarmere"
+        ],
+        "wrongalt3": [
+            "Liggende hodetelefoner",
+            "flytende hodetelefoner",
+            "stående hodetelefoner"
         ]
     },
     {
@@ -537,6 +1041,21 @@
             "Gitar og Forsterker",
             "El-gitar og Forsterker",
             "Svart El-gitar og svart forsterker"
+        ],
+        "wrongalt1": [
+            "Fiolin og forsterker",
+            "Kassegitar",
+            "Rød gitar og forsterker"
+        ],
+        "wrongalt2": [
+            "Elektrisk grammofon",
+            "Elektriker",
+            "Forsterket musikk"
+        ],
+        "wrongalt3": [
+            "Liggende instrumenter",
+            "Blått instrument",
+            "Fallende svarte bokser"
         ]
     },
     {
@@ -550,9 +1069,24 @@
         ],
         "complexity": 2,
         "alternatives": [
-            "Gitar spiller",
+            "Gitarist",
             "Gatesanger",
             "Mann spiller gitar og synger"
+        ],
+        "wrongalt1": [
+            "Gateklovn",
+            "Band",
+            "Orkester"
+        ],
+        "wrongalt2": [
+            "Pianist",
+            "Komiker",
+            "Operasanger"
+        ],
+        "wrongalt3": [
+            "Mann sitter å spiller",
+            "Mann ligger i gata",
+            "Dame synger solo"
         ]
     },
     {
@@ -569,6 +1103,21 @@
             "Keyboard",
             "Svart Keyboard",
             "Mann holder keyboard"
+        ],
+        "wrongalt1": [
+            "Keychain",
+            "Snøbrett",
+            "Piano"
+        ],
+        "wrongalt2": [
+            "Svart snøbrett",
+            "Svarte får",
+            "Lilla keyboard"
+        ],
+        "wrongalt3": [
+            "Gutt kaster keyboard",
+            "Mann slipper instrument",
+            "Svart keyboard flyter"
         ]
     },
     {
@@ -585,6 +1134,21 @@
             "Rødt instrument",
             "Sitar",
             "Mann spiller sitar"
+        ],
+        "wrongalt1": [
+            "Rødt vaskebrett",
+            "Sittende strenger",
+            "Rød fiolin"
+        ],
+        "wrongalt2": [
+            "Blåseinstrument",
+            "Gitar",
+            "Harpe"
+        ],
+        "wrongalt3": [
+            "Mann ligger på bakken",
+            "Person står og spiller",
+            "Dame stryker instrument"
         ]
     },
     {
@@ -600,21 +1164,21 @@
             "Krabbe",
             "Rød krabbe",
             "Krabbe på bord"
-        ]
-    },
-    {
-        "id": 41,
-        "category": "musikk",
-        "src": "024-55.png",
-        "tags": [
-            "hodetelefoner",
-            "lyd"
         ],
-        "complexity": 1,
-        "alternatives": [
-            "Hodetelefoner",
-            "Svarte hodetelefoner",
-            "Hodetelefoner henger på en stol"
+        "wrongalt1": [
+            "Kutte",
+            "Gulrot",
+            "Flaske"
+        ],
+        "wrongalt2": [
+            "Gul krabbe",
+            "Julemat",
+            "Kransekake"
+        ],
+        "wrongalt3": [
+            "Rotgrønnsak",
+            "Kasserolle med pasta",
+            "Macaroni"
         ]
     },
     {
@@ -629,6 +1193,21 @@
             "Kassetter",
             "Lyd kassetter",
             "Tre kassetter"
+        ],
+        "wrongalt1": [
+            "Kasettspiller",
+            "Videokassett",
+            "CD"
+        ],
+        "wrongalt2": [
+            "Lydfil",
+            "Musikkspiller",
+            "Diktafon"
+        ],
+        "wrongalt3": [
+            "Tre lydmaskiner",
+            "Spilleliste",
+            "To mikrofoner"
         ]
     },
     {
@@ -644,6 +1223,21 @@
             "DJ",
             "DJ-kontroller",
             "DJ spiller musikk"
+        ],
+        "wrongalt1": [
+            "Grammofon",
+            "CD-ROM",
+            "Databrett"
+        ],
+        "wrongalt2": [
+            "Dataingenør",
+            "Elektriker",
+            "Rapper"
+        ],
+        "wrongalt3": [
+            "DJ synger sanger",
+            "DJ skraper musikk",
+            "Person danser"
         ]
     },
     {
@@ -659,6 +1253,21 @@
             "CD",
             "CD-cover",
             "Fem CD'er"
+        ],
+        "wrongalt1": [
+            "Fem Kassetter",
+            "CD-Spiller",
+            "Vinyl"
+        ],
+        "wrongalt2": [
+            "Coverartist",
+            "VHS cover",
+            "Kassettspiller"
+        ],
+        "wrongalt3": [
+            "Liggende CD cover",
+            "To hvite CD cover",
+            "Fem vinylplater"
         ]
     },
     {
@@ -674,6 +1283,21 @@
             "Trekkspill",
             "Svart trekkspill",
             "Mann spiller trekkspill"
+        ],
+        "wrongalt1": [
+            "Trekkplaster",
+            "Trompet",
+            "Orgel"
+        ],
+        "wrongalt2": [
+            "Svart piano",
+            "Svart orgel",
+            "Mørk harpe"
+        ],
+        "wrongalt3": [
+            "Dame spiller trekkspill",
+            "Mann synger",
+            "Mann styker instrument"
         ]
     },
     {
@@ -687,8 +1311,19 @@
         "complexity": 1,
         "alternatives": [
             "Fiolin",
-            "Rød fiolin",
+            "Oransj fiolin",
             "Streng instrument"
+        ],
+        "wrongalt1": [
+            "Orgel",
+            "fiolett",
+            "Harpe"
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -705,6 +1340,15 @@
             "Gitar spillere",
             "To gitarer",
             "To gutter spiller gitar i skogen"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -721,6 +1365,15 @@
             "Noter",
             "Notebok",
             "Rød notebok"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -737,6 +1390,15 @@
             "Fløyte",
             "Svart fløyte",
             "Mann spiller fløyte"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -751,6 +1413,15 @@
             "Strenger",
             "Gitarstrenger",
             "Seks gitarstrenger"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -765,6 +1436,15 @@
             "Mikrofon",
             "Grå og svart mikrofon",
             "Èn mikrofon"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -780,6 +1460,15 @@
             "Fiolin",
             "Fiolin og Bue",
             "Mann spiller fiolin"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -795,6 +1484,15 @@
             "Trommer",
             "Mann spiller trommer",
             "Trommeslager"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -809,6 +1507,15 @@
             "Vinylplate",
             "Mann holder vinylplate",
             "Èn vinylplate"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -825,6 +1532,15 @@
             "Platespiller",
             "Vinyl spiller",
             "Platespiller i tre"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -841,6 +1557,15 @@
             "Piano",
             "Hvit piano",
             "Robot spiller piano"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -856,6 +1581,15 @@
             "Gitar",
             "Gitarspiller",
             "Mann spiller gitar for baby"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -870,6 +1604,15 @@
             "Harpe",
             "Harpe i tre",
             "Harpe står i stua"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -885,6 +1628,15 @@
             "Musikk spiller",
             "Jukeboks",
             "Retro Jukeboks"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -900,6 +1652,15 @@
             "Korps",
             "Musikk korps",
             "Trommeslagere i rød uniform"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -915,6 +1676,15 @@
             "Trekkspill",
             "Mann med hatt spiller trekkspill",
             "Mann spiller trekkspill ute"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -930,6 +1700,15 @@
             "Xylofon",
             "Farget xylofon",
             "Baby spiller xylofon"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -945,6 +1724,15 @@
             "Gitar",
             "Mann spiller gitar",
             "mann spiller gitar i skogen"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -960,6 +1748,15 @@
             "Piano",
             "Piano i parken",
             "Mann spiller piano i parken"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -974,6 +1771,15 @@
             "Høytaler",
             "Bærbar høytaler",
             "Svart bærbar høytaler"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -989,6 +1795,15 @@
             "Fiolin",
             "Orkester",
             "Orkester spiller fioliner"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1004,6 +1819,15 @@
             "Musikkspiller",
             "Musikk spiller i skogen",
             "Musikk spiller med hodetelefoner"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1019,6 +1843,15 @@
             "Tromme",
             "Trommeslager",
             "Bongotromme"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1034,6 +1867,15 @@
             "Publikum",
             "Syngende publikum",
             "Konsert publikum"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1048,6 +1890,15 @@
             "Vokalist",
             "Kvinne synger",
             "Kvinne i gul kjole synger"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1063,6 +1914,15 @@
             "Pedal",
             "Gitarpedal",
             "Musikker trykker gitarpedal"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1077,6 +1937,15 @@
             "Vinylplate",
             "Samling av vinyl",
             "Person løfter vinylplate"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1093,6 +1962,15 @@
             "Klarinett",
             "Jente spiller klarinett",
             "Jente spiller klarinett ute"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1107,6 +1985,15 @@
             "Konserthall",
             "Tom konserthall",
             "Konserthall uten publikum"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1122,6 +2009,15 @@
             "Musikkere",
             "Band",
             "Gatemusikkere"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1137,6 +2033,15 @@
             "Gitar",
             "To gitarer",
             "To menn i hatt spiller gitar"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1152,6 +2057,15 @@
             "Orgel",
             "Stort Orgel",
             "Orgel i en kirke"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1166,6 +2080,15 @@
             "Tuba",
             "Mann kaster tuba",
             "Tuba kastes i lufta"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1181,6 +2104,15 @@
             "Grammofon",
             "Gammel grammofon",
             "Grammofon i gull"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1195,6 +2127,15 @@
             "Høytaler",
             "Svart høytaler",
             "Svart høytaler på et bord"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1210,6 +2151,15 @@
             "Piano",
             "Hender på piano",
             "Kvinne og gutt spiller piano"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1225,6 +2175,15 @@
             "Panfløyte",
             "Blåseinstrument",
             "Mann spiller panfløyte"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1240,6 +2199,15 @@
             "Jogge",
             "Knyte joggesko",
             "Mann knytter joggesko"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1254,6 +2222,15 @@
             "Ishockey",
             "Målvakt",
             "Målvakt i ishockey"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1269,6 +2246,15 @@
             "Bueskyting",
             "Skyte på blink",
             "Mann skyter på blink"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1283,6 +2269,15 @@
             "Boksehansker",
             "Rosa boksehansker",
             "Boksehansker på bakken"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1297,6 +2292,15 @@
             "Boksing",
             "Boksekamp",
             "Mann på boksekamp"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1312,6 +2316,15 @@
             "Trene",
             "Kvinne trener",
             "Kvinne trener på matte"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1327,6 +2340,15 @@
             "Alpakka",
             "Hvit Alpakka",
             "Alpakka i fjellet"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1341,6 +2363,15 @@
             "Hund",
             "Valp",
             "Grå valp"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1357,6 +2388,15 @@
             "Gris",
             "Tre griser",
             "Griser på en gård"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1373,6 +2413,15 @@
             "Gorilla",
             "Silverback",
             "Svart Gorilla"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1389,6 +2438,15 @@
             "Hund",
             "Hund på sjøen",
             "Hund på en kajakk"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1405,6 +2463,15 @@
             "And",
             "Grå and",
             "And på veien"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1420,6 +2487,15 @@
             "Isbjørn",
             "Hvit isbjørn",
             "Isbjørn leker i snøen"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1435,6 +2511,15 @@
             "Hest",
             "Beige hest",
             "Hest i landskapet"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1450,6 +2535,15 @@
             "Sau",
             "Lam",
             "Lam i gresset"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1465,6 +2559,15 @@
             "Baseball",
             "Baseball på bane",
             "Menn spiller baseball"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1479,6 +2582,15 @@
             "Tennis",
             "Blå tennisbane",
             "Mann spiller tennis"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1493,6 +2605,15 @@
             "Biljard",
             "Grønt biljardbord",
             "Biljardkø og kuler"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1507,6 +2628,15 @@
             "Golf",
             "Spille golf",
             "Han spiller golf"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1521,6 +2651,15 @@
             "Snøbrett",
             "Alpinsport",
             "Han står på snøbrett"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1534,6 +2673,15 @@
         "alternatives": [
             "Svømme",
             "Han svømmer",
+            ""
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
             ""
         ]
     },
@@ -1550,6 +2698,15 @@
             "Fulg",
             "Fugler",
             "Tre fugler sitter på en gren"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1565,6 +2722,15 @@
             "Surfe",
             "Han surfer",
             "Surfing i solnedgang"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1579,6 +2745,15 @@
             "Ugle",
             "Ugle med gule øyne",
             "Ugle med brune fjær"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1593,6 +2768,15 @@
             "Volleyball",
             "Strandvolleyball",
             "Volleyball i sanden"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1607,6 +2791,15 @@
             "Pelikan",
             "Rosa pelikan",
             "Rosa pelikaner"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1621,6 +2814,15 @@
             "Øgle",
             "Brun øgle",
             "Øgle på en stein"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1636,6 +2838,15 @@
             "Langrenn",
             "Tur på langrenn",
             "Gutt står på langrenn"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1651,6 +2862,15 @@
             "Dykke",
             "Fridykking",
             "Mann under vann"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1666,6 +2886,15 @@
             "Sjimpanser",
             "Svart sjimpanser",
             "Sjimpanser holder en ball"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1681,6 +2910,15 @@
             "Motorsykkel",
             "Motorsykkelbane",
             "Motorsykkelsport på bane"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1696,6 +2934,15 @@
             "Hest",
             "Brun hest",
             "Hest i snølandskap"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1710,6 +2957,15 @@
             "Skate",
             "Stå på skateboard",
             "Ungdom hopper med skateboard"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1726,6 +2982,15 @@
             "Skilpadde",
             "Grønn skilpadde",
             "Skilpadden"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1740,6 +3005,15 @@
             "Bowling",
             "Bowlingbane",
             "Bowlingball treffer kjeglene"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1754,6 +3028,15 @@
             "Slange",
             "Pytonslange",
             "Slange på en gren"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1769,6 +3052,15 @@
             "Slalom",
             "Slalomsbakke",
             "Han står på slalom"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1784,6 +3076,15 @@
             "Bie",
             "Bie som svever",
             "Bie svever over gul blomst"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1799,6 +3100,15 @@
             "Sykling",
             "Sykkelløp",
             "De konkurrerer på sykkel"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1814,6 +3124,15 @@
             "And",
             "Grå and",
             "Anden ligger i gresset"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1829,6 +3148,15 @@
             "Fugl",
             "Kråke",
             "Svart kråke"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1845,6 +3173,15 @@
             "Roing",
             "Rosport",
             "De ror på vannet"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1860,6 +3197,15 @@
             "Håndball",
             "Kaste ball",
             "Han kaster ballen"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1876,6 +3222,15 @@
             "Papegøye",
             "Blå papegøye",
             "Papegøye sitter på en gren"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1890,6 +3245,15 @@
             "Ballspill",
             "Innendørs volleyball",
             "Jenter vinner spill"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1906,6 +3270,15 @@
             "Katt",
             "Gul katt",
             "Katt står i døra"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1922,6 +3295,15 @@
             "Sjimpanser",
             "Svart sjimpanser",
             "To sjimpansere"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1937,6 +3319,15 @@
             "Reinsdyr",
             "Reinsdyr på veien",
             "Reinsdyr går over veien"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1953,6 +3344,15 @@
             "Hester",
             "Tre hester",
             "Hester på markene"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1967,6 +3367,15 @@
             "Geopard",
             "Flekkete geopard",
             "Geopard i naturen"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1982,6 +3391,15 @@
             "Delfin",
             "Delfin i et basseng",
             "Delfin med åpen munn"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -1996,6 +3414,15 @@
             "Hund",
             "Hårete hund",
             "Hunden ligger på senga"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     },
     {
@@ -2011,6 +3438,15 @@
             "Geit",
             "Brun og Hvit geit",
             "Geit i fjellet"
+        ],
+        "wrongalt1": [
+            ""
+        ],
+        "wrongalt2": [
+            ""
+        ],
+        "wrongalt3": [
+            ""
         ]
     }
 ]

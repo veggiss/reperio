@@ -7,7 +7,7 @@ import { GAMES_LIST } from '../../services/globals';
   styleUrls: ['games.page.scss']
 })
 export class GamesPage {
-	private games: any;
+	public games: any;
 
 	constructor() {
 		this.games = {

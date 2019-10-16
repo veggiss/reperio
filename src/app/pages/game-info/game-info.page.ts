@@ -8,7 +8,7 @@ import { getGame } from '../../services/globals';
   styleUrls: ['./game-info.page.scss'],
 })
 export class GameInfoPage implements OnInit {
-	private item:any;
+	public item:any;
 
 	constructor(private route: ActivatedRoute, private router: Router) { 
 		this.route.params.subscribe(params => {

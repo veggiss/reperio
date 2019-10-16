@@ -5,37 +5,8 @@ export const GAMES_LIST = [{
 	category: 1,
 	title: 'Match - bilde',
 	icon: 'book',
-	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
-}, {
-	id: 6,
-	category: 1,
-	title: 'Ord fall',
-	icon: 'book',
-	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
-}, {
-	id: 2,
-	category: 1,
-	title: 'Ord rulett',
-	icon: 'book',
-	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
-}, {
-	id: 3,
-	category: 2,
-	title: 'Fyll inn x',
-	icon: 'create',
-	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
-}, {
-	id: 4,
-	category: 3,
-	title: 'Match - lyd',
-	icon: 'volume-high',
-	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
-}, {
-	id: 5,
-	category: 4,
-	title: 'Match - farge',
-	icon: 'pulse',
-	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling'
+	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling',
+	thumbnail: './assets/img/thumbnail_match.png'
 }];
 
 export const categories = {
@@ -61,8 +32,35 @@ export const getGame = (id:number) => GAMES_LIST.filter(e => e.id === id);
 
 //TODO: Add this to storage
 export let favorites = [3, 1];
+export let difficulty = 1.5;
 
-const legalComplexity = n => n >= 1 && n <= 3;
+export const correctDifficulty = (correctAnswers, rounds) => {
+	let winnRate:number = (correctAnswers/rounds)*100;
+
+	console.log('winnRate: ' + winnRate);
+	console.log('old complexity: ' + difficulty);
+	
+	if (winnRate <= 10) {
+		difficulty -= 0.3;
+	} else if (winnRate > 10 && winnRate <= 25) {
+		difficulty -= 0.2;
+	} else if (winnRate > 25 && winnRate <= 50) {
+		difficulty -= 0.1;
+	} else if (winnRate > 50 && winnRate <= 75) {
+		difficulty += 0.1;
+	} else if (winnRate > 75 && winnRate <= 90) {
+		difficulty += 0.2;
+	} else if (winnRate > 90) {
+		difficulty += 0.3;
+	}
+	
+	if (difficulty < 1) difficulty = 1;
+	else if (difficulty > 3) difficulty = 3;
+	
+	console.log('new complexity: ' + difficulty);
+	
+	localStorage.setItem('difficulty', difficulty.toString());
+};
 
 export const shuffle = array => {
    for (let i = array.length - 1; i > 0; i--) {
@@ -82,43 +80,46 @@ export const getMatchImage = (category: string, tags: any, complexRate: number, 
 	let list = [];
 	
 	for (let i = 0; i < rounds; i++) {
+		//let imageComplexity = Math.floor((Math.random() * 3) + 1);
+		
 		if (i < Math.round((complexRate % 1) * rounds)) {
 			complexity = Math.ceil(complexRate);
-			console.log(complexity)
 		} else {
 			complexity = Math.floor(complexRate);
-			console.log(complexity)
 		}
 		
-		let image = listByCategory.find((e, i, arr) => {
-			if (e.complexity === complexity) {
+		let image = listByCategory.splice(Math.random() * listByCategory.length, 1)[0];
+		console.log(`Finding image random image with complexity: ${image.complexity} and alternative with: ${complexity}`);
+		
+		/*let image = listByCategory.find((e, i, arr) => {
+			if (e.complexity === imageComplexity) {
+				
 				return arr.splice(i, 1);
 			}
-		});
+		});*/
 		
 		if (image) {
-			let alternatives = [image.alternatives[Math.round(complexRate) - 1]];
-			let alternativeList = [...listByCategory];
+			let alternatives = [image.alternatives[complexity - 1]];
+			image['wrongalt' + complexity].forEach(e => alternatives.push(e));
+			/*let alternativeList = [...listByCategory];
 			
 			for (let idx = 0; idx < 3; idx++) {
 				let obj = alternativeList.splice(Math.floor(Math.random() * alternativeList.length), 1)[0];
 				
 				if (obj) {
-					alternatives.push(obj["alternatives"][Math.round(complexRate) - 1]);
+					alternatives.push(obj["alternatives"][complexity - 1]);
 				}
-			}
+			}*/
 			
-			if (alternatives.length === 4) {
+			//if (alternatives.length === 4) {
 				list.push({
 					src: image.src,
 					alternatives: shuffle(alternatives),
-					answer: image.alternatives[Math.round(complexRate) - 1]
+					answer: image.alternatives[complexity - 1]
 				})
-			}
+			//}
 		}
 	}
-	
-	console.log(list);
 	
 	return shuffle(list);
 };

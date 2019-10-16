@@ -34,8 +34,7 @@ export default class Polaroid extends Phaser.GameObjects.Sprite {
                 to: () => Phaser.Math.Between(0, 10)
             },
             ease: 'Cubic.InOut',
-            duration: 1000,
-            onStart: () => console.log("starting polaroid")
+            duration: 1000
         });
         
         this.tweenOut = () => this.scene.tweens.add({
