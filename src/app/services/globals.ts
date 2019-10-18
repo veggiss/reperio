@@ -3,7 +3,14 @@ import database from "./database.json";
 export const GAMES_LIST = [{
 	id: 1,
 	category: 1,
-	title: 'Match - bilde',
+	title: 'Finn ordet',
+	icon: 'book',
+	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling',
+	thumbnail: './assets/img/thumbnail_match.png'
+}, {
+	id: 2,
+	category: 1,
+	title: 'Flipper',
 	icon: 'book',
 	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling',
 	thumbnail: './assets/img/thumbnail_match.png'

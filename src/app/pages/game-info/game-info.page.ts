@@ -28,6 +28,6 @@ export class GameInfoPage implements OnInit {
 	}
 
 	go() {
-		this.router.navigate(['match']);
+		this.router.navigate([`game_${this.item.id}`]);
 	}
 }
