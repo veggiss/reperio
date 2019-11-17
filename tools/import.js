@@ -1,7 +1,7 @@
 const GoogleSpreadsheet = require('google-spreadsheet');
 const creds = require('./client_secret.json');
 const { getList, downloadFile } = require('./googledrive');
-const PATH = '../src/app/services/database.json';
+const PATH = '../src/app/services/testdatabase.json';
 const { promisify } = require('util');
 const fs = require('fs');
 const convert = {
@@ -15,7 +15,7 @@ async function getSheet() {
     
     const excludeKeys = ['app:edited', '_links', '_xml', 'save', 'del'];
     const info = await promisify(document.getInfo)();
-    const sheet = info.worksheets[0];
+    const sheet = info.worksheets[1];
     const rows = await promisify(sheet.getRows)();
     
     rows.forEach(obj => {
@@ -49,10 +49,10 @@ function runImport() {
         for (let image of json) {
             if (nameList.includes(image.src)) {
                 let file = fileList.filter(e => e.name === image.src)[0];
-                let created = await downloadFile(image.category, file.id, file.name);
+                let created = await downloadFile('VOST', file.id, file.name);
                 if (created) filesCreated++;
             } else {
-                console.log(`Image "src: ${image.category}/${image.src}, id: ${image.id}" does not exists!`);
+                console.log(`Image "src: vost/${image.src}, id: ${image.id}" does not exists!`);
             }
         }
 
