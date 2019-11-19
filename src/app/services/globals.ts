@@ -15,6 +15,13 @@ export const GAMES_LIST = [{
 	icon: 'book',
 	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling',
 	thumbnail: './assets/img/thumbnail_match.png'
+}, {
+	id: 3,
+	category: 2,
+	title: 'Album',
+	icon: 'create',
+	description: 'Dette er en forklaring på innholdet i spillet og sikkert andre ting tingeling',
+	thumbnail: './assets/img/thumbnail_match.png'
 }];
 
 export const categories = {
