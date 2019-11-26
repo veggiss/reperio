@@ -137,9 +137,15 @@ export default class WordCard extends Phaser.GameObjects.Sprite {
           let lastClicked = props.scene.getLastClicked();
           lastClicked.killme();
           this.killme();
-          props.scene.checkCardsAnswers();
-        }
+          let correctAnswers = props.scene.getCorrectAnswers() + 1;
+          props.scene.setCorrectAnswers(correctAnswers);
 
+          props.scene.checkCardsAnswers();
+        } else {
+          let correctAnswers = props.scene.getCorrectAnswers() - 1;
+          props.scene.setCorrectAnswers(correctAnswers);
+        }
+  
         props.scene.flipWordCards(false);
         props.scene.flipImageCards(false);
       }

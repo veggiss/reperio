@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PopoverController } from '@ionic/angular';
+import {NavController, PopoverController} from '@ionic/angular';
 import { GameMenuComponent } from '../../../components/game-menu/game-menu.component';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import * as Phaser from 'phaser';
@@ -31,7 +31,7 @@ export class AlbumPage {
     }
   };
 
-  constructor(public popoverController: PopoverController, private screenOrientation: ScreenOrientation) {
+  constructor(public popoverController: PopoverController, private navCtrl: NavController) {
     //this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE_PRIMARY);
   }
 
@@ -45,6 +45,10 @@ export class AlbumPage {
 
   getInstance () {
     return this.game.instance;
+  }
+
+  goBack() {
+    this.navCtrl.back();
   }
 
   pauseGame() {

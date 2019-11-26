@@ -24,8 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+//@import url('/assets/fonts/source_sans_pro/SourceSansPro-Regular.otf');
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./assets/fonts/source_sans_pro/SourceSansPro-Regular.otf');
+}
 
 @media (min-width: 750px) {
 	ion-content {

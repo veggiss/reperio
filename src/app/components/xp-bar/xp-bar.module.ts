@@ -3,6 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { XpBarComponent } from './xp-bar.component';
+import { PLAYER_STATS } from '../../services/globals'
 
 @NgModule({
   declarations: [XpBarComponent],

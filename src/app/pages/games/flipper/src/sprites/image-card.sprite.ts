@@ -127,7 +127,13 @@ export default class ImageCard extends Phaser.GameObjects.Sprite {
                     let lastClicked = props.scene.getLastClicked();
                     lastClicked.killme();
                     this.killme();
+                    let correctAnswers = props.scene.getCorrectAnswers() + 1;
+                    props.scene.setCorrectAnswers(correctAnswers);
+
                     props.scene.checkCardsAnswers();
+                } else {
+                    let correctAnswers = props.scene.getCorrectAnswers() - 1;
+                    props.scene.setCorrectAnswers(correctAnswers);
                 }
                 
                 props.scene.flipWordCards(false);

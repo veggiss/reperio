@@ -71,7 +71,7 @@ export class MainScene extends Phaser.Scene {
     if (this.round < this.roundData.length) {      
       this.loadTweenChain();
     } else {
-      correctDifficulty(this.correctAnswers, this.rounds);
+      correctDifficulty(this.correctAnswers, this.rounds, 'lese');
       console.log(`Round ended with: ${this.correctAnswers} of ${this.rounds} correct answers.`);
       //this.scene.start('highscore');
       document.getElementById("goBackBtn").click();

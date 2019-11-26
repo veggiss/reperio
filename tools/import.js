@@ -1,7 +1,11 @@
 const GoogleSpreadsheet = require('google-spreadsheet');
 const creds = require('./client_secret.json');
 const { getList, downloadFile } = require('./googledrive');
-const PATH = '../src/app/services/testdatabase.json';
+const PATHS = {
+    'VOST': '../src/app/services/testdatabase.json',
+    'MAIN': '../src/app/services/database.json',
+    'ALBUM': '../src/app/services/database_album.json'
+};
 const { promisify } = require('util');
 const fs = require('fs');
 const convert = {
@@ -15,7 +19,7 @@ async function getSheet() {
     
     const excludeKeys = ['app:edited', '_links', '_xml', 'save', 'del'];
     const info = await promisify(document.getInfo)();
-    const sheet = info.worksheets[1];
+    const sheet = info.worksheets[2];
     const rows = await promisify(sheet.getRows)();
     
     rows.forEach(obj => {
@@ -37,27 +41,34 @@ async function getSheet() {
 }
 
 function runImport() {
-    getSheet().then(async json => {
-        fs.writeFileSync(PATH, JSON.stringify(json, null, 4), {encoding: 'utf8'});
-        console.log(`Database written to ${PATH}`);
-        console.log('...proceeding to download images');
-
-        let fileList = await getList();
-        let nameList = fileList.map(file => file.name);
-        let filesCreated = 0;    
-        
-        for (let image of json) {
-            if (nameList.includes(image.src)) {
-                let file = fileList.filter(e => e.name === image.src)[0];
-                let created = await downloadFile('VOST', file.id, file.name);
-                if (created) filesCreated++;
-            } else {
-                console.log(`Image "src: vost/${image.src}, id: ${image.id}" does not exists!`);
+    let arg = process.argv.slice(2)[0];
+    let PATH = PATHS[arg];
+    
+    if (PATH) {
+        getSheet().then(async json => {
+            fs.writeFileSync(PATH, JSON.stringify(json, null, 4), {encoding: 'utf8'});
+            console.log(`Database written to ${PATH}`);
+            console.log('...proceeding to download images');
+    
+            let fileList = await getList();
+            let nameList = fileList.map(file => file.name);
+            let filesCreated = 0;    
+            
+            for (let image of json) {
+                if (nameList.includes(image.src)) {
+                    let file = fileList.filter(e => e.name === image.src)[0];
+                    let created = await downloadFile('album', file.id, file.name);
+                    if (created) filesCreated++;
+                } else {
+                    console.log(`Image "src: ${image.src}, id: ${image.id}" does not exists!`);
+                }
             }
-        }
-
-        console.log(`Downloaded ${filesCreated} files`);
-    }).catch(err => console.log(err));
+    
+            console.log(`Downloaded ${filesCreated} files`);
+        }).catch(err => console.log(err));
+    } else {
+        console.log("INVALID ARGUMENT => MAIN, VOST, ALBUM");
+    }
 }
 
 runImport();

@@ -9,13 +9,14 @@
 <ion-content fullscreen>
 	<div class="screenWidth">
 		<img class="titleImg" [src]="item.thumbnail"/>
-
+		
         <ion-item color="dark" style="margin-top: -5px;">
-			<ion-icon color="medium" slot="end" [name]="item.icon"></ion-icon>
+			<ion-icon color="{{favoriteColor}}" (click)="addFavorite()" id="favorite_element" slot="end" name="star"></ion-icon>
 			<ion-label color="light">{{ item.title.toUpperCase() }}</ion-label>
         </ion-item>
 
 		<ion-text>
+			<p>Ditt nivå: {{ getComplexity() }}</p>
 			<p>{{ item.description }}</p>
 		</ion-text>
 	</div>

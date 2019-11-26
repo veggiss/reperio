@@ -1,5 +1,6 @@
 ﻿import * as Phaser from "phaser";
 import { shuffle } from '../../../../../services/globals';
+import { correctDifficulty } from '../../../../../services/globals';
 
 export default class Book extends Phaser.GameObjects.Sprite {
   public image: any;
@@ -135,7 +136,7 @@ export default class Book extends Phaser.GameObjects.Sprite {
   rightAlternatives(props) {
     let alternatives = shuffle(props.data.correct.concat(props.data.wrong));
     let underlines = [];
-
+    let wrongAnswers = 0;
     let sepX = 0;
     let sepY = 0;
 
@@ -186,7 +187,13 @@ export default class Book extends Phaser.GameObjects.Sprite {
             this.correctAltBoxes.shift();
             text.guessed = true;
             underlines.forEach(e => e.alpha = 0);
+            
+            if (this.correctAltBoxes.length == 0) {
+              correctDifficulty(3, wrongAnswers, 'skrive');
+              document.getElementById("goBackBtn").click();
+            }            
           } else {
+            wrongAnswers++;
             underline.alpha = 1;
           }
         }

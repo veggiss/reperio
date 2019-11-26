@@ -1,18 +1,17 @@
 import * as Phaser from 'phaser';
 import ImageCardbg from "./sprites/image-card-bg.sprite";
-import {difficulty, getFlipperImage, shuffle} from "../../../../services/globals";
+import {difficulty, getFlipperImage, shuffle, correctDifficulty} from "../../../../services/globals";
 import ImageCard from "./sprites/image-card.sprite";
 import WordCard from "./sprites/word-card.sprite";
 import ImageCardBg from "./sprites/image-card-bg.sprite";
 import WordCardBg from "./sprites/word-card-bg.sprite";
-
 
 export class MainScene extends Phaser.Scene {
   private category: string = 'musikk';
   private round = 0;
   private rounds = 1;  
   private bgSprite: Phaser.GameObjects.TileSprite;
-  private roundData: any = getFlipperImage(this.category, [], 3, this.rounds * 4);
+  private roundData: any = getFlipperImage(this.category, [], difficulty, this.rounds * 4);
   private imageCardBg: ImageCardBg;
   private wordCardBg: WordCardBg;
   public imageCards: any[] = [];
@@ -20,12 +19,15 @@ export class MainScene extends Phaser.Scene {
   public states = ["animating", "idle", "guessing_image", "guessing_word"];
   public state = this.states[0];
   public cardsAnswered = 0;
+  public correctAnswers = 0;
   public lastClickedElement;
   public answer;
   
   public getState = () => this.state;
   public setState = state => this.state = state;
   public setAnswer = answer => this.answer = answer;
+  public getCorrectAnswers = () => this.correctAnswers;
+  public setCorrectAnswers = n => this.correctAnswers = n;
   public getAnswer = () => this.answer;
   public checkCardsAnswers = () => {
     this.cardsAnswered++;
@@ -42,6 +44,8 @@ export class MainScene extends Phaser.Scene {
 
         this.loadImageCards();
       } else {
+        console.log(this.correctAnswers, this.rounds * 4);
+        correctDifficulty(this.correctAnswers, this.rounds * 4, 'lese');
         document.getElementById("goBackBtn").click();
       }
     }

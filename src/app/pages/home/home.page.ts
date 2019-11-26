@@ -12,4 +12,8 @@ export class HomePage {
 	constructor() {
 		this.favorites = GAMES_LIST.filter(e => favorites.includes(e.id));
 	}
+
+	ionViewWillEnter() {
+		this.favorites = GAMES_LIST.filter(e => favorites.includes(e.id));
+	}
 }

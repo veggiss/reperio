@@ -1,14 +1,14 @@
 <ion-grid>
 	<ion-row>		
-		<ion-progress-bar value="0.5" class="progressBar"></ion-progress-bar>
+		<ion-progress-bar value="{{PLAYER_STATS.current_xp / PLAYER_STATS.target_xp}}" class="progressBar"></ion-progress-bar>
 		<ion-col class="ion-text-start">
-			<p>500</p>
+			<p>{{PLAYER_STATS.from_xp}}</p>
 		</ion-col>
 		<ion-col class="ion-text-center">
-			<h3>Level 5</h3>
+			<h3>Level {{PLAYER_STATS.level}}</h3>
 		</ion-col>
 		<ion-col class="ion-text-end">
-			<p>1200</p>
+			<p>{{PLAYER_STATS.target_xp}}</p>
 		</ion-col>
 	</ion-row>
 
@@ -16,29 +16,29 @@
 		<ion-col>
 			<div class="progressIcon ion-text-center">
 				<ion-icon color="dark" name="book"></ion-icon>
-				<circle-progress class="center" percent="25"></circle-progress>
-				<ion-text><h5>8</h5></ion-text>
+				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.lese.current_xp / PLAYER_STATS.sup_group.lese.target_xp) * 100}}"></circle-progress>
+				<ion-text><h5>{{PLAYER_STATS.sup_group['lese'].level}}</h5></ion-text>
 			</div>
 		</ion-col>
 		<ion-col>
 			<div class="progressIcon ion-text-center">
 				<ion-icon color="dark" name="create"></ion-icon>
-				<circle-progress class="center" percent="34"></circle-progress>
-				<ion-text><h5>2</h5></ion-text>
+				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.skrive.current_xp / PLAYER_STATS.sup_group.skrive.target_xp) * 100}}"></circle-progress>
+				<ion-text><h5>{{PLAYER_STATS.sup_group['skrive'].level}}</h5></ion-text>
 			</div>
 		</ion-col>
 		<ion-col>
 			<div class="progressIcon ion-text-center">
 				<ion-icon color="dark" name="volume-high"></ion-icon>
-				<circle-progress class="center" percent="86"></circle-progress>
-				<ion-text><h5>6</h5></ion-text>
+				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.lytte.current_xp / PLAYER_STATS.sup_group.lytte.target_xp) * 100}}"></circle-progress>
+				<ion-text><h5>{{PLAYER_STATS.sup_group['lytte'].level}}</h5></ion-text>
 			</div>
 		</ion-col>
 		<ion-col>
 			<div class="progressIcon ion-text-center">
 				<ion-icon color="dark" name="pulse"></ion-icon>
-				<circle-progress class="center" percent="15"></circle-progress>
-				<ion-text><h5>3</h5></ion-text>
+				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.hjernetrim.current_xp / PLAYER_STATS.sup_group.hjernetrim.target_xp) * 100}}"></circle-progress>
+				<ion-text><h5>{{PLAYER_STATS.sup_group['hjernetrim'].level}}</h5></ion-text>
 			</div>
 		</ion-col>
 	</ion-row>

@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "sentence": "Jenta _ bukk _ _",
+        "src": "image-104.jpg",
+        "complexity": 1,
+        "correct": [
+            "hopper",
+            "over",
+            "lia"
+        ],
+        "wrong": [
+            "under",
+            "sitter",
+            "fniser"
+        ]
+    },
+    {
+        "id": 2,
+        "sentence": "Mor og _ _ mat på _",
+        "src": "brandless-jRmlMIjuJQE-unsplash-2.jpg",
+        "complexity": 1,
+        "correct": [
+            "sønn",
+            "lager",
+            "kjøkkenet"
+        ],
+        "wrong": [
+            "hund",
+            "svømme",
+            "over",
+            "klokke"
+        ]
+    },
+    {
+        "id": 3,
+        "sentence": "Jenta _ en tallerken _ kjøkkenet",
+        "src": "image-102.jpg",
+        "complexity": 3,
+        "correct": [
+            "vasker",
+            "på"
+        ],
+        "wrong": [
+            "dasker",
+            "maskerer",
+            "inne",
+            "oppå"
+        ]
+    },
+    {
+        "id": 4,
+        "sentence": "Klatreren _ _ fjellveggen",
+        "src": "x-N4QTBfNQ8Nk-unsplash.jpg",
+        "complexity": 2,
+        "correct": [
+            "henger",
+            "i"
+        ],
+        "wrong": [
+            "sitter",
+            "ligger",
+            "hopper",
+            "på",
+            "under",
+            "nedenfor"
+        ]
+    },
+    {
+        "id": 5,
+        "sentence": "Mannen _ på et _",
+        "src": "035-36.png",
+        "complexity": 1,
+        "correct": [
+            "spiller",
+            "trekkspill"
+        ],
+        "wrong": [
+            "piller",
+            "triller",
+            "smiler",
+            "piano",
+            "orgel"
+        ]
+    },
+    {
+        "id": 6,
+        "sentence": "_ _ synker i sjøen",
+        "src": "image-96.jpg",
+        "complexity": 1,
+        "correct": [
+            "Et",
+            "skip"
+        ],
+        "wrong": [
+            "Ei",
+            "ski",
+            "Skipene",
+            "En",
+            "båt"
+        ]
+    },
+    {
+        "id": 7,
+        "sentence": "Personen _ med _ _",
+        "src": "image-43.jpg",
+        "complexity": 2,
+        "correct": [
+            "klipper",
+            "ei",
+            "saks"
+        ],
+        "wrong": [
+            "hugger",
+            "skjærer",
+            "et saks",
+            "et papir"
+        ]
+    },
+    {
+        "id": 8,
+        "sentence": "Jenta _ plantene med _ _",
+        "src": "image-101.jpg",
+        "complexity": 2,
+        "correct": [
+            "vanner",
+            "ei",
+            "mugge"
+        ],
+        "wrong": [
+            "banner",
+            "kanner",
+            "manner",
+            "et krukke",
+            "ei vase"
+        ]
+    },
+    {
+        "id": 9,
+        "sentence": "Hun liker _ _",
+        "src": "image-73.jpg",
+        "complexity": 1,
+        "correct": [
+            "å",
+            "skrive"
+        ],
+        "wrong": [
+            "skive",
+            "trive"
+        ]
+    },
+    {
+        "id": 10,
+        "sentence": "Flere _ vaier i _ _ Hellas",
+        "src": "greta-caird-dWcW-lf574k-unsplash-2.jpg",
+        "complexity": 3,
+        "correct": [
+            "flagg",
+            "vinden",
+            "i"
+        ],
+        "wrong": [
+            "klegg",
+            "vin",
+            "vindu",
+            "over",
+            "under"
+        ]
+    }
+]
