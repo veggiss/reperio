@@ -14,12 +14,12 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.server.get('*.*', express.static(APPPATH, {maxAge: '1y'}));
+app.server.get('*.*', express.static('www', {maxAge: '1y'}));
 app.all('*', function (req, res) {
-    res.status(200).sendFile('/', {root: APPPATH});
+    res.status(200).sendFile('/', {root: 'www'});
 });
  
-app.use(express.static('www'));
+//app.use(express.static('www'));
 app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
