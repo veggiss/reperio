@@ -5,13 +5,8 @@ ion-card {
 	margin-left: 15px;
 	margin-top: 0px;
 	margin-bottom: 15px;
-	border: 1px solid black;
 	box-shadow:none;
 	background-image: none;
-}
-
-ion-icon {
-	name: 'book';
 }
 
 .overlay {
@@ -27,6 +22,8 @@ ion-card-subtitle {
 	margin: 5px;
 	font-size: 15px;
 	opacity: 1;
+	margin-left: 20px;
+	bottom: 15px;
 }
 
 .topright {

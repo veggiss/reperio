@@ -4,13 +4,12 @@ import Image from './sprites/image.sprite';
 import { getMatchImage, correctDifficulty, difficulty} from '../../../../services/globals';
 import Btn from "./sprites/btn.sprite";
 
-
 export class MainScene extends Phaser.Scene {
   private category: string = 'mat';
   private state: number = 1;
   public round: number = 0;
   public correctAnswers: number = 0;
-  public rounds: number = 10;
+  public rounds: number = 5;
   private states: any = {
     1: 'loading',
     2: 'guessing'
@@ -74,6 +73,8 @@ export class MainScene extends Phaser.Scene {
     } else {
       correctDifficulty(this.correctAnswers, this.rounds);
       console.log(`Round ended with: ${this.correctAnswers} of ${this.rounds} correct answers.`);
+      //this.scene.start('highscore');
+      document.getElementById("goBackBtn").click();
     }
   }
   

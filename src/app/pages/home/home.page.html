@@ -1,13 +1,20 @@
 <div class="topMenu"></div>
 <ion-content>
-	<app-xp-bar></app-xp-bar>
-
-	<ion-item>
+	<ion-item lines="none">
+		<ion-label>
+			<ion-icon class="icon" name="md-contact"></ion-icon> Nivå
+		</ion-label>
+	</ion-item>
+	<div class="xpBar">
+		<app-xp-bar></app-xp-bar>
+	</div>
+	
+	<ion-item lines="none">
 		<ion-label>
 			<ion-icon class="icon" name="star"></ion-icon> Favoritter
 		</ion-label>
 	</ion-item>
-
+	
 	<div class="gameCards" *ngFor="let item of favorites">
 		<app-game-card [item] = "item"></app-game-card>
 	</div>

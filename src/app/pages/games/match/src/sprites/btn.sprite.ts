@@ -52,7 +52,7 @@ export default class Btn extends Phaser.GameObjects.Sprite {
             text: '',
             style: {
                 fontSize: '48px',
-                fontFamily: 'Arial',
+                fontFamily: 'Source Sans Pro',
                 color: '#000000',
                 align: 'center'
             }

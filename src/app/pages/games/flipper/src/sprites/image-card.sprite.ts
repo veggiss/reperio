@@ -127,6 +127,7 @@ export default class ImageCard extends Phaser.GameObjects.Sprite {
                     let lastClicked = props.scene.getLastClicked();
                     lastClicked.killme();
                     this.killme();
+                    props.scene.checkCardsAnswers();
                 }
                 
                 props.scene.flipWordCards(false);

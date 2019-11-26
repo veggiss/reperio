@@ -1,13 +1,13 @@
-<ion-card (click)="go(item.id)" routerDirection="forward" class="noshadow">
-	<img [src]="item.thumbnail"/>
-    <ion-icon color="dark" class="topright" name="{{
-        item.category == 1 ? 'book' :
-        item.category == 2 ? 'create' :
-        item.category == 3 ? 'volume-high' : 'pulse'
-    }}"></ion-icon>
-    <div class="noshadow">
-    	<ion-card-subtitle class="ion-text-center" color="dark">
-            {{item.title}}
-        </ion-card-subtitle>
-    </div>
-</ion-card>
+<div (click)="go(item.id)" routerDirection="forward">
+    <ion-card class="noshadow">
+        <img [src]="item.thumbnail"/>
+        <ion-icon color="light" class="topright" name="{{
+            item.category == 1 ? 'book' :
+            item.category == 2 ? 'create' :
+            item.category == 3 ? 'volume-high' : 'pulse'
+        }}"></ion-icon>
+    </ion-card>
+    <ion-card-subtitle class="ion-text-left" color="dark">
+        {{item.title}}
+    </ion-card-subtitle>
+</div>

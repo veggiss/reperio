@@ -23,7 +23,12 @@ export class AlbumPage {
     height: "100%",
     type: Phaser.WEBGL,
     scene: BootScene,
-    instance: null
+    instance: null,
+    fps: {
+      target: 60,
+      min: 60,
+      forceSetTimeOut: true﻿
+    }
   };
 
   constructor(public popoverController: PopoverController, private screenOrientation: ScreenOrientation) {

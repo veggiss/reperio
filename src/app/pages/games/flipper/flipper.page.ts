@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { GameMenuComponent } from '../../../components/game-menu/game-menu.component';
+import { NavController } from '@ionic/angular';
 import * as Phaser from 'phaser';
 import { BootScene } from './src/boot.scene';
 
@@ -22,10 +23,15 @@ export class FlipperPage {
     height: "100%",
     type: Phaser.WEBGL,
     scene: BootScene,
-    instance: null
+    instance: null,
+    fps: {
+      target: 60,
+      min: 60,
+      forceSetTimeOut: true﻿
+    }
   };
 
-  constructor(public popoverController: PopoverController) {}
+  constructor(public popoverController: PopoverController, private navCtrl: NavController) {}
 
   async presentPopover() {
     const popover = await this.popoverController.create({
@@ -37,6 +43,10 @@ export class FlipperPage {
 
   getInstance () {
     return this.game.instance;
+  }
+
+  goBack() {
+    this.navCtrl.back();
   }
 
   pauseGame() {
