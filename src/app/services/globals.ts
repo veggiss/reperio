@@ -52,11 +52,19 @@ export const GAMES_LIST = [{
 	icon: 'book',
 	description: 'I spillet Finn Ordet må du trykke på det rette ordet i forhold til hva som er på bildet. Her trener du på forståelse av verb.',
 	thumbnail: './assets/img/polaroid_thumb.png'
+}, {
+	id: 2,
+	category: 2,
+	title: 'Ord-deling',
+	icon: 'create',
+	description: 'I spillet Finn Ordet må du trykke på det rette ordet i forhold til hva som er på bildet. Her trener du på forståelse av verb.',
+	thumbnail: './assets/img/polaroid_thumb.png'
 }];
 
 export const HIGHSCORES = JSON.parse(localStorage.getItem('highscores')) || {
 	// ID
-	1: [0, 0, 0]
+	1: [0, 0, 0],
+	2: [0, 0, 0]
 };
 
 export const categories = {
@@ -79,6 +87,7 @@ export const categories = {
 };
 
 export const getGame = (id:number) => GAMES_LIST.filter(e => e.id === id);
+
 export const addXp = (category:string, points:number) => {
 	let leveledUp = {
 		main: false,
