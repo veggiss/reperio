@@ -36,9 +36,8 @@ export class FinnOrdetPage implements OnInit {
     //let orientation = window.screen.orientation;
     //await orientation.lock("portrait");
 
-    /*this.speech = new Speech();
+    this.speech = new Speech();
     this.speech.setLanguage('nb-NO');
-    await this.speech.init({'rate': 0.75});*/
 
     //TODO: Change these to using local id #variable
     this.container = document.getElementById("main-container");
@@ -53,6 +52,8 @@ export class FinnOrdetPage implements OnInit {
   }
 
   async ionViewWillEnter() {
+    await this.speech.init({'rate': 0.75});
+    
     this.points = 0;
     this.correctAnswers = 0;
     this.round = 0;    
@@ -140,11 +141,11 @@ export class FinnOrdetPage implements OnInit {
       let target = evt.target;
       let answer = target.innerHTML;
 
-      /*this.speech.cancel();
+      this.speech.cancel();
       
       this.speech.speak(<SpeechSynthesisUtterance>{
         text: answer,
-      });*/
+      });
       
       if (answer.toUpperCase() == this.roundData[this.round].answer.toUpperCase()) {
         target.color = "success";

@@ -1,6 +1,7 @@
-<div (click)="go(item.id)" routerDirection="forward">
-    <ion-card class="noshadow">
-        <img [src]="item.thumbnail"/>
+<div (click)="go(item.id)" routerDirection="forward" style="height: 100%; border: solid;">
+    <ion-card style="margin-left: 0; margin-right: 0;">
+        <img [src]="item.thumbnail" />
+        
         <ion-icon color="light" class="topright" name="{{
             item.category == 1 ? 'book' :
             item.category == 2 ? 'create' :

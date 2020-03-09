@@ -9,6 +9,11 @@ import {AlertController} from "@ionic/angular";
 })
 export class HomePage {
 	public favorites: Array<any>;
+	public GAMES_LIST: any = GAMES_LIST;
+	public sliderConfig = {
+		slidesPerView: 1.2,
+		centeredSlides: true
+	};
 
 	constructor(public alertController: AlertController) {
 		this.favorites = GAMES_LIST.filter(e => favorites.includes(e.id));

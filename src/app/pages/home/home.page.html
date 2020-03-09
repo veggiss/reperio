@@ -1,21 +1,44 @@
-<div class="topMenu"></div>
-<ion-content>
-	<ion-item lines="none">
+<ion-content fullscreen>
+	<ion-item hidden lines="none">
 		<ion-label>
 			<ion-icon class="icon" name="md-contact"></ion-icon> Nivå
 		</ion-label>
 	</ion-item>
-	<div class="xpBar">
+
+	<ion-card color="primary">
+		<ion-card-header>
+			<ion-grid>
+				<ion-row>
+					<ion-col>
+						<img style="height: 5rem; width: auto; margin: 0;" src="../../../assets/img/brain.png" />
+					</ion-col>
+					<ion-col>
+						<ion-card-subtitle>REPERIO</ion-card-subtitle>
+						<ion-card-title>Fortsett</ion-card-title>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-card-header>
+	</ion-card>
+	
+	<section style="margin: 1rem; padding: 0;">
 		<app-xp-bar></app-xp-bar>
-	</div>
+	</section>
+	
 	
 	<ion-item lines="none">
-		<ion-label>
-			<ion-icon class="icon" name="star"></ion-icon> Favoritter
+		<ion-label style="margin: 0; padding: 0;">
+			<ion-icon class="icon" name="rocket"></ion-icon> Spill
 		</ion-label>
 	</ion-item>
 	
-	<div class="gameCards" *ngFor="let item of favorites">
-		<app-game-card [item] = "item"></app-game-card>
-	</div>
+	<ion-grid style="margin: 0; padding: 0;">
+		<ion-row>
+			<ion-slides [options]="sliderConfig">
+				<ion-slide *ngFor="let item of GAMES_LIST" style="padding: 1rem">
+					<app-game-card [item]="item"></app-game-card>
+				</ion-slide>
+			</ion-slides>
+		</ion-row>
+	</ion-grid>
 </ion-content>
