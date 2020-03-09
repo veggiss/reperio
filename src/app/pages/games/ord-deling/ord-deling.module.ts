@@ -1,15 +1,16 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
-import { AlbumPage } from './album.page';
 
+import { IonicModule } from '@ionic/angular';
+
+import { OrdDelingPage } from './ord-deling.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AlbumPage
+    component: OrdDelingPage
   }
 ];
 
@@ -20,7 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AlbumPage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [OrdDelingPage]
 })
-export class AlbumPageModule {}
+export class OrdDelingPageModule {}

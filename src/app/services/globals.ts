@@ -1,14 +1,12 @@
 import databaseVost from "./testdatabase.json";
 import database from "./database.json";
 import databaseAlbum from "./database_album.json";
-import PLAY = Phaser.Sound.Events.PLAY;
-import {Local} from "protractor/built/driverProviders";
 
 export let PLAYER_STATS = JSON.parse(localStorage.getItem('PLAYER_STATS')) || {
 	level: 1,
 	current_xp: 0,
 	from_xp: 0,
-	target_xp: 50,
+	target_xp: 200,
 	add_target_xp: 50,
 	additive_xp: 25,
 	sup_group: {
@@ -50,25 +48,16 @@ export let PLAYER_STATS = JSON.parse(localStorage.getItem('PLAYER_STATS')) || {
 export const GAMES_LIST = [{
 	id: 1,
 	category: 1,
-	title: 'Match',
+	title: 'Finn Ordet',
 	icon: 'book',
-	description: 'I spillet Match må du trykke på det rette ordet i forhold til hva som er på bildet. Her trener du på forståelse av verb.',
+	description: 'I spillet Finn Ordet må du trykke på det rette ordet i forhold til hva som er på bildet. Her trener du på forståelse av verb.',
 	thumbnail: './assets/img/polaroid_thumb.png'
-}, {
-	id: 2,
-	category: 1,
-	title: 'Flipper',
-	icon: 'book',
-	description: 'I spillet Flipper er det om å gjøre å fjerne alle boksene. Trykk på en av firkantene og velg riktig ord eller bilde. Her trener du på forståelse av verb.',
-	thumbnail: './assets/img/flippern_thumb.png'
-}, {
-	id: 3,
-	category: 2,
-	title: 'Album',
-	icon: 'create',
-	description: 'I spillet Album så må du sette sammen setningen som passer til bildet. Husk å trykk på ordene i riktig rekkefølge! Her trener du på å bygge korrekte setninger.',
-	thumbnail: './assets/img/album_thumb.png'
 }];
+
+export const HIGHSCORES = JSON.parse(localStorage.getItem('highscores')) || {
+	// ID
+	1: [0, 0, 0]
+};
 
 export const categories = {
 	1: {
@@ -90,13 +79,16 @@ export const categories = {
 };
 
 export const getGame = (id:number) => GAMES_LIST.filter(e => e.id === id);
-export const addXp = (category:string, winRate:number) => {
-	if (winRate > 100) winRate = 100;
-	else if (winRate < 50) winRate = 50;
+export const addXp = (category:string, points:number) => {
+	let leveledUp = {
+		main: false,
+		category: false,
+		categoryType: category
+	};
 	
-	[PLAYER_STATS, PLAYER_STATS.sup_group[category]].forEach(stats => {
-		stats.current_xp += winRate;
-
+	[PLAYER_STATS, PLAYER_STATS.sup_group[category]].forEach((stats, i) => {
+		stats.current_xp += points;
+		
 		if (stats.current_xp >= stats.target_xp) {
 			let lastTargetXp = stats.target_xp;
 			
@@ -105,10 +97,15 @@ export const addXp = (category:string, winRate:number) => {
 			stats.target_xp += stats.target_xp + stats.add_target_xp;
 			stats.from_xp = lastTargetXp;
 			stats.add_target_xp += stats.additive_xp;
+
+			if (i == 0) leveledUp.main = true;
+			else if (i == 1) leveledUp.category = true;
 		}
 	});
 
 	localStorage.setItem('PLAYER_STATS', JSON.stringify(PLAYER_STATS));
+	
+	return leveledUp;
 };
 
 //TODO: Add this to storage
@@ -131,8 +128,23 @@ export const addToFavorites = id => {
 	return added;
 };
 
-export const correctDifficulty = (correctAnswers, rounds, category) => {
-	let winRate:number = (correctAnswers/rounds)*100;
+export const addToHighscores = (score, id) => {	
+	if (HIGHSCORES[id]) {
+		for (let i = 0; i < HIGHSCORES[id].length; i++) {
+			if (score > HIGHSCORES[id][i]) {
+				HIGHSCORES[id][i] = score;
+				localStorage.setItem('highscores', JSON.stringify(HIGHSCORES));
+				
+				return i;
+			}
+		}
+	} else {
+		console.log("Highscores: Invalid ID");
+	}
+};
+
+export const correctDifficulty = (correctAnswers, rounds, category, points) => {
+	let winRate:number = (correctAnswers/rounds) * 100;
   
 	console.log('winRate: ' + winRate);
 	console.log('old complexity: ' + difficulty);
@@ -155,7 +167,7 @@ export const correctDifficulty = (correctAnswers, rounds, category) => {
 	else if (difficulty > 3) difficulty = 3;
 	
 	localStorage.setItem('difficulty', difficulty.toString());
-	addXp(category, winRate);
+	return addXp(category, points);
 };
 
 export const shuffle = array => {
@@ -251,4 +263,19 @@ export const getAlbumImage = (category: string, tags: any, complexRate: number, 
 	}
 
 	return shuffle(list);
+};
+
+export const tween = (element, animationName, delay, direction, callback) => {
+	element.classList.add('animated', animationName, delay);
+	
+	function handleAnimationEnd() {
+		element.classList.remove('animated', animationName, delay);
+		element.removeEventListener('animationend', handleAnimationEnd);
+	
+		//if (direction === "in") element.style.visibility = "hidden";
+	
+		if (typeof callback === 'function') callback();
+	}
+	
+	element.addEventListener('animationend', handleAnimationEnd);
 };

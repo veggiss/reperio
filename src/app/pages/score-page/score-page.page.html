@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/" routerDirection="back"><ion-icon name="home"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Resultat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center slideIn">
+      <ion-list lines="none" style="width: 12rem; margin-bottom: 0">
+        <ion-item id="highscore0">
+          <ion-icon class="gold" name="md-medal" size="large"></ion-icon>
+          <ion-label>1.</ion-label>
+          <ion-text>{{highscores[0] > 0 ? highscores[0] : '-'}}</ion-text>
+        </ion-item>
+        <ion-item id="highscore1">
+          <ion-icon class="silver" name="md-medal" size="large"></ion-icon>
+          <ion-label>2.</ion-label>
+          <ion-text>{{highscores[1] > 0 ? highscores[1] : '-'}}</ion-text>
+        </ion-item>
+        <ion-item id="highscore2">
+          <ion-icon class="bronze" name="md-medal" size="large"></ion-icon>
+          <ion-label>3.</ion-label>
+          <ion-text>{{highscores[2] > 0 ? highscores[2] : '-'}}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+    
+    <ion-row id="score-page-points" class="vertical-align-content slideIn">
+      <ion-col style="font-size: 3rem">
+        <ion-icon name="trophy" color="warning"></ion-icon>
+        <ion-label id="score-page-points-label">0</ion-label>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="slideIn">
+      <ion-col>
+        <app-xp-bar color="dark"></app-xp-bar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="5" class="ion-no-padding">
+        <ion-button routerLink="/tabs/games" routerDirection="back" expand="full" color="success" class="ion-no-margin"><ion-icon size="large" color="light" name="rocket"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col class="ion-no-padding">
+        <ion-button routerLink="/game_1" routerDirection="back" expand="full" color="primary" class="ion-no-margin"><ion-icon size="large" color="light" name="refresh"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

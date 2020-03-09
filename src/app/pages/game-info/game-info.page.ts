@@ -28,7 +28,6 @@ export class GameInfoPage implements OnInit {
 	}
 
 	ngOnInit() {
-		console.log(this.item);
 	}
 
 	getComplexity() {
@@ -39,8 +38,6 @@ export class GameInfoPage implements OnInit {
 		let icon = document.getElementById('favorite_element');
 		let added = addToFavorites(this.item.id);
 		this.favoriteColor = added ? 'favorite' : 'medium';
-		
-		console.log(this.favoriteColor)
 	}
 
 	go() {

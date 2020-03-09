@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/game-info/1" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      <ion-buttons class="ion-align-items-center ion-justify-content-center">
+        <ion-icon name="trophy" color="warning"></ion-icon>
+        <ion-text id="finn-ordet-points" color="dark"></ion-text>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid id="main-container" style="height: 100%; visibility: hidden;">
+    <ion-row style="height: 60%">
+      <img id="question-image" class="question-image box-shadow" [src]="questionImageSrc">
+    </ion-row>
+
+    <ion-row style="height: 40%">
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>

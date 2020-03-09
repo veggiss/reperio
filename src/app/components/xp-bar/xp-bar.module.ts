@@ -20,9 +20,12 @@ import { PLAYER_STATS } from '../../services/globals'
       innerStrokeWidth: 5,
       showBackground: false,
       animateTitle: false,
+      animation: true,
+      startFromZero: false,
       showTitle: false,
       showUnits: false,
-      showSubtitle: false
+      showSubtitle: false,
+      renderOnClick: false
     })
   ]
 })

@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatchPage } from './match.page';
+import { FinnOrdetPage } from './finn-ordet.page';
 
-describe('MatchPage', () => {
-  let component: MatchPage;
-  let fixture: ComponentFixture<MatchPage>;
+describe('FinnOrdetPage', () => {
+  let component: FinnOrdetPage;
+  let fixture: ComponentFixture<FinnOrdetPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MatchPage ],
+      declarations: [ FinnOrdetPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MatchPage);
+    fixture = TestBed.createComponent(FinnOrdetPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

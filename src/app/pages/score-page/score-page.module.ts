@@ -1,15 +1,17 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+
 import { IonicModule } from '@ionic/angular';
-import { FlipperPage } from './flipper.page';
-//import { GameMenuComponent } from "../../../components/game-menu/game-menu.component";
+
+import { ScorePagePage } from './score-page.page';
+import {XpBarModule} from "../../components/xp-bar/xp-bar.module";
 
 const routes: Routes = [
   {
     path: '',
-    component: FlipperPage
+    component: ScorePagePage
   }
 ];
 
@@ -18,9 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    XpBarModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FlipperPage],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [ScorePagePage]
 })
-export class FlipperPageModule {}
+export class ScorePagePageModule {}
