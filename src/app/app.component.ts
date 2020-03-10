@@ -22,6 +22,10 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
+      //document.addEventListener('click', e => {
+      //  console.log(e);
+      //})
     });
   }
 }

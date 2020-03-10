@@ -10,7 +10,7 @@
     <ion-title>
       <ion-buttons class="ion-align-items-center ion-justify-content-center">
         <ion-icon name="trophy" color="warning"></ion-icon>
-        <ion-text id="finn-ordet-points" color="dark"></ion-text>
+        <ion-text id="ord-deling-points" color="dark"></ion-text>
       </ion-buttons>
     </ion-title>
   </ion-toolbar>
@@ -18,34 +18,45 @@
 
 <ion-content>
   <ion-grid id="main-container" style="height: 100%;">
-    <ion-row style="height: 60%">
-      <img id="question-image" class="question-image box-shadow" src="../../../../assets/img/games/images/sport/gentrit-sylejmani-JjUyjE-oEbM-unsplash.jpg">
+    <ion-row style="height: 50%;">
+      <img id="question-image" class="question-image box-shadow" [src]="'../../../../assets/img/games/images/' + roundData[round].image">
     </ion-row>
 
-    <ion-row class="vertical-align-content" style="height: 40%;">
+    <ion-row class="vertical-align-content" style="height: 50%;">
       <ion-grid>
-        <ion-row>
+        <ion-row [hidden]="!roundData[round].left[0]">
           <ion-col>
-            <ion-button size="small" expand="block" color="light" style="font-size: 1.5rem; margin: 0; padding: 0;">Svømme-</ion-button>
+            <ion-button (click)="answer($event, 'left')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].left[0]}}</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button size="small" expand="block" color="light" style="font-size: 1.5rem; margin: 0; padding: 0;">terreng</ion-button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-button size="small" expand="block" color="light" style="font-size: 1.5rem; margin: 0; padding: 0;">Rømme-</ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button size="small" expand="block" color="light" style="font-size: 1.5rem; margin: 0; padding: 0;">basseng</ion-button>
+            <ion-button  (click)="answer($event, 'right')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].right[0]}}</ion-button>
           </ion-col>
         </ion-row>
-        <ion-row>
+        
+        <ion-row [hidden]="!roundData[round].left[1]">
           <ion-col>
-            <ion-button size="small" expand="block" color="light" style="font-size: 1.5rem; margin: 0; padding: 0;">Drømme-</ion-button>
+            <ion-button (click)="answer($event, 'left')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].left[1]}}</ion-button>
           </ion-col>
           <ion-col>
-            <ion-button size="small" expand="block" color="light" style="font-size: 1.5rem; margin: 0; padding: 0;">parkett</ion-button>
+            <ion-button  (click)="answer($event, 'right')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].right[1]}}</ion-button>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row [hidden]="!roundData[round].left[2]">
+          <ion-col>
+            <ion-button (click)="answer($event, 'left')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].left[2]}}</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button  (click)="answer($event, 'right')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].right[2]}}</ion-button>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row [hidden]="!roundData[round].left[3]">
+          <ion-col>
+            <ion-button (click)="answer($event, 'left')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].left[3]}}</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button  (click)="answer($event, 'right')" size="small" expand="block" color="light" class="alternative-btn">{{roundData[round].right[3]}}</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>

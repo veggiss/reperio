@@ -169,6 +169,12 @@ export const addToHighscores = (score, id) => {
 	if (HIGHSCORES[id]) {
 		for (let i = 0; i < HIGHSCORES[id].length; i++) {
 			if (score > HIGHSCORES[id][i]) {
+				let oldHighscores = [...HIGHSCORES[id]];
+				
+				for (let j = i + 1; j < HIGHSCORES[id].length; j++) {
+					HIGHSCORES[id][j] = oldHighscores[j - 1];
+				}
+
 				HIGHSCORES[id][i] = score;
 				localStorage.setItem('highscores', JSON.stringify(HIGHSCORES));
 				
@@ -302,14 +308,31 @@ export const getAlbumImage = (category: string, tags: any, complexRate: number, 
 	return shuffle(list);
 };
 
+export const getOrddelingData = () => {
+	return [{
+		image: "sport/gentrit-sylejmani-JjUyjE-oEbM-unsplash.jpg",
+		answer: "Svømmebasseng",
+		left: ["Svømme", "Rømmelangordtest"],
+		right: ["terreng", "basseng"]
+	}, {
+		image: "mat/ddp-hE78-lM4PkA-unsplash.jpg",
+		answer: "Appelsinskall",
+		left: ["Jordbær", "Tommel", "Appelsin"],
+		right: ["skall", "mann", "rengjøring"]
+	}, {
+		image: "musikk/003-11.png",
+		answer: "Musikkinstrument",
+		left: ["Bil", "Mot", "Papir", "Musikk"],
+		right: ["instrument", "gang", "skilt", "fly"]
+	}]
+};
+
 export const tween = (element, animationName, delay, direction, callback) => {
 	element.classList.add('animated', animationName, delay);
 	
 	function handleAnimationEnd() {
 		element.classList.remove('animated', animationName, delay);
 		element.removeEventListener('animationend', handleAnimationEnd);
-	
-		//if (direction === "in") element.style.visibility = "hidden";
 	
 		if (typeof callback === 'function') callback();
 	}

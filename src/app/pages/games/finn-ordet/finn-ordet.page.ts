@@ -11,7 +11,7 @@ import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
 })
 
 export class FinnOrdetPage implements OnInit {  
-  public maxRounds: number = 1;
+  public maxRounds: number = 10;
   public questionImageElement: HTMLElement;
   public questionImageSrc: string = "";
   public alternativeBtns: any = [];
