@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { GAMES_LIST, favorites } from '../../services/globals';
-import {AlertController} from "@ionic/angular";
+import {AlertController, IonSlides} from "@ionic/angular";
 
 @Component({
   selector: 'app-home',
@@ -9,10 +9,15 @@ import {AlertController} from "@ionic/angular";
 })
 export class HomePage {
 	public favorites: Array<any>;
+	@ViewChild('slides', null) slides: IonSlides;
 	public GAMES_LIST: any = GAMES_LIST;
 	public sliderConfig = {
-		slidesPerView: 1.2,
-		centeredSlides: true
+		slidesPerView: 1.5,
+		centeredSlides: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
 	};
 
 	constructor(public alertController: AlertController) {
@@ -25,6 +30,13 @@ export class HomePage {
 	
 	ionViewDidEnter() {
 		if (!localStorage.getItem('consent')) this.showConsentForm();
+	}
+
+	slidePrev() {
+		this.slides.slidePrev();
+	}
+	slideNext() {
+		this.slides.slideNext();
 	}
 	
 	async showConsentForm() {

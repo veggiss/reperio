@@ -32,13 +32,11 @@
 		</ion-label>
 	</ion-item>
 	
-	<ion-grid style="margin: 0; padding: 0;">
-		<ion-row>
-			<ion-slides [options]="sliderConfig">
-				<ion-slide *ngFor="let item of GAMES_LIST" style="padding: 1rem">
-					<app-game-card [item]="item"></app-game-card>
-				</ion-slide>
-			</ion-slides>
-		</ion-row>
-	</ion-grid>
+	<section>		
+		<ion-slides #slides [options]="sliderConfig">
+			<ion-slide *ngFor="let item of GAMES_LIST" style="padding: 1rem">
+				<app-game-card [item]="item"></app-game-card>
+			</ion-slide>
+		</ion-slides>
+	</section>
 </ion-content>
