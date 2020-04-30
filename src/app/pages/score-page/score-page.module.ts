@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { ScorePagePage } from './score-page.page';
 import {XpBarModule} from "../../components/xp-bar/xp-bar.module";
+import {StatBarModule} from "../../components/stat-bar/stat-bar.module";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 const routes: Routes = [
   {
@@ -21,6 +23,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     XpBarModule,
+    StatBarModule,
+    MatExpansionModule,
     RouterModule.forChild(routes)
   ],
   declarations: [ScorePagePage]

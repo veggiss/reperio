@@ -1,0 +1,1019 @@
+[
+    {
+        "id": 0,
+        "category": "mat",
+        "answer": "Pizza",
+        "src": "alan-hardman-SU1LFoeEUkk-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Pai",
+            "Eple",
+            "Pære"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 1,
+        "category": "mat",
+        "answer": "Søt dessert",
+        "src": "alexander-mils-aiIANaSK9DQ-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Nybakt dessert",
+            "Søt dressing",
+            "Bitter dessert"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "mat",
+        "answer": "Grønn brokkoli",
+        "src": "amir-hanna-y73ExyLsveA-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Grønn Frukt",
+            "Hvit blomkål",
+            "Grønne Spinatblader"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "mat",
+        "answer": "Sjømat",
+        "src": "anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Gulrot",
+            "Mel",
+            "Gryte"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "mat",
+        "answer": "Håndfull bær",
+        "src": "annie-spratt-bB0EsYazzXY-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "En neve grønnsaker",
+            "Røde hjertebær",
+            "Røde jordbær"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "mat",
+        "answer": "Sulten ape",
+        "src": "bao-menglong-TqD7M_uwwdE-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Tørst ape",
+            "Mett ape",
+            "Trist ape"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "mat",
+        "answer": "Stekte egg",
+        "src": "ben-kolde-FFqNATH27EM-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Kokte egg",
+            "Gul eggerøre",
+            "Stekt Sopp"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "mat",
+        "answer": "Gresskar",
+        "src": "bonnie-kittle-XAsG0EZEsyA-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Gressløk",
+            "Agurk",
+            "Appelsin"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "mat",
+        "answer": "Rødløk",
+        "src": "burhan-rexhepi-gAIhUvHv0f0-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Gul løk",
+            "Vårløk",
+            "Hvitløk"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "mat",
+        "answer": "Saftige laksefileter",
+        "src": "caroline-attwood-kC9KUtSiflw-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Rød indrefilet",
+            "Oransje fiskekake",
+            "Sur lake"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "mat",
+        "answer": "Aubergine",
+        "src": "charles-ogJNR_jhxS8-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Vin",
+            "Tomat",
+            "Løk"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "musikk",
+        "answer": "Hodetelefoner",
+        "src": "001-2.png",
+        "complexity": 1,
+        "alternatives": [
+            "Hodeskalle",
+            "Hodelus",
+            "Telefon"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "musikk",
+        "answer": "Gitar",
+        "src": "002-3.png",
+        "complexity": 1,
+        "alternatives": [
+            "Cello",
+            "Fløyte",
+            "Violin"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 13,
+        "category": "mat",
+        "answer": "Jordbær",
+        "src": "artur-rutkowski-GdTLaWamFHw-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Plommer",
+            "Vann",
+            "Jordskokk"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 14,
+        "category": "mat",
+        "answer": "Salat",
+        "src": "dmitry-dreyer-K4ERT_IYazw-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Suppe",
+            "Lat",
+            "Spinat"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 15,
+        "category": "musikk",
+        "answer": "Cellospiller",
+        "src": "003-11.png",
+        "complexity": 2,
+        "alternatives": [
+            "Gitarist",
+            "Violinist",
+            "Saxofonist"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 16,
+        "category": "mat",
+        "answer": "Bananer",
+        "src": "elena-koycheva-lWrD_CskDBU-unsplash.jpg",
+        "_clrrx": "-",
+        "complexity": 1,
+        "alternatives": [
+            "Appelsin",
+            "Bær",
+            "Sitron"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 17,
+        "category": "musikk",
+        "answer": "Banjo",
+        "src": "011-12.png",
+        "complexity": 1,
+        "alternatives": [
+            "Bananer",
+            "Bjelle",
+            "Bongo"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 18,
+        "category": "musikk",
+        "answer": "Grammofon",
+        "src": "100-65.png",
+        "complexity": 1,
+        "alternatives": [
+            "Grammatikk",
+            "Gremmelse",
+            "Diktafon"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 19,
+        "category": "musikk",
+        "answer": "Bongo",
+        "src": "073-41.png",
+        "complexity": 1,
+        "alternatives": [
+            "Balje",
+            "Bolle",
+            "Trombone"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 20,
+        "category": "musikk",
+        "answer": "Orgel",
+        "src": "097-27.png",
+        "complexity": 1,
+        "alternatives": [
+            "Organisk",
+            "Pipekonsert",
+            "Rørsystem"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 21,
+        "category": "musikk",
+        "answer": "Svevende mikrofon",
+        "src": "043-56.png",
+        "complexity": 2,
+        "alternatives": [
+            "Liggende mikrofon",
+            "Stående mikroskop",
+            "Flytende høytaler"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 22,
+        "category": "musikk",
+        "answer": "Svart høytaler",
+        "src": "089-60.png",
+        "complexity": 2,
+        "alternatives": [
+            "Svart boks",
+            "Hvit ramme",
+            "Hvit høytaler"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 23,
+        "category": "musikk",
+        "answer": "Fallende tuba",
+        "src": "098-69.png",
+        "complexity": 2,
+        "alternatives": [
+            "Svevende tube",
+            "Flytende turbulens",
+            "Stående tuba"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 24,
+        "category": "musikk",
+        "answer": "Manlige musikere",
+        "src": "095-68.png",
+        "complexity": 2,
+        "alternatives": [
+            "Kvinnelige musikere",
+            "Mannlige dansere",
+            "Syngende gitarer"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 25,
+        "category": "musikk",
+        "answer": "Hengende hodetelefoner",
+        "src": "024-55.png",
+        "complexity": 2,
+        "alternatives": [
+            "Hengende stol",
+            "Liggende gelender",
+            "Stående rekkverk"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 26,
+        "category": "musikk",
+        "answer": "Gamle kassetter",
+        "src": "025-59.png",
+        "complexity": 2,
+        "alternatives": [
+            "Gammel vinyl",
+            "VHS spiller",
+            "Fargede båndspiller"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 27,
+        "category": "musikk",
+        "answer": "Sittende sitarspiller",
+        "src": "023-72.png",
+        "complexity": 3,
+        "alternatives": [
+            "Stående gitar",
+            "Gammel sigd",
+            "Liggende musikker"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 28,
+        "category": "musikk",
+        "answer": "Gammel felespiller",
+        "src": "044-19.png",
+        "complexity": 3,
+        "alternatives": [
+            "Ung felespiller",
+            "Sovende felespiller",
+            "Sprudlende felespiller"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 29,
+        "category": "musikk",
+        "answer": "Svevende hvite hodetelefoner",
+        "src": "019-48.png",
+        "complexity": 3,
+        "alternatives": [
+            "Stående høytalere",
+            "Fallende hender",
+            "Hvit mikrofon"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 30,
+        "category": "musikk",
+        "answer": "Blåsende saksofonist",
+        "src": "008-13.png",
+        "complexity": 3,
+        "alternatives": [
+            "Blåsende vind",
+            "Flytende saksofon",
+            "Hengende saks"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 31,
+        "category": "musikk",
+        "answer": "Syngende ung gutt",
+        "src": "jason-rosewell-ASKeuOZqhYU-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Ropende gammel gutt",
+            "Syngende stor gutt",
+            "Sovende ung gutt"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 32,
+        "category": "musikk",
+        "answer": "Pianospiller",
+        "src": "009-6.png",
+        "complexity": 1,
+        "alternatives": [
+            "Pinnespiller",
+            "Pipespiller",
+            "Organisk spiller"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 33,
+        "category": "musikk",
+        "answer": "Mann holder mikrofon",
+        "src": "german-lopez-sP45Es070zI-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Kvinne holder mikrofon",
+            "Mann slipper mikrofon",
+            "Mann hopper mikrofon"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 34,
+        "category": "dyr",
+        "answer": "Lama",
+        "src": "alex-azabache-A59RzUpx9jA-unsplash-9.png",
+        "complexity": 1,
+        "alternatives": [
+            "Dama",
+            "Krana",
+            "Sama"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 35,
+        "category": "dyr",
+        "answer": "And",
+        "src": "anita-austvika-J4pBYVlBxh4-unsplash-17.png",
+        "complexity": 1,
+        "alternatives": [
+            "Anker",
+            "Andenes",
+            "Andes"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 36,
+        "category": "dyr",
+        "answer": "Firfisle",
+        "src": "christian-holzinger-_94wpXx6C4g-unsplash-73.png",
+        "complexity": 1,
+        "alternatives": [
+            "Flire",
+            "Finte",
+            "Flue"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 37,
+        "category": "dyr",
+        "answer": "Ku",
+        "src": "jake-fagan-NicYcQcZ-wE-unsplash-50.png",
+        "complexity": 1,
+        "alternatives": [
+            "Mue",
+            "Kunst",
+            "Kull"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 38,
+        "category": "dyr",
+        "answer": "Sittende kanin",
+        "src": "jason-leung-MyqmnV-lksU-unsplash-56.png",
+        "complexity": 2,
+        "alternatives": [
+            "Sovende kanin",
+            "Hoppende kanin",
+            "Løpende kanin"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 39,
+        "category": "dyr",
+        "answer": "Stående lundefugl",
+        "src": "kym-welsh-aj5ZgaE2Gi0-unsplash-19.png",
+        "complexity": 2,
+        "alternatives": [
+            "Liggende lundefugl",
+            "Sovende lundefugl",
+            "Hoppende lundefugl",
+            "Snakkende lundefugl"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 40,
+        "category": "dyr",
+        "answer": "Observante bavianer",
+        "src": "jorge-tung-CGvnSkCr4b8-unsplash-35.png",
+        "complexity": 2,
+        "alternatives": [
+            "Smilende bavianer",
+            "Liggende bavianer",
+            "Truende bavianer"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 41,
+        "category": "dyr",
+        "answer": "Nysgjerrig rev",
+        "src": "olga-kononenko-FdSD_9r8Uy8-unsplash-34.png",
+        "complexity": 2,
+        "alternatives": [
+            "Redd rev",
+            "Sovende rev",
+            "Løpende rev"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 42,
+        "category": "dyr",
+        "answer": "Stor kosete hund",
+        "src": "spencer-davis-4yzDJjewBZ4-unsplash-55.png",
+        "complexity": 3,
+        "alternatives": [
+            "Liten kosete hund",
+            "Agressiv hvit hund",
+            "Stor hvit bjørn"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 43,
+        "category": "dyr",
+        "answer": "Liten brun falk",
+        "src": "the-nigmatic-pAGWDcyK9As-unsplash-7.png",
+        "complexity": 3,
+        "alternatives": [
+            "Stor brun ørn",
+            "Liten svart fugl",
+            "Flygende brun falk"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 44,
+        "category": "dyr",
+        "answer": "Rådyr i gresset",
+        "src": "vincent-van-zalinge-77e-HYqBcMs-unsplash-39.png",
+        "complexity": 3,
+        "alternatives": [
+            "Rådyr i gata",
+            "Hest i gresset",
+            "Hjort i i fjellet"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 45,
+        "category": "dyr",
+        "answer": "Liten prikkete sommerfugl",
+        "src": "wolfgang-hasselmann-PRWgfeB2rpQ-unsplash-67.png",
+        "complexity": 3,
+        "alternatives": [
+            "Stor rosa sommerfugl",
+            "Blå liten møll",
+            "Sittende svart sommerfugl"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 46,
+        "category": "sport",
+        "answer": "Surfer",
+        "src": "guy-kawasaki-iij-QvyRAnM-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Padler",
+            "Svømmer",
+            "Dykker"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 47,
+        "category": "sport",
+        "answer": "Klatre",
+        "src": "x-N4QTBfNQ8Nk-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Klarere",
+            "Kantre",
+            "Klandre"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 48,
+        "category": "sport",
+        "answer": "Boksehansker",
+        "src": "arisa-chattasa-HZbqhd5aK3I-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Votter",
+            "Boksering",
+            "Boks"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 49,
+        "category": "sport",
+        "answer": "Løping",
+        "src": "nicolas-hoizey-Lno6-CxVXgo-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Lønning",
+            "Løsning",
+            "Lasting"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 50,
+        "category": "sport",
+        "answer": "Boksekamp",
+        "src": "hermes-rivera-qbf59TU077Q-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Boks",
+            "Boksåpner",
+            "Slagmark"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 51,
+        "category": "sport",
+        "answer": "Rykende biler",
+        "src": "ralph-blvmberg--EXF9shcTO0-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Flyende biler",
+            "Krypende biler",
+            "Ryggende biler"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 52,
+        "category": "sport",
+        "answer": "Sykkelløp",
+        "src": "quino-al-GPm3boXMtYQ-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Syklubb",
+            "Sykehus",
+            "Sykkellås"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 53,
+        "category": "sport",
+        "answer": "Hoppende skater",
+        "src": "omer-goldstein-LjS8HzK-5ss-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Løpende skater",
+            "Skatende brett",
+            "Liggende skater"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 54,
+        "category": "sport",
+        "answer": "Grønne tennisbaner",
+        "src": "sergio-souza-romrzIr6Svc-unsplash.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Grønne plener",
+            "Grønne parker",
+            "Grønne tennisballer"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 55,
+        "category": "sport",
+        "answer": "Konkurrende kamsport",
+        "src": "samuel-castro-v7vcRsGdF9M-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Kronglete menn",
+            "Kurerende grep",
+            "Kastende kamp"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 56,
+        "category": "sport",
+        "answer": "Utøvere spiller cricket",
+        "src": "sefton-marks-xEvYH8fiCWk-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Utøvende spillende plen",
+            "Unødvendig grønn park",
+            "Undrende ballsport"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 57,
+        "category": "sport",
+        "answer": "Svevende snowboarder",
+        "src": "mauro-paillex-XgaHKSV4UBA-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Svettende snowboarder",
+            "Snakkende snowboarder",
+            "Flaksende snowboarder"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 58,
+        "category": "sport",
+        "answer": "Sparkende karatejenter",
+        "src": "ashima-pargal-b24JhTZlxSg-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Sprudlende kranjenter",
+            "Krabbende karatejenter",
+            "Liggende karatejenter"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 59,
+        "category": "sport",
+        "answer": "Liten gutt på langrennski",
+        "src": "j-g-d-vHZte5Wl3Fg-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Liten gutt på slalom",
+            "Stor gutt på ski",
+            "Liten gutt i bakken"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 60,
+        "category": "sport",
+        "answer": "Fektere i masker",
+        "src": "eugene-lim-J9yPHHc0Fe4-unsplash.jpg",
+        "complexity": 3,
+        "alternatives": [
+            "Fektere i tasker",
+            "Vektere i hallen",
+            "Nektere i drakter"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    }
+]

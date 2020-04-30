@@ -1,3 +1,11 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<div *ngIf="!platform.is('mobileweb'); else mobileWidth">
+  <ion-app class="browserWidth">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-app>
+</div>
+
+<ng-template #mobileWidth>
+  <ion-app class="mobileWidth">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-app>
+</ng-template>

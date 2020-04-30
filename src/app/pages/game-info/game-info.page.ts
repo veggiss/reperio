@@ -1,6 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { getGame, difficulty, favorites, addToFavorites } from '../../services/globals';
+import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
+import {
+	getGame,
+	DIFFICULTY,
+	GAME_HISTORY,
+	getDifficultyPercent,
+	PLAYER_STATS,
+	getStatPercent, STATS_LIST, GAMES_LIST
+} from '../../services/globals';
+import {SmartAudioService} from "../../services/providers/smart-audio.service";
 
 @Component({
   selector: 'app-game-info',
@@ -9,10 +17,43 @@ import { getGame, difficulty, favorites, addToFavorites } from '../../services/g
 })
 export class GameInfoPage implements OnInit {
 	public item:any;
-	public favoriteColor:string;
-	public favoritesList:any = favorites;
+	public gameList = GAMES_LIST;
+	public statPercent = getStatPercent;
+	public statsList = {
+		grammatikk: {
+			text: 'Grammatikk',
+			hex: '#CDB2AB',
+			color: 'quinary',
+			icon: 'book-outline'
+		},
+		benevning: {
+			text: 'Benevning',
+			hex: '#EA526F',
+			color: 'secondary',
+			icon: 'image-outline'
+		},
+		semantikk: {
+			text: 'Semantikk',
+			hex: '#a559f9',
+			color: 'quaternary',
+			icon: 'share-social-outline'
+		},
+		hurtighet: {
+			text: 'Hurtighet',
+			hex: '#FF8A5B',
+			color: 'tertiary',
+			icon: 'flash-outline'
+		},
+		auditiv: {
+			text: 'Auditiv Forståelse',
+			hex: '#f9db64',
+			color: 'favorite',
+			icon: 'ear-outline'
+		}
+	};
+	public statsKeys = Object.keys(this.statsList);
 
-	constructor(private route: ActivatedRoute, private router: Router) { 
+	constructor(private route: ActivatedRoute, private router: Router, private smartAudio: SmartAudioService) { 
 		this.route.params.subscribe(params => {
 			let game = getGame(parseInt(params['id']));
 
@@ -22,22 +63,41 @@ export class GameInfoPage implements OnInit {
 			} else {
 				this.item = game[0];
 			}
-
-			this.favoriteColor = favorites.includes(this.item.id) ? 'favorite' : 'medium';
 		});
 	}
 
 	ngOnInit() {
+		this.smartAudio.preload(this.item.soundKey, this.item.soundSrc);
 	}
 
-	getComplexity() {
-		return Math.round( difficulty * 10) / 10;
+	playSound() {
+		this.smartAudio.play(this.item.soundKey);
+	}
+
+	ionViewWillLeave() {
+		this.stopSound();
+	}
+	
+	stopSound() {
+		this.smartAudio.stop(this.item.soundKey);
+	}
+	
+	getDifficulty() {
+		return getDifficultyPercent(this.item.id);
 	}
 
 	addFavorite() {
-		let icon = document.getElementById('favorite_element');
-		let added = addToFavorites(this.item.id);
-		this.favoriteColor = added ? 'favorite' : 'medium';
+		if (GAME_HISTORY[this.item.id].length > 0) {
+			let data: NavigationExtras = {
+				state: {
+					data: GAME_HISTORY[this.item.id][GAME_HISTORY[this.item.id].length - 1].data,
+					history: true,
+					id: this.item.id,
+				}
+			};
+
+			this.router.navigate([`/score-page`], data);
+		}
 	}
 
 	go() {

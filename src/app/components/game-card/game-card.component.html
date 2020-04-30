@@ -1,12 +1,8 @@
-<div (click)="go(item.id)" routerDirection="forward">
+<div (click)="go(item.id)" routerDirection="forward" (mousedown)="$event.preventDefault()">
     <ion-card style="margin-left: 0; margin-right: 0;">
-        <img [src]="item.thumbnail" />
+        <img [src]="item.thumbnail"/>
         
-        <ion-icon color="light" class="topright" name="{{
-            item.category == 1 ? 'book' :
-            item.category == 2 ? 'create' :
-            item.category == 3 ? 'volume-high' : 'pulse'
-        }}"></ion-icon>
+        <ion-icon color="light" class="topright" [name]="item.icon"></ion-icon>
     </ion-card>
     <ion-card-subtitle class="ion-text-left" color="dark">
         {{item.title}}

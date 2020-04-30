@@ -1,0 +1,662 @@
+[
+    {
+        "id": 0,
+        "type": "HB",
+        "answer": [
+            "Hav",
+            "Sjø"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 1,
+        "type": "LB",
+        "answer": [
+            "Forlatelse",
+            "Tilgivelse"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "LB",
+        "answer": [
+            "Anklage",
+            "Bebreidelse"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "HB",
+        "answer": [
+            "Kamp",
+            "Krig"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "LB",
+        "answer": [
+            "Enighet",
+            "Samtykke"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 5,
+        "type": "HB",
+        "answer": [
+            "Kontanter",
+            "Penger"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 6,
+        "type": "HB",
+        "answer": [
+            "Avgrøde",
+            "Avlinger"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 7,
+        "type": "HB",
+        "answer": [
+            "Hus",
+            "Bolig"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 8,
+        "type": "HB",
+        "answer": [
+            "Giftermål",
+            "Bryllup"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 9,
+        "type": "LB",
+        "answer": [
+            "Idè",
+            "Tanke"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 10,
+        "type": "HB",
+        "answer": [
+            "Begravelse",
+            "Bisettelse"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 11,
+        "type": "LB",
+        "answer": [
+            "Nasjon",
+            "Land"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 12,
+        "type": "HB",
+        "answer": [
+            "Verktøy",
+            "Redskap"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 13,
+        "type": "LB",
+        "answer": [
+            "Oppdagelse",
+            "Funn"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 14,
+        "type": "LB",
+        "answer": [
+            "Hell",
+            "Flaks"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 15,
+        "type": "HB",
+        "answer": [
+            "Gave",
+            "Presang"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 16,
+        "type": "LB",
+        "answer": [
+            "Løgn",
+            "Falskhet"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 17,
+        "type": "HB",
+        "answer": [
+            "Historie",
+            "Fortelling"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 18,
+        "type": "LB",
+        "answer": [
+            "Realitet",
+            "Sannhet"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 19,
+        "type": "HB",
+        "answer": [
+            "Skip",
+            "Båt"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 20,
+        "type": "LB",
+        "answer": [
+            "Råd",
+            "Veiledning"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 21,
+        "type": "LB",
+        "answer": [
+            "Svakhet",
+            "Skrøperlighet"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 22,
+        "type": "HB",
+        "answer": [
+            "Blomst",
+            "Plante"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 23,
+        "type": "LB",
+        "answer": [
+            "Utkast",
+            "Plan"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 24,
+        "type": "LB",
+        "answer": [
+            "Sikkerhet",
+            "Trygghet"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 25,
+        "type": "LB",
+        "answer": [
+            "Medlidenhet",
+            "Medfølelse"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 26,
+        "type": "LB",
+        "answer": [
+            "Fare",
+            "Trussel"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 27,
+        "type": "HB",
+        "answer": [
+            "Glede",
+            "Lykke"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 28,
+        "type": "HB",
+        "answer": [
+            "Snøskuffe",
+            "Spade"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 29,
+        "type": "HB",
+        "answer": [
+            "Lykt",
+            "Lampe"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 30,
+        "type": "LB",
+        "answer": [
+            "Advarsel",
+            "Alarm"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 31,
+        "type": "LB",
+        "answer": [
+            "Afasi",
+            "Taleproblem"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 32,
+        "type": "MB",
+        "answer": [
+            "Se",
+            "Observere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 33,
+        "type": "MB",
+        "answer": [
+            "Gi",
+            "Levere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 34,
+        "type": "MB",
+        "answer": [
+            "Skrive",
+            "Kladde"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 35,
+        "type": "MB",
+        "answer": [
+            "Skole",
+            "Lærested"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 36,
+        "type": "MB",
+        "answer": [
+            "Jobb",
+            "Levebrød"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 37,
+        "type": "MB",
+        "answer": [
+            "Klokke",
+            "Ur"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 38,
+        "type": "MB",
+        "answer": [
+            "Munn",
+            "Kjeft"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 39,
+        "type": "MB",
+        "answer": [
+            "Kjole",
+            "Plagg"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 40,
+        "type": "MB",
+        "answer": [
+            "Bil",
+            "Kjøretøy"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 41,
+        "type": "MB",
+        "answer": [
+            "Lås",
+            "Sperre"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 42,
+        "type": "MB",
+        "answer": [
+            "Ansikt",
+            "Fjes"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 43,
+        "type": "MB",
+        "answer": [
+            "Gress",
+            "Plen"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 44,
+        "type": "MB",
+        "answer": [
+            "Vifte",
+            "Veive"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 45,
+        "type": "MB",
+        "answer": [
+            "Snor",
+            "Tråd"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 46,
+        "type": "MB",
+        "answer": [
+            "Hvile",
+            "Avkobling"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 47,
+        "type": "MB",
+        "answer": [
+            "Elev",
+            "Lærling"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 48,
+        "type": "MB",
+        "answer": [
+            "Løpe",
+            "Jogge"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 49,
+        "type": "MB",
+        "answer": [
+            "Bilde",
+            "Portrett"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 50,
+        "type": "MB",
+        "answer": [
+            "Skade",
+            "Brudd"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 51,
+        "type": "MB",
+        "answer": [
+            "Spor",
+            "Skinner"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 52,
+        "type": "LB",
+        "answer": [
+            "Måte",
+            "Metode"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 53,
+        "type": "LB",
+        "answer": [
+            "Grunn",
+            "Årsak"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 54,
+        "type": "LB",
+        "answer": [
+            "Begynne",
+            "Starte"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 55,
+        "type": "HB",
+        "answer": [
+            "Sofa",
+            "Møbel"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 56,
+        "type": "HB",
+        "answer": [
+            "Mugge",
+            "Karaffel"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 57,
+        "type": "HB",
+        "answer": [
+            "Hjerte",
+            "Kjærlighet"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 58,
+        "type": "HB",
+        "answer": [
+            "Vott",
+            "Håndplagg"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 59,
+        "type": "HB",
+        "answer": [
+            "Strikk",
+            "Bånd"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    }
+]

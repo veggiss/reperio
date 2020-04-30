@@ -18,16 +18,6 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'games',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../../pages/games/games.module').then(m => m.GamesPageModule)
-          }
-        ]
-      },
-      {
         path: 'stats',
         children: [
           {

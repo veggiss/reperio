@@ -1,0 +1,18 @@
+<div>
+  <div class="animWidth ion-no-margin ion-no-padding" [style.width]="value + '%'">
+    <div style="white-space:nowrap; float:right; transform: translateX(50%);">
+      <div class="ion-text-center" style="transform: translateY(70%);">
+        <ion-label style="font-size: 1.8vh;">{{getOriginalValue(value)}}</ion-label>
+      </div>
+      
+      <div style="margin: 0; padding: 0; transform: translateY(20%);">
+        <ion-icon class="textAlign" #leftArrow color="danger" style="font-size: 2vh; opacity: 0;" name="arrow-back-outline"></ion-icon>
+        <ion-icon class="textAlign" #pointer style="font-size: 3vh;" name="caret-down-outline"></ion-icon>
+        <ion-icon class="textAlign" #rightArrow color="success" style="font-size: 2vh; opacity: 0;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <ion-progress-bar value="1" [color]="color" [class]="'progressBar ' + class"></ion-progress-bar>
+  <ion-label style="float:left; font-size: 1.8vh;" color="medium">1.0</ion-label><ion-label style="float:right; font-size: 1.8vh;" color="medium">3.0</ion-label>
+</div>

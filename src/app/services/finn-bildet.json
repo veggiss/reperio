@@ -1,0 +1,857 @@
+[
+    {
+        "id": 0,
+        "category": "mat",
+        "answer": "Pizza",
+        "src": "alan-hardman-SU1LFoeEUkk-unsplash.jpg",
+        "audio": "0_pizza.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv",
+            "benevning"
+        ]
+    },
+    {
+        "id": 1,
+        "category": "mat",
+        "answer": "Gresskar",
+        "src": "bonnie-kittle-XAsG0EZEsyA-unsplash.jpg",
+        "audio": "1_gresskar.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "mat",
+        "answer": "Jordbær",
+        "src": "artur-rutkowski-GdTLaWamFHw-unsplash.jpg",
+        "audio": "2_jordbær.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "mat",
+        "answer": "Salat",
+        "src": "dmitry-dreyer-K4ERT_IYazw-unsplash.jpg",
+        "audio": "3_salat.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "mat",
+        "answer": "Bananer",
+        "src": "elena-koycheva-lWrD_CskDBU-unsplash.jpg",
+        "audio": "4_bananer.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "mat",
+        "answer": "Sjømat",
+        "src": "anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg",
+        "audio": "5_sjømat.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "musikk",
+        "answer": "Hodetelefoner",
+        "src": "001-2.png",
+        "audio": "6_hodetelefoner.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "musikk",
+        "answer": "Gitar",
+        "src": "002-3.png",
+        "audio": "7_gitar.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "musikk",
+        "answer": "Grammofon",
+        "src": "100-65.png",
+        "audio": "8_grammofon.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "musikk",
+        "answer": "Bongo",
+        "src": "073-41.png",
+        "audio": "9_bongo.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "musikk",
+        "answer": "Orgel",
+        "src": "097-27.png",
+        "audio": "10_orgel.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "sport",
+        "answer": "Surfer",
+        "src": "guy-kawasaki-iij-QvyRAnM-unsplash.jpg",
+        "audio": "11_surfer.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "sport",
+        "answer": "Klatre",
+        "src": "x-N4QTBfNQ8Nk-unsplash.jpg",
+        "audio": "12_klatre.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 13,
+        "category": "sport",
+        "answer": "Boksehansker",
+        "src": "arisa-chattasa-HZbqhd5aK3I-unsplash.jpg",
+        "audio": "13_boksehansker.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 14,
+        "category": "sport",
+        "answer": "Løping",
+        "src": "nicolas-hoizey-Lno6-CxVXgo-unsplash.jpg",
+        "audio": "14_løping.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 15,
+        "category": "sport",
+        "answer": "Sykkelløp",
+        "src": "quino-al-GPm3boXMtYQ-unsplash.jpg",
+        "audio": "15_sykkelløp.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 16,
+        "category": "dyr",
+        "answer": "Lama",
+        "src": "alex-azabache-A59RzUpx9jA-unsplash-9.png",
+        "audio": "16_lama.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 17,
+        "category": "dyr",
+        "answer": "And",
+        "src": "anita-austvika-J4pBYVlBxh4-unsplash-17.png",
+        "audio": "17_and.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 18,
+        "category": "dyr",
+        "answer": "Firfisle",
+        "src": "christian-holzinger-_94wpXx6C4g-unsplash-73.png",
+        "audio": "18_firfisle.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 19,
+        "category": "dyr",
+        "answer": "Ku",
+        "src": "jake-fagan-NicYcQcZ-wE-unsplash-50.png",
+        "audio": "19_ku.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 20,
+        "category": "dyr",
+        "answer": "Kanin",
+        "src": "jason-leung-MyqmnV-lksU-unsplash-56.png",
+        "audio": "20_kanin.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 21,
+        "category": "mat",
+        "answer": "Bringebær",
+        "src": "annie-spratt-bB0EsYazzXY-unsplash.jpg",
+        "audio": "21_bringebær.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 22,
+        "category": "mat",
+        "answer": "Speilegg",
+        "src": "ben-kolde-FFqNATH27EM-unsplash.jpg",
+        "audio": "22_speilegg.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 23,
+        "category": "mat",
+        "answer": "Rødløk",
+        "src": "burhan-rexhepi-gAIhUvHv0f0-unsplash.jpg",
+        "audio": "23_rødløk.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 24,
+        "category": "mat",
+        "answer": "Laks",
+        "src": "caroline-attwood-kC9KUtSiflw-unsplash.jpg",
+        "audio": "24_laks.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 25,
+        "category": "mat",
+        "answer": "Aubergine",
+        "src": "charles-ogJNR_jhxS8-unsplash.jpg",
+        "audio": "25_aubergine.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 26,
+        "category": "musikk",
+        "answer": "Mikrofon",
+        "src": "043-56.png",
+        "audio": "26_mikrofon.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 27,
+        "category": "musikk",
+        "answer": "Høytaler",
+        "src": "089-60.png",
+        "audio": "27_høytaler.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 28,
+        "category": "musikk",
+        "answer": "Tuba",
+        "src": "098-69.png",
+        "audio": "28_tuba.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 29,
+        "category": "musikk",
+        "answer": "Gitarister",
+        "src": "095-68.png",
+        "audio": "29_gitarister.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 30,
+        "category": "musikk",
+        "answer": "Kassetter",
+        "src": "025-59.png",
+        "audio": "30_kassetter.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 31,
+        "category": "sport",
+        "answer": "Boksekamp",
+        "src": "hermes-rivera-qbf59TU077Q-unsplash.jpg",
+        "audio": "31_boksekamp.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 32,
+        "category": "sport",
+        "answer": "Biler",
+        "src": "ralph-blvmberg--EXF9shcTO0-unsplash.jpg",
+        "audio": "32_biler.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 33,
+        "category": "sport",
+        "answer": "Snøbrett",
+        "src": "mauro-paillex-XgaHKSV4UBA-unsplash.jpg",
+        "audio": "33_snøbrett.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 34,
+        "category": "sport",
+        "answer": "Karate",
+        "src": "ashima-pargal-b24JhTZlxSg-unsplash.jpg",
+        "audio": "34_karate.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 35,
+        "category": "sport",
+        "answer": "Langrenn",
+        "src": "j-g-d-vHZte5Wl3Fg-unsplash.jpg",
+        "audio": "35_langrenn.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 36,
+        "category": "sport",
+        "answer": "Fekting",
+        "src": "eugene-lim-J9yPHHc0Fe4-unsplash.jpg",
+        "audio": "36_fekting.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 37,
+        "category": "dyr",
+        "answer": "Lundefugl",
+        "src": "kym-welsh-aj5ZgaE2Gi0-unsplash-19.png",
+        "audio": "37_bavianer.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 38,
+        "category": "dyr",
+        "answer": "Bavianer",
+        "src": "jorge-tung-CGvnSkCr4b8-unsplash-35.png",
+        "audio": "38_lundefugl.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 39,
+        "category": "dyr",
+        "answer": "Rev",
+        "src": "olga-kononenko-FdSD_9r8Uy8-unsplash-34.png",
+        "audio": "39_Rev.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 40,
+        "category": "dyr",
+        "answer": "Hund",
+        "src": "spencer-davis-4yzDJjewBZ4-unsplash-55.png",
+        "audio": "40_hund.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 41,
+        "category": "dyr",
+        "answer": "Rådyr",
+        "src": "vincent-van-zalinge-77e-HYqBcMs-unsplash-39.png",
+        "audio": "41_rådyr.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 42,
+        "category": "dyr",
+        "answer": "Sommerfugl",
+        "src": "wolfgang-hasselmann-PRWgfeB2rpQ-unsplash-67.png",
+        "audio": "42_sommerfugl.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 43,
+        "category": "mat",
+        "answer": "Dessert",
+        "src": "alexander-mils-aiIANaSK9DQ-unsplash.jpg",
+        "audio": "43_dessert.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 44,
+        "category": "mat",
+        "answer": "Sopp",
+        "src": "christine-siracusa-XJY1C5LVNn8-unsplash.jpg",
+        "audio": "44_sopp.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 45,
+        "category": "mat",
+        "answer": "Egg",
+        "src": "danielle-macinnes-AFkahTPyM9o-unsplash.jpg",
+        "audio": "45_egg.mp3",
+        "complexity": 1,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 46,
+        "category": "mat",
+        "answer": "Tomater",
+        "src": "dani-california-gCwZSrrdSLE-unsplash.jpg",
+        "audio": "46_tomater.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 47,
+        "category": "mat",
+        "answer": "Appelsiner",
+        "src": "ddp-hE78-lM4PkA-unsplash.jpg",
+        "audio": "47_appelsiner.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 48,
+        "category": "mat",
+        "answer": "Chilli",
+        "src": "elle-hughes-sFU3-fwZ6nQ-unsplash.jpg",
+        "audio": "48_chilli.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 49,
+        "category": "musikk",
+        "answer": "Felespiller",
+        "src": "044-19.png",
+        "audio": "49_felespiller.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 50,
+        "category": "musikk",
+        "answer": "Saksofonist",
+        "src": "008-13.png",
+        "audio": "50_saksofonist.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 51,
+        "category": "musikk",
+        "answer": "Pianist",
+        "src": "009-6.png",
+        "audio": "51_pianist.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 52,
+        "category": "musikk",
+        "answer": "Vokalist",
+        "src": "007-16.png",
+        "audio": "52_vokalist.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 53,
+        "category": "musikk",
+        "answer": "Trommesett",
+        "src": "012-17.png",
+        "audio": "53_trommesett.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 54,
+        "category": "musikk",
+        "answer": "Orkester",
+        "src": "069-50.png",
+        "audio": "54_orkester.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 55,
+        "category": "sport",
+        "answer": "Cricket",
+        "src": "sefton-marks-xEvYH8fiCWk-unsplash.jpg",
+        "audio": "55_cricket.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 56,
+        "category": "sport",
+        "answer": "Målvakt",
+        "src": "andy-hall-ZH9NCQKLyMg-unsplash.jpg",
+        "audio": "56_målvakt.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 57,
+        "category": "sport",
+        "answer": "Bueskytter",
+        "src": "annie-spratt-jY9mXvA15W0-unsplash.jpg",
+        "audio": "57_bueskytter.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 58,
+        "category": "sport",
+        "answer": "Tennisspiller",
+        "src": "christopher-burns-YSfTcJZR-ws-unsplash.jpg",
+        "audio": "58_tennis.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 59,
+        "category": "sport",
+        "answer": "Volleyball",
+        "src": "ildar-garifullin-XEFfYl44Abo-unsplash.jpg",
+        "audio": "59_volleyball.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    },
+    {
+        "id": 60,
+        "category": "sport",
+        "answer": "Skihopping",
+        "src": "todd-trapani-11hnchukldg-unsplash.jpg",
+        "audio": "60_skihopping.mp3",
+        "complexity": 2,
+        "alternatives": [
+            ""
+        ],
+        "stats": [
+            "auditiv"
+        ]
+    }
+]

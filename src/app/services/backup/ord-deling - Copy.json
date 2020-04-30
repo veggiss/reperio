@@ -1,0 +1,53 @@
+[
+    {
+        "id": 0,
+        "category": "sport",
+        "answer": "Svømmebasseng",
+        "src": "gentrit-sylejmani-JjUyjE-oEbM-unsplash.jpg",
+        "complexity": 1,
+        "left": [
+            "Svømme",
+            "Rømme"
+        ],
+        "right": [
+            "terreng",
+            "basseng"
+        ]
+    },
+    {
+        "id": 1,
+        "category": "mat",
+        "answer": "Appelsinskall",
+        "src": "ddp-hE78-lM4PkA-unsplash.jpg",
+        "complexity": 2,
+        "left": [
+            "Jordbær",
+            "Tommel",
+            "Appelsin"
+        ],
+        "right": [
+            "skall",
+            "mann",
+            "rengjøring"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "musikk",
+        "answer": "Musikkinstrument",
+        "src": "003-11.png",
+        "complexity": 3,
+        "left": [
+            "Bil",
+            "Mot",
+            "Papir",
+            "Musikk"
+        ],
+        "right": [
+            "instrument",
+            "gang",
+            "skilt",
+            "fly"
+        ]
+    }
+]

@@ -1,7 +1,13 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {tween, difficulty, getMatchImage} from "../../../services/globals";
+import {
+  tween,
+  DIFFICULTY,
+  loadImages,
+  getFinnOrdetData,
+  getTimeBonus,
+  getOrddelingData, getStatPoint, getTimeStat, addRoundStats
+} from "../../../services/globals";
 import { CountUp } from 'countup.js';
-import Speech from 'speak-tts';
 import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
 
 @Component({
@@ -11,33 +17,34 @@ import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
 })
 
 export class FinnOrdetPage implements OnInit {  
-  public maxRounds: number = 10;
-  public questionImageElement: HTMLElement;
-  public questionImageSrc: string = "";
-  public alternativeBtns: any = [];
+  public questionImageElement: HTMLElement;  
   public container: HTMLElement;
   public allowInput: boolean = false;
-  public answeredCorrect: boolean = true;
-  public maxTimeTaken: number = 30;
   public pointsElement: HTMLElement;
-  public speech: any;
   public countUp: any;
+  public timeLeft: number;
   public timeStamp: number;
-  public category: string = 'lese';
-  
+  public timerInterval: any;
   public points: number;
   public correctAnswers;
   public round: number;
   public roundData: any;
+  public precachedRoundData: any;
+
+  public maxRounds: number = 10;
+  public questionImageSrc: string = "";
+  public alternativeBtns: any = [];
+  public maxTimeTaken: number = 30;
+  public category: string = 'lese';
+  public statsPoints: any = {};
+  public roundTextAlternatives = ["", "", "", ""];
+  public gameHistory: any = {};
 
   constructor(private router: Router) {}
 
   async ngOnInit() {
     //let orientation = window.screen.orientation;
     //await orientation.lock("portrait");
-
-    this.speech = new Speech();
-    this.speech.setLanguage('nb-NO');
 
     //TODO: Change these to using local id #variable
     this.container = document.getElementById("main-container");
@@ -52,47 +59,35 @@ export class FinnOrdetPage implements OnInit {
   }
 
   async ionViewWillEnter() {
-    await this.speech.init({'rate': 0.75});
-    
+    this.container.style.visibility = "hidden";
     this.points = 0;
     this.correctAnswers = 0;
     this.round = 0;    
-    this.roundData = getMatchImage("mat", [], difficulty, this.maxRounds);
+    this.roundData = getFinnOrdetData(DIFFICULTY[1], this.maxRounds);
+    this.precachedRoundData = JSON.parse(JSON.stringify(this.roundData));
     this.countUp.reset();
     
-    await this.loadImages();
+    await loadImages(this.roundData);
     
     this.startRound();
   }
   
-  loadImages() {
-    return new Promise((resolve, reject) => {
-      let imagesLoaded = 0;
-      
-      for (const round of this.roundData) {
-        this.loadImage(`./assets/img/games/images/mat/${round.src}`).then(res => {
-          round.image = res;
-          
-          imagesLoaded++;
-          if (imagesLoaded == this.maxRounds) resolve();
-        }).catch(() => reject("Error loading images"));
-      }
-    });
-  }
-  
   addPoints(points, timeBonus) {
-    this.points += Math.round((points * difficulty) + timeBonus);
+    this.points += Math.round((points * DIFFICULTY[1]) + timeBonus);
     this.countUp.update(this.points);
     tween(this.pointsElement, "tada", "slow", null, null);
   }
   
   startRound() {
     this.container.style.visibility = "visible";
-    this.answeredCorrect = true;
     this.questionImageSrc = this.roundData[this.round].image.src;
+    this.timeLeft = this.maxTimeTaken;
+    
+    this.startTimer();
+    
     this.alternativeBtns.forEach((btn, i) => {
+      this.roundTextAlternatives[i] = this.roundData[this.round].alternatives[i];
       btn.color = "light";
-      btn.innerHTML = this.roundData[this.round].alternatives[i].toUpperCase();
     });
 
     tween(this.container, "slideInRight", "fast", null, () => {
@@ -106,13 +101,17 @@ export class FinnOrdetPage implements OnInit {
       this.container.style.visibility = "hidden";
       this.round++;
       
-      if (this.round >= this.maxRounds) {
+      if (this.round >= this.roundData.length) {
         let data: NavigationExtras = {
           state: {
+            id: 1,
             points: this.points,
             correctAnswers: this.correctAnswers,
-            rounds: this.maxRounds,
-            category: 'lese'
+            rounds: this.roundData.length,
+            category: 'lese',
+            gameHistory: this.gameHistory,
+            roundData: this.precachedRoundData,
+            statPoints: this.statsPoints
           }
         };
         
@@ -122,56 +121,55 @@ export class FinnOrdetPage implements OnInit {
       }
     });
   }
-
-  loadImage(url) {
-    return new Promise((resolve, reject) => {
-      let img = new Image();
-      
-      img.addEventListener('load', e => resolve(img));
-      img.addEventListener('error', () => {
-        reject(new Error(`Failed to load image's URL: ${url}`));
-      });
-      
-      img.src = url;
-    });
-  }
   
   answer(evt) {    
     if (this.allowInput) {
+      clearInterval(this.timerInterval);
+      
+      this.allowInput = false;
       let target = evt.target;
       let answer = target.innerHTML;
-
-      this.speech.cancel();
+      let answeredCorrect = answer.toUpperCase() == this.roundData[this.round].answer.toUpperCase();
       
-      this.speech.speak(<SpeechSynthesisUtterance>{
-        text: answer,
-      });
-      
-      if (answer.toUpperCase() == this.roundData[this.round].answer.toUpperCase()) {
-        target.color = "success";
-        this.allowInput = false;
-        
-        if (this.answeredCorrect) {
-          this.correctAnswers++;
-          
-          let timeTaken = (Date.now() - this.timeStamp) / 1000;
-          let timeBonus = Math.round(timeTaken < this.maxTimeTaken ? this.maxTimeTaken - timeTaken : 0);
-          
-          this.addPoints(30, timeBonus);
-        } else {
-          this.addPoints(10, 0);
-        }
-
-        tween(target, "pulse", "slow", null, () => {
-          setTimeout(() => {
-            this.endRound();
-          }, 500);
-        });
+      if (answeredCorrect) {
+        this.correctAnswers++;
+        target.color = 'success';
+        this.addPoints(10, getTimeBonus(this.timeStamp, this.maxTimeTaken));
+        addRoundStats(this.statsPoints, 'hurtighet', this.timeLeft, null);
       } else {
         target.color = "danger";
-        this.answeredCorrect = false;
-        tween(target, "pulse", "faster", null, null);
       }
+      
+      this.addRoundInfo(answeredCorrect, answer);
+
+      tween(target, "pulse", "slow", null, () => {
+        setTimeout(() => {
+          this.endRound();
+        }, 500);
+      });
     }
+  }
+  
+  addRoundInfo(answeredCorrect, answer) {
+    if (this.roundData[this.round].stats) {
+      let roundDifficulty = this.roundData[this.round].difficulty;
+      this.roundData[this.round].stats.forEach(stat => addRoundStats(this.statsPoints, stat, roundDifficulty, answeredCorrect));
+      
+      if (!this.gameHistory[this.round]) this.gameHistory[this.round] = [];
+  
+      this.gameHistory[this.round].push({
+        guessedWord: answer,
+        answeredCorrect: answeredCorrect,
+        timeTaken: (Date.now() - this.timeStamp) / 1000
+      });
+    } else {
+      console.log('No stats list found for round: ' + this.round);
+    }
+  }
+
+  startTimer() {
+    this.timerInterval = setInterval(() => {
+      if (this.timeLeft > 0) this.timeLeft--;
+    }, 1000);
   }
 }

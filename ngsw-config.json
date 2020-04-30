@@ -8,21 +8,40 @@
       "resources": {
         "files": [
           "/favicon.ico",
-          "/index.html",
+          "/*.html",
           "/*.css",
-          "/*.js"
+          "/*.scss",
+          "/*.js",
+          "/*.ttf",
+          "/*.json"
         ]
       }
     }, {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "resources": {
         "files": [
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/**"
+        ]
+      }
+    }, {
+      "name": "icons",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/svg/*.svg"
         ]
       }
     }
+  ],
+
+  "navigationUrls": [
+    "/**/*"
   ]
 }

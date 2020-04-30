@@ -1,1 +1,182 @@
-<ion-content></ion-content>
+<ion-content fullscreen>
+    <!--<h3 class="ion-text-center"><ion-label>STATESTIKK</ion-label></h3>-->
+    
+    <ion-grid>
+        <mat-expansion-panel [expanded]="false">            
+            <mat-expansion-panel-header>
+                <mat-panel-title style="font-size: 3vh;">
+                    HISTORIKK
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <ion-segment #dateSelection value="day" (ionChange)="updateHistoryList($event.detail.value)">
+                <ion-segment-button value="day">
+                    <ion-label>DAG</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="week">
+                    <ion-label>UKE</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="month">
+                    <ion-label>MÅNED</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="all">
+                    <ion-label>ALT</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+
+            <ion-button size="small" tooltip="Ved å velge type spill og parameter, viser grafen din progresjon over tid." placement="right" color="medium">?</ion-button>
+            
+            <ion-row class="ion-padding-vertical ion-margin">                
+                <ion-list>
+                    <ion-item lines="none" *ngIf="getSelectionList().length > 0; else noData">
+                        <div>
+                            <ion-label color="medium">
+                                Spill:
+                            </ion-label>
+                            <div class="ion-padding-bottom">
+                                <select [(ngModel)]="selectedOption" [value]="selectedOption" (change)="updateLineChart()">
+                                    <option *ngFor="let label of getSelectionList()" [value]="label">
+                                        {{label.toUpperCase()}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div *ngIf="['ord-par', 'finn-ordet', 'sant-usant', 'finn-bildet'].includes(selectedOption)">
+                            <ion-label color="medium">
+                                Parameter:
+                            </ion-label>
+                            <div class="ion-padding-bottom">
+                                <select [(ngModel)]="subSelectedOption"(change)="updateLineChart()">
+                                    <option *ngFor="let label of ['SVARTID', 'VANSKELIGHETSGRAD', 'RIKTIGE SVAR']" [value]="label">
+                                        {{label}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </ion-item>
+                    
+                    <ng-template #noData>
+                        <ion-label>
+                            Ingen Data
+                        </ion-label>
+                    </ng-template>
+                </ion-list>
+                
+                <canvas #lineChart></canvas>
+            </ion-row>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title style="font-size: 2vh;">
+                        SPILL DETALJER
+                    </mat-panel-title>
+                    <mat-panel-description></mat-panel-description>
+                </mat-expansion-panel-header>
+            
+                <div *ngFor="let game of gameList">
+                    <mat-expansion-panel class="no-white-space" *ngIf="gameHistory[game].length > 0">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title style="font-size: 2vh;">
+                                {{game.split('-').join(' ').toUpperCase()}}
+                            </mat-panel-title>
+                            <mat-panel-description></mat-panel-description>
+                        </mat-expansion-panel-header>
+    
+                        <ion-list>
+                            <ion-item *ngFor="let game of gameHistory[game]; let gameIndex = index">
+                                <ion-button color="primary" (click)="presentModal(game)">ÅPNE</ion-button>
+                                <ion-label color="medium">{{getDate(game.date)}} - {{game.data.correctAnswers}} av {{game.data.roundData.length}} riktige - Vanskelighetsgrad: {{game.data.difficulty}}</ion-label>
+                            </ion-item>
+                        </ion-list>
+                    </mat-expansion-panel>
+                </div>
+            </mat-expansion-panel>
+        </mat-expansion-panel>
+        
+        <mat-expansion-panel [expanded]="true">
+            <ion-button size="small" tooltip="Diagrammet viser fordelingen av ferdighetene dine. Tallet i midten er gjennomsnittet." placement="right" color="medium">?</ion-button>
+            <mat-expansion-panel-header>
+                <mat-panel-title style="font-size: 3vh;">
+                    OVERSIKT
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+            </mat-expansion-panel-header>
+            
+            <ion-row>
+                <ion-col>
+                    <canvas style="height: 10vh; width: auto;" #barChart></canvas>
+                </ion-col>
+            </ion-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="true">
+            <ion-button size="small" tooltip="Indikerer gjennomsnittlig verdi av ferdighetene listet nedenfor (se detaljer)." placement="right" color="medium">?</ion-button>
+            <mat-expansion-panel-header>
+                <mat-panel-title style="font-size: 3vh;" class="ion-align-items-center">
+                    FERDIGHETER
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <ion-row>                
+                <ion-col>
+                    <app-stat-bar style="width: 100%;" [value]="lesePercent" color="{{statsList['verb'].color}}"></app-stat-bar>
+
+                    <ion-item lines="none" style="font-size: 2.7vh;">
+                        <ion-icon style="float: left; padding-right: 1vh; font-size: 2.6vh;" color="dark" [name]="statsList['verb'].icon"></ion-icon>
+                        <ion-label class="textAlign">LESE</ion-label>
+                    </ion-item>
+
+                    <mat-expansion-panel [expanded]="false">
+                        <mat-expansion-panel-header>
+                            DETALJER
+                        </mat-expansion-panel-header>
+                        <mat-panel-description></mat-panel-description>
+
+                        <ion-row class="text-size" *ngFor="let stat of statsKeys">
+                            <ion-col *ngIf="['verb', 'adjektiv', 'substantiv'].includes(stat)" class="ion-padding-horizontal">
+                                <app-stat-bar value="{{statPercent(stat)}}" color="{{statsList[stat].color}}"></app-stat-bar>
+
+                                <ion-item lines="none">
+                                    <ion-icon style="float: left; padding-right: 1vh;" color="dark" [name]="statsList[stat].icon"></ion-icon>
+                                    <ion-label class="textAlign">{{stat.toUpperCase()}}</ion-label>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </mat-expansion-panel>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col>
+                    <app-stat-bar style="width: 100%;" [value]="forstoelsePercent" color="septenary"></app-stat-bar>
+
+                    <ion-item lines="none">
+                        <ion-icon style="float: left; padding-right: 1vh; font-size: 2.7vh;" name="bulb-outline"></ion-icon>
+                        <ion-label class="textAlign" style="font-size: 2.5vh;">FORSTÅELSE</ion-label>
+                    </ion-item>
+
+                    <mat-expansion-panel [expanded]="false">
+                        <mat-expansion-panel-header>
+                            DETALJER
+                        </mat-expansion-panel-header>
+                        <mat-panel-description></mat-panel-description>
+
+                        <ion-row class="text-size" *ngFor="let stat of statsKeys">
+                            <ion-col *ngIf="['benevning', 'semantikk', 'hurtighet', 'auditiv'].includes(stat)" class="ion-padding-horizontal">
+                                <app-stat-bar value="{{statPercent(stat)}}" color="{{statsList[stat].color}}"></app-stat-bar>
+
+                                <ion-item lines="none">
+                                    <ion-icon style="float: left; padding-right: 1vh;" color="dark" [name]="statsList[stat].icon"></ion-icon>
+                                    <ion-label class="textAlign">{{stat.toUpperCase()}}</ion-label>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </mat-expansion-panel>
+                </ion-col>
+            </ion-row>
+        </mat-expansion-panel>
+    </ion-grid>
+</ion-content>

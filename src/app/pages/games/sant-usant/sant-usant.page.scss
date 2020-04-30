@@ -1,0 +1,14 @@
+ion-content {
+  --background: url("../../../../assets/img/games/match/bg.png");
+  --overflow: hidden !important;
+}
+
+ion-title{
+  font-size: 2em;
+}
+
+.alternative-btn {
+  font-size: 4vh;
+  position: absolute;
+  bottom: 0;
+}

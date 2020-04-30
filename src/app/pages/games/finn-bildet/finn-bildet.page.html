@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/game-info/4" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      <ion-buttons class="ion-align-items-center ion-justify-content-center">
+        <ion-icon name="star" color="primary"></ion-icon>
+        <ion-text id="finn-bildet-points" color="dark"></ion-text>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-progress-bar color="tertiary" style="height: 2vh;" value="{{timeLeft / maxTimeTaken}}"></ion-progress-bar>
+
+  <div id="main-container" style="height: 98%;">
+    <ion-grid style="height: 100%;">
+      <ion-row class="ion-align-items-end" style="height: 40%;">
+        <ion-col class="ion-align-items-end">
+          <img (click)="answer($event, 0)" class="ion-no-margin ion-no-padding imgButton" [src]="images[0]"/>
+        </ion-col>
+        <ion-col class="ion-align-items-end">
+          <img (click)="answer($event, 1)" class="ion-no-margin ion-no-padding imgButton" [src]="images[1]"/>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-start" style="height: 40%;">
+        <ion-col>
+          <img (click)="answer($event, 2)" class="ion-no-margin ion-no-padding imgButton" [src]="images[2]"/>
+        </ion-col>
+        <ion-col>
+          <img (click)="answer($event, 3)" class="ion-no-margin ion-no-padding imgButton" [src]="images[3]"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 20%;">
+        <ion-button (click)="playSound()" shape="round" color="light" style="height: 85%;"><ion-icon style="font-size: 10vh" color="dark" name="ear-outline"></ion-icon></ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

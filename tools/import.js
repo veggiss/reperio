@@ -2,9 +2,10 @@ const GoogleSpreadsheet = require('google-spreadsheet');
 const creds = require('./client_secret.json');
 const { getList, downloadFile } = require('./googledrive');
 const PATHS = {
-    'VOST': '../src/app/services/testdatabase.json',
-    'MAIN': '../src/app/services/database.json',
-    'ALBUM': '../src/app/services/database_album.json'
+    'finn-ordet': '../src/app/services/finn-ordet.json',
+    'finn-bildet': '../src/app/services/finn-bildet.json',
+    'ord-deling': '../src/app/services/ord-deling.json',
+    'sant-usant': '../src/app/services/sant-usant.json'
 };
 const { promisify } = require('util');
 const fs = require('fs');
@@ -13,13 +14,13 @@ const convert = {
     'arr': e => e.split(',').map(str => str.trim())
 };
     
-async function getSheet() {
+async function getSheet(title) {
     const document = new GoogleSpreadsheet('1ke_Lewq2kzbLWb-bFibLkmWgifSS-TZV72S0Nea5wgQ');
     await promisify(document.useServiceAccountAuth)(creds);
     
     const excludeKeys = ['app:edited', '_links', '_xml', 'save', 'del'];
     const info = await promisify(document.getInfo)();
-    const sheet = info.worksheets[2];
+    const sheet = info.worksheets.find(e => e.title === title);    
     const rows = await promisify(sheet.getRows)();
     
     rows.forEach(obj => {
@@ -45,7 +46,7 @@ function runImport() {
     let PATH = PATHS[arg];
     
     if (PATH) {
-        getSheet().then(async json => {
+        getSheet(arg).then(async json => {            
             fs.writeFileSync(PATH, JSON.stringify(json, null, 4), {encoding: 'utf8'});
             console.log(`Database written to ${PATH}`);
             console.log('...proceeding to download images');
@@ -55,19 +56,21 @@ function runImport() {
             let filesCreated = 0;    
             
             for (let image of json) {
-                if (nameList.includes(image.src)) {
-                    let file = fileList.filter(e => e.name === image.src)[0];
-                    let created = await downloadFile('album', file.id, file.name);
-                    if (created) filesCreated++;
-                } else {
-                    console.log(`Image "src: ${image.src}, id: ${image.id}" does not exists!`);
+                if (image.src) {
+                    if (nameList.includes(image.src)) {
+                        let file = fileList.filter(e => e.name === image.src)[0];
+                        let created = await downloadFile(image.category, file.id, file.name);
+                        if (created) filesCreated++;
+                    } else {
+                        console.log(`Image "src: ${image.src}, id: ${image.id}" does not exists!`);
+                    }
                 }
             }
     
             console.log(`Downloaded ${filesCreated} files`);
         }).catch(err => console.log(err));
     } else {
-        console.log("INVALID ARGUMENT => MAIN, VOST, ALBUM");
+        console.log(`INVALID ARGUMENT => ${Object.keys(PATHS)}`);
     }
 }
 

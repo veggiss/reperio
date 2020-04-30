@@ -1,0 +1,966 @@
+[
+    {
+        "id": 0,
+        "category": "sport",
+        "src": "gentrit-sylejmani-JjUyjE-oEbM-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "En sport"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 1,
+        "category": "mat",
+        "src": "ddp-hE78-lM4PkA-unsplash.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "En grønnsak"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "musikk",
+        "src": "003-11.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Et strenginstrument"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "mat",
+        "src": "annie-spratt-m1t-RJ1iCIU-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En uspiselig grønnsak"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "mat",
+        "src": "elena-koycheva-lWrD_CskDBU-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Tre blå bananer"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "mat",
+        "src": "elle-hughes-sFU3-fwZ6nQ-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Sterk grønnsak"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "sport",
+        "src": "siora-photography-hVeOZslMjGA-unsplash.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Kaster tennisball"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "sport",
+        "src": "karla-rivera-TS2_PvGhGgs-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Fritidsaktivitet"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "sport",
+        "src": "miguel-puig-phU8NHF85rU-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Gående håndballspiller"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "musikk",
+        "src": "012-17.png",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Slagverk"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "musikk",
+        "src": "018-5.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En sologitarist"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "musikk",
+        "src": "019-48.png",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Et lydaparat"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "musikk",
+        "src": "020-76.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En hvit gitar"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 13,
+        "category": "musikk",
+        "src": "069-50.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "En stor gruppe musikere"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 14,
+        "category": "mat",
+        "src": "annie-spratt-bB0EsYazzXY-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Hender holder røde grønnsaker"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 15,
+        "category": "mat",
+        "src": "annie-spratt-m1t-RJ1iCIU-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "En brokkoli"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 16,
+        "category": "mat",
+        "src": "danielle-macinnes-AFkahTPyM9o-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Flerfargede egg"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 17,
+        "category": "mat",
+        "src": "elaine-casap-qgHGDbbSNm8-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Søte og gule grønnsaker"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 18,
+        "category": "mat",
+        "src": "ernest-porzi-Z-Y6I45f9kQ-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Sure og gule sitroner"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 19,
+        "category": "mat",
+        "src": "jeff-siepman-hK9hIPgF3QU-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Rennende smakfull hvitvin"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 20,
+        "category": "mat",
+        "src": "jiangxulei1990-ELDgFshFAhw-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "En spiselig frukt"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 21,
+        "category": "mat",
+        "src": "joanna-kosinska-4qujjbj3srs-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Sunne brune blåbær"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 22,
+        "category": "dyr",
+        "src": "amber-kipp-EwJMBIshgXU-unsplash-75.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "To fete husdyr"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 23,
+        "category": "dyr",
+        "src": "amy-reed-XB5E4D-Ipco-unsplash-72.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "En svart gorilla"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 24,
+        "category": "dyr",
+        "src": "arjan-stalpers-hPGkorH0blg-unsplash-21.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "To kvitrende dyr med fjær"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 25,
+        "category": "dyr",
+        "src": "david-clode-wRt8myE0W00-unsplash-26.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Et svermende blått insekt"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 26,
+        "category": "dyr",
+        "src": "eduard-delputte-LTG3VYE6X7U-unsplash-6.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Et oransje kjæledyr"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 27,
+        "category": "dyr",
+        "src": "dominik-lange-BFsm5vldl2I-unsplash-53.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En flyvende lilla fugl"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 28,
+        "category": "dyr",
+        "src": "fabian-burghardt-A81818EFqGQ-unsplash-52.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Tre stående hester"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 29,
+        "category": "dyr",
+        "src": "janer-zhang-3MJHXOfK0jc-unsplash-87.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En hvit og flaksende svane"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 30,
+        "category": "dyr",
+        "src": "maurits-bausenhart-QMRN_GX7p4I-unsplash-13.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "En hårete og vill tiger"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 31,
+        "category": "dyr",
+        "src": "monica-silva-P1_D-zkFuy8-unsplash-84.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Tre sittende geoparder"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 32,
+        "category": "sport",
+        "src": "christopher-burns-YSfTcJZR-ws-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Et ballspill med racket"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 33,
+        "category": "sport",
+        "src": "court-prather-Nka1wVAQWa4-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En utendørs friidrett"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 34,
+        "category": "sport",
+        "src": "matteo-vistocco-Dph00R2SwFo-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Roing"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 35,
+        "category": "sport",
+        "src": "todd-trapani-11hnchukldg-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "En skihopper"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 36,
+        "category": "sport",
+        "src": "tim-mossholder-5vh4crJBztg-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Stående basketballspiller"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 37,
+        "category": "sport",
+        "src": "tommy-boudreau-diO0a_ZEiEE-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "En oransj kjegle"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 38,
+        "category": "sport",
+        "src": "ildar-garifullin-XEFfYl44Abo-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Lagsport"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 39,
+        "category": "sport",
+        "src": "chris-chow--NDHn3ownBU-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Ballsport"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 40,
+        "category": "sport",
+        "src": "bruce-mars-gJtDg6WfMlQ-unsplash.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Yogatime"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 41,
+        "category": "musikk",
+        "src": "001-2.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Stående sorte hodetelefoner"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 42,
+        "category": "musikk",
+        "src": "007-16.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Vokalist"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 43,
+        "category": "musikk",
+        "src": "008-13.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Strenginstrument"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 44,
+        "category": "musikk",
+        "src": "017-4.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Blåseinstrument"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 45,
+        "category": "musikk",
+        "src": "038-52.png",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "To mannlige musikere"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 46,
+        "category": "musikk",
+        "src": "039-22.png",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Brukes i orkester"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 47,
+        "category": "musikk",
+        "src": "042-34.png",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Smale gitarstrenger"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 48,
+        "category": "musikk",
+        "src": "056-53.png",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Harpe"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 49,
+        "category": "musikk",
+        "src": "059-33.png",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Marsjerende trommer"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 50,
+        "category": "mat",
+        "src": "anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Sjømat"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 51,
+        "category": "mat",
+        "src": "anto-meneghini-gQyTxSrctvw-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Røde bær"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 52,
+        "category": "mat",
+        "src": "ben-kolde-FFqNATH27EM-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Delikat stekt eggerøre"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 53,
+        "category": "mat",
+        "src": "burhan-rexhepi-gAIhUvHv0f0-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Smakfulle plommer"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 54,
+        "category": "mat",
+        "src": "caroline-attwood-kC9KUtSiflw-unsplash.jpg",
+        "complexity": 3,
+        "answer": 0,
+        "question": [
+            "Oransje torsk"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 55,
+        "category": "mat",
+        "src": "christine-siracusa-XJY1C5LVNn8-unsplash.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Flere kokende sopper"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 56,
+        "category": "mat",
+        "src": "dmitry-dreyer-K4ERT_IYazw-unsplash.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Salt og Pepper"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 57,
+        "category": "dyr",
+        "src": "annie-spratt-SkvPuo5jxVM-unsplash-48.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Liggende grizzlybjørn"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 58,
+        "category": "dyr",
+        "src": "arjan-stalpers-Ap3eTe7eFrA-unsplash-63.png",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Ett lite lamb"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 59,
+        "category": "dyr",
+        "src": "balint-szajki-_rzasuFVs5Y-unsplash-31.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Stirrende høne"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 60,
+        "category": "dyr",
+        "src": "allison-christine-8j-2d94Orlc-unsplash-8.png",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Et pustende kjæledyr"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    }
+]

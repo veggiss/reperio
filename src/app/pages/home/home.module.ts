@@ -6,16 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { XpBarModule } from '../../components/xp-bar/xp-bar.module';
 import { GameCardModule } from '../../components/game-card/game-card.module';
+import {HostListenerModule} from "../../services/directive/host-listener.module";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    XpBarModule,
-    GameCardModule,
-    RouterModule.forChild([{ path: '', component: HomePage }])
-  ],
+    imports: [
+        IonicModule,
+        CommonModule,
+        FormsModule,
+        XpBarModule,
+        GameCardModule,
+        HostListenerModule,
+        RouterModule.forChild([{path: '', component: HomePage}]),
+    ],
   declarations: [HomePage]
 })
 export class HomePageModule {}

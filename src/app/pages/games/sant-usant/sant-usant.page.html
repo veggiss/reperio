@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/game-info/3" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      <ion-buttons class="ion-align-items-center ion-justify-content-center">
+        <ion-icon name="star" color="primary"></ion-icon>
+        <ion-text id="sant-usant-points" color="dark"></ion-text>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-progress-bar color="tertiary" style="height: 2vh;" value="{{timeLeft / maxTimeTaken}}"></ion-progress-bar>
+    
+  <div class="ion-text-center" id="main-container">
+    <ion-card style="display: inline-block; max-width: 450px;">
+      <img [src]="questionImageSrc">
+      <ion-card-header>
+        <ion-card-title style="font-size: 3.5vh">{{questionText}}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <ion-button (click)="answer($event, 1)" class="alternative-btn ion-no-margin ion-margin" mode="md" shape="round" style="left: 10%;" size="small" expand="block" color="light"><ion-icon name="thumbs-up-outline"></ion-icon></ion-button>
+  <ion-button (click)="answer($event, 0)" class="alternative-btn ion-no-margin ion-margin" mode="md" shape="round" style="right: 10%;" size="small" expand="block" color="light"><ion-icon name="thumbs-down-outline"></ion-icon></ion-button>
+</ion-content>

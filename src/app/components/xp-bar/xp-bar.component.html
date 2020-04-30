@@ -1,6 +1,6 @@
 <ion-grid>
 	<ion-row>		
-		<ion-progress-bar value="{{PLAYER_STATS.current_xp / PLAYER_STATS.target_xp}}" class="progressBar"></ion-progress-bar>
+		<ion-progress-bar color="primary" value="{{PLAYER_STATS.current_xp / PLAYER_STATS.target_xp}}" class="progressBar"></ion-progress-bar>
 		<ion-col class="ion-text-start">
 			<p>{{PLAYER_STATS.from_xp}}</p>
 		</ion-col>
@@ -9,37 +9,6 @@
 		</ion-col>
 		<ion-col class="ion-text-end">
 			<p>{{PLAYER_STATS.target_xp}}</p>
-		</ion-col>
-	</ion-row>
-
-	<ion-row hidden style="margin-top: -35px;">
-		<ion-col #lese>
-			<div class="progressIcon ion-text-center">
-				<ion-icon color="{{color}}" name="book"></ion-icon>
-				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.lese.current_xp / PLAYER_STATS.sup_group.lese.target_xp) * 100}}"></circle-progress>
-				<ion-text color="{{color}}"><h5>{{PLAYER_STATS.sup_group['lese'].level}}</h5></ion-text>
-			</div>
-		</ion-col>
-		<ion-col #skrive>
-			<div class="progressIcon ion-text-center">
-				<ion-icon color="dark" name="create"></ion-icon>
-				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.skrive.current_xp / PLAYER_STATS.sup_group.skrive.target_xp) * 100}}"></circle-progress>
-				<ion-text><h5>{{PLAYER_STATS.sup_group['skrive'].level}}</h5></ion-text>
-			</div>
-		</ion-col>
-		<ion-col #tale>
-			<div class="progressIcon ion-text-center">
-				<ion-icon color="dark" name="volume-high"></ion-icon>
-				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.lytte.current_xp / PLAYER_STATS.sup_group.lytte.target_xp) * 100}}"></circle-progress>
-				<ion-text><h5>{{PLAYER_STATS.sup_group['lytte'].level}}</h5></ion-text>
-			</div>
-		</ion-col>
-		<ion-col #hjernetrim>
-			<div class="progressIcon ion-text-center">
-				<ion-icon color="dark" name="pulse"></ion-icon>
-				<circle-progress class="center" percent="{{(PLAYER_STATS.sup_group.hjernetrim.current_xp / PLAYER_STATS.sup_group.hjernetrim.target_xp) * 100}}"></circle-progress>
-				<ion-text><h5>{{PLAYER_STATS.sup_group['hjernetrim'].level}}</h5></ion-text>
-			</div>
 		</ion-col>
 	</ion-row>
 </ion-grid>

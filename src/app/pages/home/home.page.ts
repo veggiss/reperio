@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
-import { GAMES_LIST, favorites } from '../../services/globals';
+import { GAMES_LIST } from '../../services/globals';
 import {AlertController, IonSlides} from "@ionic/angular";
+import {FirebaseService} from "../../services/firebase/firebase.service";
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,6 @@ import {AlertController, IonSlides} from "@ionic/angular";
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-	public favorites: Array<any>;
 	@ViewChild('slides', null) slides: IonSlides;
 	public GAMES_LIST: any = GAMES_LIST;
 	public sliderConfig = {
@@ -20,13 +20,7 @@ export class HomePage {
 		}
 	};
 
-	constructor(public alertController: AlertController) {
-		this.favorites = GAMES_LIST.filter(e => favorites.includes(e.id));
-	}
-
-	ionViewWillEnter() {
-		this.favorites = GAMES_LIST.filter(e => favorites.includes(e.id));
-	}
+	constructor(public alertController: AlertController, public firebaseService: FirebaseService) {}
 	
 	ionViewDidEnter() {
 		if (!localStorage.getItem('consent')) this.showConsentForm();
@@ -47,11 +41,18 @@ export class HomePage {
 			buttons: [{
 				text: 'Gi samtykke',
 				handler: () => {
-					alert.dismiss().then(() => localStorage.setItem('consent', Date.now().toString()));
+					alert.dismiss().then(() => {
+						localStorage.setItem('consent', Date.now().toString());
+						this.firebaseService.addConsent();
+					});
 				}
 			}]
 		});
 
 		await alert.present();
+	}
+	
+	openSurvey() {
+		window.open("https://www.survey-xact.dk/LinkCollector?key=5WS2U9W6S2CJ",'_system', 'location=yes');
 	}
 }
