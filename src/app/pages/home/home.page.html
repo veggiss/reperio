@@ -1,17 +1,23 @@
 <ion-content fullscreen>
-	<ion-card color="primary" style="padding-bottom: 0; margin-bottom: 0;">
-		<ion-card-header>
+	<ion-card color="primary" class="ion-no-margin ion-no-padding">
+		<mat-expansion-panel class="ion-padding-vertical">
+			<mat-expansion-panel-header collapsedHeight="6vh">
+				<mat-panel-title class="ion-align-items-center">
+					<img style="height: 5vh;" src="../../../assets/img/brain.png" />
+				</mat-panel-title>
+				<mat-panel-description><ion-label class="vertical-align-content" style="font-size: 3vh;">DAGLIGE MÅL</ion-label></mat-panel-description>
+			</mat-expansion-panel-header>
+
 			<ion-grid>
-				<ion-row>
-					<ion-col>
-						<img style="height: 5rem; width: auto; margin: 0;" src="../../../assets/img/brain.png" />
-					</ion-col>
-					<ion-col>
-						<h1><ion-label color="dark" style="font-size: 2.9vh;">REPERIO</ion-label></h1>
-					</ion-col>
+				<ion-row>	
+					<ion-item *ngFor="let goal of GOALS_LIST; let i = index" color="primary" class="ion-no-margin ion-no-padding daily-goals-text">
+						<ion-text slot="end" class="ion-text-end">{{goal.progress}} / {{goal.max}}</ion-text>
+						<ion-icon [hidden]="!goal.finished" slot="end" class="ion-no-margin ion-no-padding" name="checkmark-circle-outline"></ion-icon>
+						<ion-label>{{goal.text}}</ion-label>
+					</ion-item>
 				</ion-row>
 			</ion-grid>
-		</ion-card-header>
+		</mat-expansion-panel>
 	</ion-card>
 	
 	<ion-grid>
@@ -24,24 +30,22 @@
 			</ion-col>
 		</ion-row>
 		
-		<ion-row style="width: 100%;">
-			<ion-col>
-				<app-xp-bar></app-xp-bar>
-			</ion-col>
+		<ion-row>
+			<app-xp-bar style="width: 100%;"></app-xp-bar>
+		</ion-row>
+		
+		<ion-row>
+			<ion-label class="ion-padding-horizontal" style="font-size: 2.5vh;">
+				<ion-icon class="icon" name="rocket-outline"></ion-icon> SPILL
+			</ion-label>
+		</ion-row>
+		
+		<ion-row>
+			<ion-slides #slides [options]="sliderConfig" (click)="$event.preventDefault()">
+				<ion-slide *ngFor="let item of GAMES_LIST" style="padding: 1rem">
+					<app-game-card [item]="item"></app-game-card>
+				</ion-slide>
+			</ion-slides>
 		</ion-row>
 	</ion-grid>
-	
-	<ion-item lines="none">
-		<ion-label style="margin: 0; padding: 0;">
-			<ion-icon class="icon" name="rocket-outline"></ion-icon> SPILL
-		</ion-label>
-	</ion-item>
-	
-	<section>		
-		<ion-slides #slides [options]="sliderConfig" (click)="$event.preventDefault()">
-			<ion-slide *ngFor="let item of GAMES_LIST" style="padding: 1rem">
-				<app-game-card [item]="item"></app-game-card>
-			</ion-slide>
-		</ion-slides>
-	</section>
 </ion-content>

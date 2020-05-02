@@ -13,7 +13,7 @@ import {
   STATS_LIST,
   PLAYER_STATS,
   addPlayerStats,
-  getAveragePercent, STATS_AVERAGE
+  getAveragePercent, STATS_AVERAGE, updateGoals
 } from "../../services/globals";
 import {XpBarComponent} from "../../components/xp-bar/xp-bar.component";
 import {CountUp} from "countup.js";
@@ -144,6 +144,7 @@ export class ScorePagePage implements OnInit {
     this.data.difficulty = DIFFICULTY[this.data.id];
 
     addGameHistory(this.data);
+    updateGoals(this.data);
     this.firebaseService.addGameHistory(this.data);
   }
 }

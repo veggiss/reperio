@@ -7,7 +7,9 @@
         "audio": "0_pizza.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "xiaolong-wong-9gpERFdyDW4-unsplash.jpg",
+            "amirali-mirhashemian-JqnuWlHmDfE-unsplash.jpg",
+            "bruna-branco-t8hTmte4O_g-unsplash.jpg"
         ],
         "stats": [
             "auditiv",
@@ -22,7 +24,9 @@
         "audio": "1_gresskar.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "dani-california-gCwZSrrdSLE-unsplash.jpg",
+            "silvia-agrasar-JxjMKynuV9w-unsplash.jpg",
+            "xiaolong-wong-9gpERFdyDW4-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -36,7 +40,9 @@
         "audio": "2_jordbær.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "zidonito-mcbrain-6wV2i_DsG8Q-unsplash.jpg",
+            "jen-theodore-P96rE0gVVLs-unsplash.jpg",
+            "vijay-verma-flGDJzwp8xk-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -50,7 +56,9 @@
         "audio": "3_salat.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "victoria-aleksandrova-n56ZKeW9bVM-unsplash.jpg",
+            "stefano-alemani-RISb03J0GK0-unsplash.jpg",
+            "tanalee-youngblood-CMdQcxsWZE0-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -64,7 +72,9 @@
         "audio": "4_bananer.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "mwangi-gatheca-hvvNY6b8pE0-unsplash-47.png",
+            "charles-deluvio-tPmezPgUeNw-unsplash.jpg",
+            "milada-vigerova-r7NhxSjz7e4-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -78,7 +88,9 @@
         "audio": "5_sjømat.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "evi-radauscher-U_D5NWMmTTM-unsplash.jpg",
+            "anastasia-taioglou-CTivHyiTbFw-unsplash.jpg",
+            "ahmed-yaaniu-lD2PZuMscsw-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -92,7 +104,9 @@
         "audio": "6_hodetelefoner.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "quino-al-8gWEAAXJjtI-unsplash.jpg",
+            "fezbot2000-V4CU3OBsrEk-unsplash.jpg",
+            "david-matos-xtLIgpytpck-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -106,7 +120,9 @@
         "audio": "7_gitar.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "003-11.png",
+            "david-pisnoy-oIm9s3llywE-unsplash.jpg",
+            "kelly-sikkema-HwU5H9Y6aL8-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -120,7 +136,9 @@
         "audio": "8_grammofon.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "wim-van-t-einde-m98fT1HAo7Q-unsplash.jpg",
+            "jay-rembert-xnK_o6OdTew-unsplash.jpg",
+            "valik-chernetskyi-rHyrFhRpAuo-unsplash.jpg"
         ],
         "stats": [
             "auditiv"
@@ -134,7 +152,9 @@
         "audio": "9_bongo.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "011-12.png",
+            "leo-wieling-pEEHFSX1vak-unsplash-1.png",
+            "012-17.png"
         ],
         "stats": [
             "auditiv"
@@ -148,7 +168,9 @@
         "audio": "10_orgel.mp3",
         "complexity": 1,
         "alternatives": [
-            ""
+            "010-18.png",
+            "pro-church-media-3E3AVpvlpao-unsplash.jpg",
+            "092-38.png"
         ],
         "stats": [
             "auditiv"
@@ -521,8 +543,8 @@
     {
         "id": 37,
         "category": "dyr",
-        "answer": "Lundefugl",
-        "src": "kym-welsh-aj5ZgaE2Gi0-unsplash-19.png",
+        "answer": "Bavianer",
+        "src": "jorge-tung-CGvnSkCr4b8-unsplash-35.png",
         "audio": "37_bavianer.mp3",
         "complexity": 2,
         "alternatives": [
@@ -535,8 +557,8 @@
     {
         "id": 38,
         "category": "dyr",
-        "answer": "Bavianer",
-        "src": "jorge-tung-CGvnSkCr4b8-unsplash-35.png",
+        "answer": "Lundefugl",
+        "src": "kym-welsh-aj5ZgaE2Gi0-unsplash-19.png",
         "audio": "38_lundefugl.mp3",
         "complexity": 2,
         "alternatives": [

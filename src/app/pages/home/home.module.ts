@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { XpBarModule } from '../../components/xp-bar/xp-bar.module';
 import { GameCardModule } from '../../components/game-card/game-card.module';
 import {HostListenerModule} from "../../services/directive/host-listener.module";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
     imports: [
@@ -15,6 +16,7 @@ import {HostListenerModule} from "../../services/directive/host-listener.module"
         FormsModule,
         XpBarModule,
         GameCardModule,
+        MatExpansionModule,
         HostListenerModule,
         RouterModule.forChild([{path: '', component: HomePage}]),
     ],

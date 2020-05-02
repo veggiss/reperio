@@ -666,7 +666,7 @@
         "category": "dyr",
         "answer": "Observante bavianer",
         "src": "jorge-tung-CGvnSkCr4b8-unsplash-35.png",
-        "complexity": 2,
+        "complexity": 3,
         "alternatives": [
             "Smilende bavianer",
             "Liggende bavianer",
@@ -866,7 +866,7 @@
     {
         "id": 52,
         "category": "sport",
-        "answer": "Sykkelløp",
+        "answer": "Sykkelritt",
         "src": "quino-al-GPm3boXMtYQ-unsplash.jpg",
         "complexity": 2,
         "alternatives": [

@@ -15,9 +15,11 @@ ion-item {
 	--background: url("../../../assets/img/games/match/bg.png");
 }
 
-.xpBar {
-	margin-left: 5%;
-	margin-right: 5%;
-	border-radius: 1em;
-	background: white;
+.daily-goals-text {
+	width: 100%; font-size: 2vh;
+}
+
+.mp-bottom {
+	padding-bottom: 0;
+	margin-bottom: 0;
 }

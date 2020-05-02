@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import { GAMES_LIST } from '../../services/globals';
+import {GAMES_LIST, GOALS_LIST, updateGoalDate} from '../../services/globals';
 import {AlertController, IonSlides} from "@ionic/angular";
 import {FirebaseService} from "../../services/firebase/firebase.service";
 
@@ -11,6 +11,7 @@ import {FirebaseService} from "../../services/firebase/firebase.service";
 export class HomePage {
 	@ViewChild('slides', null) slides: IonSlides;
 	public GAMES_LIST: any = GAMES_LIST;
+	public GOALS_LIST: any = GOALS_LIST.list;
 	public sliderConfig = {
 		slidesPerView: 1.5,
 		centeredSlides: true,
@@ -24,6 +25,8 @@ export class HomePage {
 	
 	ionViewDidEnter() {
 		if (!localStorage.getItem('consent')) this.showConsentForm();
+
+		updateGoalDate();
 	}
 
 	slidePrev() {

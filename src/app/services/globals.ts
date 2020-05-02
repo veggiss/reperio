@@ -7,7 +7,7 @@ export let PLAYER_STATS = JSON.parse(localStorage.getItem('PLAYER_STATS')) || {
 	level: 1,
 	current_xp: 0,
 	from_xp: 0,
-	target_xp: 200,
+	target_xp: 500,
 	add_target_xp: 50,
 	stats: {
 		verb: 1.5,
@@ -238,6 +238,70 @@ export const addXp = (category:string, points:number) => {
 	localStorage.setItem('PLAYER_STATS', JSON.stringify(PLAYER_STATS));
 	
 	return leveledUp;
+};
+
+export const GOALS_LIST = JSON.parse(localStorage.getItem('GOALS_LIST')) ||  {
+	date: 0,
+	list: [{
+		finished: false,
+		progress: 0,
+		max: 3,
+		text: 'Spill 3 spill'
+	}, {
+		finished: false,
+		progress: 0,
+		max: 1,
+		text: 'Svar >75% riktig i et spill',
+	}, {
+		finished: false,
+		progress: 0,
+		max: 15,
+		text: 'Svar riktig på 15 oppgaver',
+	}]
+};
+
+export const updateGoalDate = () => {
+	let date = GOALS_LIST.date;
+	let newDate = new Date();
+	newDate.setHours(0, 0, 0, 0);
+
+	if (date < newDate.getTime()) {
+		GOALS_LIST.date = newDate.getTime();
+
+		GOALS_LIST.list.forEach(goal => {
+			goal.progress = 0;
+			goal.finished = false;
+		})
+	}
+
+	localStorage.setItem('GOALS_LIST', JSON.stringify(GOALS_LIST));
+};
+
+export const updateGoals = data => {	
+	console.log(Math.round((data.correctAnswers / data.rounds) * 100));
+	
+	GOALS_LIST.list.forEach((goal, i) => {
+		if (i == 0 && goal.progress < goal.max) {
+			goal.progress++;
+
+			if (goal.progress >= goal.max) goal.finished = true;
+		} else if (i == 1 && goal.progress < goal.max) {
+			let winPercent = Math.round((data.correctAnswers / data.rounds) * 100);
+			
+			if (winPercent >= 75) goal.progress++;
+			if (goal.progress >= goal.max) goal.finished = true;
+		} else if (i == 2 && goal.progress < goal.max) {			
+			goal.progress += data.correctAnswers;
+			
+			if (goal.progress >= goal.max) {
+				goal.progress++;
+				goal.finished = true;
+				goal.progress = goal.max;
+			}
+		}
+	});
+
+	localStorage.setItem('GOALS_LIST', JSON.stringify(GOALS_LIST));
 };
 
 export const addGameHistory = (data) => {
