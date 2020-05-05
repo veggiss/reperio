@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "reperio-uia",
+    "site": "reperio-preview",
     "public": "www",
     "ignore": [
       "firebase.json",
@@ -21,6 +21,15 @@
           {
             "key": "Cache-Control",
             "value": "public, max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "ngsw-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
           }
         ]
       }

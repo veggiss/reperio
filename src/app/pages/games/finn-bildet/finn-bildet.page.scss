@@ -8,8 +8,33 @@ ion-title{
 }
 
 .imgButton {
-  height: auto;
+  max-height: 100%;
+  margin: 0.25rem;
   width: auto;
   border-radius: 10%;
   border: 1vh solid #FCFCFC;
+}
+
+.align-bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.align-bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.align-top-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.align-top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
 }

@@ -8,7 +8,7 @@ import { PLAYER_STATS } from '../../services/globals'
 })
 export class XpBarComponent implements OnInit {
   public PLAYER_STATS: any = PLAYER_STATS;
-  @ViewChild("level", {static: false, read: ElementRef } ) levelElementRef: ElementRef;
+  @ViewChild("level", {static: false, read: ElementRef }) levelElementRef: ElementRef;
   @Input() color: string;
 
   constructor() { }

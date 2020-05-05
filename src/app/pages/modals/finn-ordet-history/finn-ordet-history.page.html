@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
   <ion-grid class="ion-padding-horizontal">
     <mat-accordion>
       <mat-expansion-panel [expanded]="false"  style="padding: 0; margin: 0;" *ngFor="let roundData of gameData.data.roundData; let roundIndex = index">
@@ -18,49 +18,39 @@
           <mat-panel-description></mat-panel-description>
         </mat-expansion-panel-header>
         
-        <ion-row *ngIf="gameData.data.id == 1">
-          <ion-list class="no-item-space">
+        <!-- finn ordet -->
+        <ion-row *ngIf="gameData.data.id == 1" class="labelFullWidth">
             <ion-img [src]="'./assets/img/games/images/' + roundData.src"></ion-img>
-            <ion-item lines="none"><ion-label><b>Vanskelighetsgrad</b>: {{getDifficulty(roundData.difficulty)}}</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Riktig Svar</b>: {{roundData.answer}}</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Statistikk</b>: {{roundData.stats.join(', ')}}</ion-label></ion-item>
-            <ion-item><ion-label><b>Alternativer</b>: {{roundData.alternatives.join(', ')}}</ion-label></ion-item>
-            <ion-list *ngFor="let history of gameData.data.gameHistory[roundIndex]">
-              <ion-item lines="none"><ion-label><b>Gjettet</b>: {{history.guessedWord}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label></ion-item>
-              <ion-item><ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label></ion-item>
-            </ion-list>
-          </ion-list>
+            <ion-label><b>Vanskelighetsgrad</b>: {{getDifficulty(roundData.difficulty)}}</ion-label>
+            <ion-label><b>Riktig Svar</b>: {{roundData.answer}}</ion-label>
+            <ion-label><b>Statistikk</b>: {{roundData.stats.join(', ')}}</ion-label>
+            <ion-label><b>Alternativer</b>: {{roundData.alternatives.join(', ')}}</ion-label>
+            <div style="width: 100%;" *ngFor="let history of gameData.data.gameHistory[roundIndex]">
+              <br/>
+              <ion-label><b>Gjettet</b>: {{history.guessedWord}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label>
+              <br/>
+              <ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label>
+            </div>
         </ion-row>
 
-        <ion-row *ngIf="gameData.data.id == 2">
-          <ion-list class="no-item-space">
-            <ion-item lines="none"><ion-label><b>Riktige Svar</b>: {{roundData.correctPairs.join(', ')}}</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Statistikk</b>: semantikk</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Alternativer Venstre</b>: {{roundData.alternatives.left.join(', ')}}</ion-label></ion-item>
-            <ion-item><ion-label><b>Alternativer Høyre</b>: {{roundData.alternatives.right.join(', ')}}</ion-label></ion-item>
-            <ion-list *ngFor="let history of gameData.data.gameHistory[roundIndex]">
-              <ion-item lines="none"><ion-label><b>Gjettet</b>: {{history.guessedWord}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label></ion-item>
-              <ion-item><ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label></ion-item>
-            </ion-list>
-          </ion-list>
-        </ion-row>
-
-        <ion-row *ngIf="gameData.data.id == 3">
-          <ion-list class="no-item-space">
+        <!-- sant eller usant -->
+        <ion-row *ngIf="gameData.data.id == 2" class="labelFullWidth">
             <ion-img [src]="'./assets/img/games/images/' + roundData.src"></ion-img>
-            <ion-item lines="none"><ion-label><b>Vanskelighetsgrad</b>: {{getDifficulty(roundData.difficulty)}}</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Tekst</b>: {{roundData.question}}</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Riktige Svar</b>: {{roundData.answer ? 'Sant' : 'Usant'}}</ion-label></ion-item>
-            <ion-item><ion-label><b>Statistikk</b>: {{roundData.stats.join(', ')}}</ion-label></ion-item>
-            <ion-list *ngFor="let history of gameData.data.gameHistory[roundIndex]">
-              <ion-item lines="none"><ion-label><b>Gjettet</b>: {{roundData.answer ? 'Sant' : 'Usant'}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label></ion-item>
-              <ion-item><ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label></ion-item>
-            </ion-list>
-          </ion-list>
+            <ion-label><b>Vanskelighetsgrad</b>: {{getDifficulty(roundData.difficulty)}}</ion-label>
+            <ion-label><b>Tekst</b>: {{roundData.question}}</ion-label>
+            <ion-label><b>Riktige Svar</b>: {{roundData.answer ? 'Sant' : 'Usant'}}</ion-label>
+            <ion-label><b>Statistikk</b>: {{roundData.stats.join(', ')}}</ion-label>
+          
+            <div style="width: 100%;" *ngFor="let history of gameData.data.gameHistory[roundIndex]">
+              <br/>
+              <ion-label><b>Gjettet</b>: {{roundData.answer ? 'Sant' : 'Usant'}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label>
+              <br/>
+              <ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label>
+            </div>
         </ion-row>
 
-        <ion-row *ngIf="gameData.data.id == 4">
-          <ion-list class="no-item-space">
+        <!-- finn bildet -->
+        <ion-row *ngIf="gameData.data.id == 3" class="labelFullWidth">
             <ion-grid>
               <ion-row>
                 <ion-col style="width: 30%;">
@@ -85,14 +75,32 @@
                 </ion-col>
               </ion-row>
             </ion-grid>
-            <ion-item lines="none"><ion-label><b>Vanskelighetsgrad</b>: {{getDifficulty(roundData.difficulty)}}</ion-label></ion-item>
-            <ion-item lines="none"><ion-label><b>Riktig Svar</b>: {{roundData.answer}}</ion-label></ion-item>
-            <ion-item><ion-label><b>Statistikk</b>: {{roundData.stats.join(', ')}}</ion-label></ion-item>
-            <ion-list *ngFor="let history of gameData.data.gameHistory[roundIndex]">
-              <ion-item lines="none"><ion-label><b>Gjettet</b>: {{history.guessedWord}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label></ion-item>
-              <ion-item><ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label></ion-item>
-            </ion-list>
-          </ion-list>
+          
+            <ion-label><b>Vanskelighetsgrad</b>: {{getDifficulty(roundData.difficulty)}}</ion-label>
+            <ion-label><b>Riktig Svar</b>: {{roundData.answer}}</ion-label>
+            <ion-label><b>Statistikk</b>: {{roundData.stats.join(', ')}}</ion-label>
+          
+            <div style="width: 100%;" *ngFor="let history of gameData.data.gameHistory[roundIndex]">
+              <br/>
+              <ion-label><b>Gjettet</b>: {{history.guessedWord}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label>
+              <br/>
+              <ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label>
+            </div>
+        </ion-row>
+        
+        <!-- par-ord -->
+        <ion-row *ngIf="gameData.data.id == 4" class="labelFullWidth">
+            <ion-label><b>Riktige Svar</b>: {{roundData.correctPairs.join(', ')}}</ion-label>
+            <ion-label><b>Statistikk</b>: semantikk</ion-label>
+            <ion-label><b>Alternativer Venstre</b>: {{roundData.alternatives.left.join(', ')}}</ion-label>
+            <ion-label><b>Alternativer Høyre</b>: {{roundData.alternatives.right.join(', ')}}</ion-label>
+          
+            <div style="width: 100%;" *ngFor="let history of gameData.data.gameHistory[roundIndex]">
+              <br/>
+              <ion-label><b>Gjettet</b>: {{history.guessedWord}} ({{history.answeredCorrect ? 'Riktig' : 'Feil'}})</ion-label>
+              <br/>
+              <ion-label><b>Tid brukt</b>: {{history.timeTaken}} sekunder</ion-label>
+            </div>
         </ion-row>
       </mat-expansion-panel>
     </mat-accordion>

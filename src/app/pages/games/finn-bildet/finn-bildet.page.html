@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/game-info/4" text=""></ion-back-button>
+      <ion-back-button defaultHref="/game-info/3" text=""></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
+      <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false"><ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon></ion-menu-button>
     </ion-buttons>
 
     <ion-title>
@@ -16,25 +16,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
   <ion-progress-bar color="tertiary" style="height: 2vh;" value="{{timeLeft / maxTimeTaken}}"></ion-progress-bar>
 
   <div id="main-container" style="height: 98%;">
     <ion-grid style="height: 100%;">
-      <ion-row class="ion-align-items-end" style="height: 40%;">
-        <ion-col class="ion-align-items-end">
-          <img (click)="answer($event, 0)" class="ion-no-margin ion-no-padding imgButton" [src]="images[0]"/>
+      <ion-row class="ion-margin-horizontal" style="height: 40%;">
+        <ion-col style="height: 100%;">
+          <img (click)="answer($event, 0)" class="align-bottom-right imgButton" [src]="images[0]"/>
         </ion-col>
-        <ion-col class="ion-align-items-end">
-          <img (click)="answer($event, 1)" class="ion-no-margin ion-no-padding imgButton" [src]="images[1]"/>
+        <ion-col style="height: 100%;">
+          <img (click)="answer($event, 1)" class="align-bottom-left imgButton" [src]="images[1]"/>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-align-items-start" style="height: 40%;">
-        <ion-col>
-          <img (click)="answer($event, 2)" class="ion-no-margin ion-no-padding imgButton" [src]="images[2]"/>
+      <ion-row class="ion-margin-horizontal" style="height: 40%;">
+        <ion-col style="height: 100%;">
+          <img (click)="answer($event, 2)" class="align-top-right imgButton" [src]="images[2]"/>
         </ion-col>
-        <ion-col>
-          <img (click)="answer($event, 3)" class="ion-no-margin ion-no-padding imgButton" [src]="images[3]"/>
+        <ion-col style="height: 100%;">
+          <img (click)="answer($event, 3)" class="align-top-left imgButton" [src]="images[3]"/>
         </ion-col>
       </ion-row>
 

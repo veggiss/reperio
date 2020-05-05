@@ -1,12 +1,20 @@
 <ion-header>
 	<ion-toolbar>
 		<ion-buttons slot="start">
-			<ion-back-button defaultHref="/" text=""></ion-back-button>
+			<ion-menu-button [routerLink]="'/'" routerDirection="back" auto-hide="false">
+				<ion-icon name="arrow-back-outline"></ion-icon>
+			</ion-menu-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-menu-button (click)="toggleSoundMuted()" auto-hide="false">
+				<ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon>
+			</ion-menu-button>
 		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
 	<div class="screenWidth bg-image">
 		<img class="titleImg bg-image" [src]="item.thumbnail"/>
 		
@@ -26,7 +34,7 @@
 		<ion-grid>
 			<ion-row>
 				<ion-col>
-					<ion-button (click)="playSound()" fill="outline" color="primary"><ion-icon color="dark" name="ear-outline" class="ion-no-margin ion-no-padding"></ion-icon></ion-button>
+					<ion-button (click)="playSound()" size="large" fill="outline" color="primary"><ion-icon color="dark" name="ear-outline" class="ion-no-margin ion-no-padding"></ion-icon></ion-button>
 					<h2 class="ion-no-padding ion-no-margin"><ion-label>
 						Beskrivelse:
 					</ion-label></h2>
@@ -46,10 +54,10 @@
 	<ion-grid class="ion-no-padding">
 		<ion-row>
 			<ion-col size="4" class="ion-no-padding">
-				<ion-button (click)="addFavorite()" routerDirection="forward" expand="full" class="ion-no-margin" color="success"><ion-icon size="large" color="light" name="trophy"></ion-icon></ion-button>
+				<ion-button (click)="gotoHighscore()" routerDirection="forward" expand="full" class="ion-no-margin" color="success"><ion-label color="light">RESULTAT</ion-label>&nbsp;<ion-icon size="large" color="light" name="trophy"></ion-icon></ion-button>
 			</ion-col>
 			<ion-col class="ion-no-padding">
-				<ion-button (click)="go()" routerDirection="forward" expand="full" class="ion-no-margin" color="primary"><ion-icon size="large" color="light" name="play"></ion-icon></ion-button>
+				<ion-button [routerLink]="'/game_' + item.id" routerDirection="forward" expand="full" class="ion-no-margin" color="primary"><ion-label color="light">SPILL</ion-label>&nbsp;<ion-icon size="large" color="light" name="play"></ion-icon></ion-button>
 			</ion-col>
 		</ion-row>
 	</ion-grid>

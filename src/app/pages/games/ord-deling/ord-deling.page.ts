@@ -7,10 +7,13 @@ import {
   getTimeBonus, getTimeStat,
   loadImages,
   shuffle,
-  tween
+  tween,
+  getSoundMuted,
+  toggleSoundMuted, PLAYER_STATS
 } from "../../../services/globals";
 import {NavigationExtras, Router} from "@angular/router";
 import {CountUp} from "countup.js";
+import {SmartAudioService} from "../../../services/providers/smart-audio.service";
 
 @Component({
   selector: 'app-ord-deling',
@@ -31,36 +34,57 @@ export class OrdDelingPage implements OnInit {
   public allowInput: boolean;
   public questionImageSrc: any;
   public answeredCorrect: boolean;
-  public maxRounds: number;
   public correctAnswers: number;
   public timeLeft: number;
   public timerInterval: any;
   public alternatives: any;
 
+  public getSoundMuted: any = getSoundMuted;
+  public toggleSoundMuted: any = toggleSoundMuted;
   public maxTimeTaken: number = 30;
+  public maxRounds: number = 5;
   public gameHistory: any = {};
   public statsPoints: any = {};
   public pairsRemoved: number = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private smartAudio: SmartAudioService) {}
 
   async ngOnInit() {
+    if (PLAYER_STATS.level < 4) {
+      this.router.navigate([`/`]);
+      return;
+    }
+    
+    this.smartAudio.preload('correct_answer', '../../../../assets/audio/fx/correct_answer.mp3');
+    this.smartAudio.preload('countup_tick', '../../../../assets/audio/fx/countup_tick.mp3');
+    this.smartAudio.preload('wrong_answer', '../../../../assets/audio/fx/wrong_answer.mp3');
+    this.smartAudio.preload('clock_tick', '../../../../assets/audio/fx/clock_tick.mp3');
+    this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
+    this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
+    
     this.container = document.getElementById("main-container");
     this.pointsElement = document.getElementById('ord-deling-points');
     this.countUp = new CountUp('ord-deling-points', 0);
   }
 
   async ionViewWillEnter() {
+    if (PLAYER_STATS.level < 4) return;
+    
     this.container.style.visibility = "hidden";
     this.countUp.reset();
-    this.roundData = getOrddelingData(DIFFICULTY[2], 6);
+    this.gameHistory = {};
+    this.roundData = getOrddelingData(DIFFICULTY[4], this.maxRounds);
     this.precachedRoundData = JSON.parse(JSON.stringify(this.roundData));
     this.allowInput = false;
     this.correctAnswers = 0;
     this.round = 0;
     this.points = 0;
-
+    
     this.startRound();
+  }
+
+  ionViewWillLeave() {
+    clearInterval(this.timerInterval);
   }
 
   clearSelection() {
@@ -75,6 +99,8 @@ export class OrdDelingPage implements OnInit {
     this.pairsRemoved = 0;
     this.clearSelection();
     this.startTimer();
+
+    this.playAudio('swosh_in');
 
     this.alternatives = {
       left: this.roundData[this.round].alternatives.left,
@@ -95,6 +121,7 @@ export class OrdDelingPage implements OnInit {
   }
 
   endRound() {
+    this.playAudio('swosh_out');
     tween(this.container, "slideOutLeft", "fast", "out", () => {
       this.container.style.visibility = "hidden";
       this.round++;
@@ -102,7 +129,7 @@ export class OrdDelingPage implements OnInit {
       if (this.round >= this.roundData.length) {
         let data: NavigationExtras = {
           state: {
-            id: 2,
+            id: 4,
             points: this.points,
             correctAnswers: this.correctAnswers,
             rounds: this.roundData.length,
@@ -118,6 +145,10 @@ export class OrdDelingPage implements OnInit {
         this.startRound();
       }
     });
+  }
+
+  playAudio(key) {
+    if (!getSoundMuted()) this.smartAudio.play(key);
   }
 
   answer(event, side) {
@@ -139,6 +170,7 @@ export class OrdDelingPage implements OnInit {
             let timeBonus = getTimeBonus(this.timeStamp, this.maxTimeTaken);
             this.addPoints(30, timeBonus);
             clearInterval(this.timerInterval);
+            this.playAudio('correct_answer');
 
             this.lastClickedElement.setAttribute('color', 'success');
             event.target.setAttribute('color', 'success');
@@ -166,6 +198,7 @@ export class OrdDelingPage implements OnInit {
               }, 500);
             });
           } else {
+            this.playAudio('wrong_answer');
             this.answeredCorrect = false;
             this.lastClickedElement.setAttribute('color', 'danger');
             event.target.setAttribute('color', 'danger');
@@ -203,7 +236,10 @@ export class OrdDelingPage implements OnInit {
 
   startTimer() {
     this.timerInterval = setInterval(() => {
-      if (this.timeLeft > 0) this.timeLeft--;
+      if (this.timeLeft > 0) {
+        this.playAudio('clock_tick');
+        this.timeLeft--;
+      }
     }, 1000);
   }
 }

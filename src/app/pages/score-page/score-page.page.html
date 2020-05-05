@@ -1,13 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button [routerLink]="'/game-info/' + data.id.toString()" routerDirection="back" text=""></ion-back-button >
+      <ion-menu-button [routerLink]="'/game-info/' + data.id.toString()" routerDirection="back" auto-hide="false">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-menu-button>
     </ion-buttons>
-    <ion-title>Resultat</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false"><ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title class="ion-text-center">RESULTAT</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
   <ion-grid>    
     <ion-row class="ion-align-items-center ion-justify-content-center slideIn" style="padding-right: 6%;">
       <ion-list lines="none" style="width: 12rem; margin-bottom: 0">
@@ -45,14 +52,8 @@
       </ion-col>
     </ion-row>
 
-    <mat-expansion-panel [expanded]="true" class="ion-padding-horizontal">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <ion-label>DETALJER</ion-label>
-        </mat-panel-title>
-        <mat-panel-description></mat-panel-description>
-      </mat-expansion-panel-header>
-
+      
+    <ion-grid class="ion-padding-horizontal ion-padding-margin">
       <ion-row class="vertical-align-content">
         <ion-col style="font-size: 4vh; width: 100%;">
           <ion-icon name="school-outline" color="dark"></ion-icon>
@@ -71,28 +72,37 @@
         </ion-col>
       </ion-row>
 
-      <ion-row class="text-size">
-        <ion-col class="ion-no-padding">
-          <app-stat-bar #leseBar [value]="lesePercent" color="{{statsList['verb'].color}}"></app-stat-bar>
+      <mat-expansion-panel [expanded]="false" class="ion-padding-horizontal">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <ion-label>FERDIGHETER</ion-label>
+          </mat-panel-title>
+          <mat-panel-description></mat-panel-description>
+        </mat-expansion-panel-header>
 
-          <ion-item lines="none">
-            <ion-icon style="float: left; padding-right: 1vh;" color="dark" [name]="statsList['verb'].icon"></ion-icon>
-            <ion-label>LESE</ion-label>
-          </ion-item>
-        </ion-col>
-      </ion-row>
+        <ion-row class="text-size">
+          <ion-col class="ion-no-padding">
+            <app-stat-bar #leseBar [value]="lesePercent" color="{{statsList['verb'].color}}"></app-stat-bar>
 
-      <ion-row class="text-size">
-        <ion-col class="ion-no-padding">
-          <app-stat-bar #forstoelseBar [value]="forstoelsePercent" color="septenary"></app-stat-bar>
+            <ion-item lines="none">
+              <ion-icon style="float: left; padding-right: 1vh;" color="dark" [name]="statsList['verb'].icon"></ion-icon>
+              <ion-label>LESE</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
 
-          <ion-item lines="none">
-            <ion-icon style="float: left; padding-right: 1vh;" color="dark" name="bulb-outline"></ion-icon>
-            <ion-label>FORSTÅELSE</ion-label>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </mat-expansion-panel>
+        <ion-row class="text-size">
+          <ion-col class="ion-no-padding">
+            <app-stat-bar #forstoelseBar [value]="forstoelsePercent" color="septenary"></app-stat-bar>
+
+            <ion-item lines="none">
+              <ion-icon style="float: left; padding-right: 1vh;" color="dark" name="bulb-outline"></ion-icon>
+              <ion-label>FORSTÅELSE</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </mat-expansion-panel>
+    </ion-grid>
   </ion-grid>
 </ion-content>
 
@@ -100,10 +110,10 @@
   <ion-grid class="ion-no-padding">
     <ion-row>
       <ion-col size="4" class="ion-no-padding">
-        <ion-button routerLink="/" routerDirection="back" expand="full" color="success" class="ion-no-margin"><ion-icon size="large" color="light" name="home"></ion-icon></ion-button>
+        <ion-button routerLink="/" routerDirection="back" expand="full" color="success" class="ion-no-margin"><ion-label color="light">HJEM</ion-label>&nbsp;<ion-icon size="large" color="light" name="home"></ion-icon></ion-button>
       </ion-col>
       <ion-col class="ion-no-padding">
-        <ion-button [routerLink]="'/game_' + data.id.toString()" routerDirection="back" expand="full" color="primary" class="ion-no-margin"><ion-icon size="large" color="light" name="refresh"></ion-icon></ion-button>
+        <ion-button [routerLink]="'/game_' + data.id.toString()" routerDirection="back" expand="full" color="primary" class="ion-no-margin"><ion-label color="light">PRØV IGJEN</ion-label>&nbsp;<ion-icon size="large" color="light" name="refresh"></ion-icon></ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -22,11 +22,25 @@ ion-card-subtitle {
 	bottom: 15px;
 }
 
-.topright {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 23px;
+.blur {
+	filter: blur(2px) grayscale(100%);
+}
+
+.lockIcon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 5rem;
+}
+
+.levelReq {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: 0.7rem;
+	transform: translate(-50%, -50%);
+	font-size: 3rem;
 }
 
 .overlay > .left {

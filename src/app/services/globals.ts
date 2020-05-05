@@ -3,7 +3,7 @@ import db_ord_deling from "./ord-deling.json";
 import db_sant_usant from "./sant-usant.json";
 import db_finn_bildet from "./finn-bildet.json";
 
-export let PLAYER_STATS = JSON.parse(localStorage.getItem('PLAYER_STATS')) || {
+export const PLAYER_STATS = JSON.parse(localStorage.getItem('PLAYER_STATS')) || {
 	level: 1,
 	current_xp: 0,
 	from_xp: 0,
@@ -65,6 +65,13 @@ export const STATS_LIST = {
 	}
 };
 
+export const EXCLUDE_LIST = {
+	1: [],
+	2: [],
+	3: [],
+	4: []
+};
+
 export const STATS_AVERAGE = {
 	lese: ['verb', 'adjektiv', 'substantiv'],
 	forsoelse: ['semantikk', 'benevning', 'auditiv', 'hurtighet']
@@ -75,6 +82,7 @@ export const GAMES_LIST = [{
 	category: 1,
 	title: 'Finn Ordet',
 	icon: 'book',
+	levelReq: 1,
 	soundKey: 'finn_ordet',
 	soundSrc: '../../../../assets/audio/finn_ordet.mp3',
 	description: 'I dette spillet skal du se på bildet. Les så alle tekstboksene og trykk på alternativet som passer til bildet. Du har 30 sekunder på å svare på hver oppgave.',
@@ -83,16 +91,7 @@ export const GAMES_LIST = [{
 }, {
 	id: 2,
 	category: 2,
-	title: 'Par-Ord',
-	icon: 'share-social',
-	soundKey: 'par_ord',
-	soundSrc: '../../../../assets/audio/par_ord.mp3',
-	description: 'I dette spillet ser du tekstbokser, på venstre og høyre side. Noen av disse ordene passer sammen som synonymer. Trykk på de ordene du tror er riktige. Du har 30 sekunder på å svare på hver oppgave. Husk, flere alternativer kan være riktige.',
-	purpose: 'Å undersøke en persons forståelse av semantiske relasjoner mellom parord.',
-	thumbnail: './assets/img/ord-par-thumb.png'
-}, {
-	id: 3,
-	category: 1,
+	levelReq: 2,
 	title: 'Sant & Usant',
 	icon: 'share-social',
 	soundKey: 'sant_usant',
@@ -101,8 +100,9 @@ export const GAMES_LIST = [{
 	purpose: 'Å undersøke en persons forståelse av setningssemantikk ved bruk av setninger og bilder.',
 	thumbnail: './assets/img/sant-usant-thumb.png'
 }, {
-	id: 4,
+	id: 3,
 	category: 1,
+	levelReq: 3,
 	title: 'Finn Bildet',
 	icon: 'ear',
 	soundKey: 'finn_bildet',
@@ -110,7 +110,38 @@ export const GAMES_LIST = [{
 	description: 'I dette spillet skal du trykke på lytte-knappen. Lytt så til ordene som blir sagt. Se på alle bildene og trykk på bilde som passer utsagnet. Du har 30 sekunder på å svare på hver oppgave.',
 	purpose: 'Å undersøke en persons auditiv forståelse ved hjelp av sammensetning av talt ord og bilde.',
 	thumbnail: './assets/img/finn-bildet-thumb.png'
+}, {
+	id: 4,
+	category: 2,
+	levelReq: 4,
+	title: 'Par-Ord',
+	icon: 'share-social',
+	soundKey: 'par_ord',
+	soundSrc: '../../../../assets/audio/par_ord.mp3',
+	description: 'I dette spillet ser du tekstbokser, på venstre og høyre side. Noen av disse ordene passer sammen som synonymer. Trykk på de ordene du tror er riktige. Du har 30 sekunder på å svare på hver oppgave. Husk, flere alternativer kan være riktige.',
+	purpose: 'Å undersøke en persons forståelse av semantiske relasjoner mellom parord.',
+	thumbnail: './assets/img/ord-par-thumb.png'
 }];
+
+export const GOALS_LIST = JSON.parse(localStorage.getItem('GOALS_LIST')) ||  {
+	date: 0,
+	list: [{
+		finished: false,
+		progress: 0,
+		max: 5,
+		text: 'Spill 5 spill'
+	}, {
+		finished: false,
+		progress: 0,
+		max: 1,
+		text: 'Få over 75% riktig i et spill',
+	}, {
+		finished: false,
+		progress: 0,
+		max: 20,
+		text: 'Svar riktig på 20 oppgaver',
+	}]
+};
 
 export const GAME_HISTORY = JSON.parse(localStorage.getItem('GAME_HISTORY')) || {
 	1: [],
@@ -133,15 +164,24 @@ export const DIFFICULTY = JSON.parse(localStorage.getItem('DIFFICULTY')) || {
 	4: 1.0
 };
 
+export let SOUND_MUTED = JSON.parse(localStorage.getItem('SOUND_MUTED')) || false;
+
 export const getUserGuid = () => localStorage.getItem('USER_GUID');
 
 export const setUserGuid = key => localStorage.setItem('USER_GUID', key);
 
+export const toggleSoundMuted = () => {
+	SOUND_MUTED = !SOUND_MUTED;
+
+	localStorage.setItem('SOUND_MUTED', SOUND_MUTED);
+};
+
+export const getSoundMuted = () => SOUND_MUTED == undefined ? false : JSON.parse(SOUND_MUTED);
+
 export const getReperioRate = () => {
 	let stats = Object.values(PLAYER_STATS.stats);
 	let sum = <number> stats.reduce((a: number, b: number) => a + b);
-	
-	return Math.round(convertToSingleDecimal(sum / stats.length) * 10) / 10;
+	return Math.round(convertToSingleDecimal(sum / stats.length) * 10) / 10;;
 };
 
 export const convertToPercent = (high: number, low: number, value: number) => {
@@ -218,16 +258,13 @@ export const addPlayerStats = (stat, value) => {
 };
 
 export const addXp = (category:string, points:number) => {
-	let leveledUp = {
-		main: false,
-		category: false,
-		categoryType: category
-	};
+	let leveledUp = false;
 	
 	PLAYER_STATS.current_xp += points;
 		
 	if (PLAYER_STATS.current_xp >= PLAYER_STATS.target_xp) {
 		let lastTargetXp = PLAYER_STATS.target_xp;
+		leveledUp = true;
 
 		PLAYER_STATS.level++;
 		PLAYER_STATS.current_xp -= PLAYER_STATS.target_xp;
@@ -238,26 +275,6 @@ export const addXp = (category:string, points:number) => {
 	localStorage.setItem('PLAYER_STATS', JSON.stringify(PLAYER_STATS));
 	
 	return leveledUp;
-};
-
-export const GOALS_LIST = JSON.parse(localStorage.getItem('GOALS_LIST')) ||  {
-	date: 0,
-	list: [{
-		finished: false,
-		progress: 0,
-		max: 3,
-		text: 'Spill 3 spill'
-	}, {
-		finished: false,
-		progress: 0,
-		max: 1,
-		text: 'Svar >75% riktig i et spill',
-	}, {
-		finished: false,
-		progress: 0,
-		max: 15,
-		text: 'Svar riktig på 15 oppgaver',
-	}]
 };
 
 export const updateGoalDate = () => {
@@ -278,8 +295,6 @@ export const updateGoalDate = () => {
 };
 
 export const updateGoals = data => {	
-	console.log(Math.round((data.correctAnswers / data.rounds) * 100));
-	
 	GOALS_LIST.list.forEach((goal, i) => {
 		if (i == 0 && goal.progress < goal.max) {
 			goal.progress++;
@@ -313,6 +328,7 @@ export const addGameHistory = (data) => {
 			data: data
 		});
 
+		updateGoals(data);
 		localStorage.setItem('GAME_HISTORY', JSON.stringify(GAME_HISTORY));
 	} else {
 		console.log("Can't add game history, '" + data.id + "' is an invalid gameid");
@@ -526,7 +542,8 @@ export const getSantUsantData = (complexRate: number, rounds: number) => {
 	let list = [];
 
 	getRoundData(db_sant_usant, complexRate, rounds, (database, complexity, round) => {
-		let sorted = database.filter(e => e.complexity === complexity && e.answer == (round > Math.round(rounds / 2) ? 1 : 0));
+		let answer = round > rounds / 2 ? 1 : 0;
+		let sorted = database.filter(e => e.complexity === complexity && e.answer == answer);
 		let data = sorted[Math.floor(Math.random() * sorted.length)];
 
 		if (data) {
@@ -544,6 +561,10 @@ export const getSantUsantData = (complexRate: number, rounds: number) => {
 	});
 
 	return shuffle(list);
+};
+
+export const getDailyGoalsDone = () => {
+	return GOALS_LIST.list.filter(goal => goal.finished).length
 };
 
 export const tween = (element, animationName, delay, direction, callback) => {
@@ -572,7 +593,7 @@ export const loadImage = url => {
 	});
 };
 
-export const loadImages = roundData => {
+export const loadImages = roundData => {	
 	return new Promise((resolve, reject) => {
 		let imagesLoaded = 0;
 
@@ -585,4 +606,23 @@ export const loadImages = roundData => {
 			}).catch(() => reject("Error loading images"));
 		}
 	});
+};
+
+export const printFunction = function(val: number) {
+	const result = this.formattingFn(val);
+	let oldValue;
+	
+	if (this.el.tagName === 'INPUT') {
+		const input = this.el as HTMLInputElement;
+		oldValue = input.value;
+		input.value = result;
+	} else if (this.el.tagName === 'text' || this.el.tagName === 'tspan') {
+		oldValue = this.el.textContent;
+		this.el.textContent = result;
+	} else {
+		oldValue = this.el.innerHTML;
+		this.el.innerHTML = result;
+	}
+	
+	if (oldValue != result) this.updateCallback();
 };

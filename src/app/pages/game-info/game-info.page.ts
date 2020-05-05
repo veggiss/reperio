@@ -6,6 +6,8 @@ import {
 	GAME_HISTORY,
 	getDifficultyPercent,
 	PLAYER_STATS,
+	getSoundMuted,
+	toggleSoundMuted,
 	getStatPercent, STATS_LIST, GAMES_LIST
 } from '../../services/globals';
 import {SmartAudioService} from "../../services/providers/smart-audio.service";
@@ -19,6 +21,8 @@ export class GameInfoPage implements OnInit {
 	public item:any;
 	public gameList = GAMES_LIST;
 	public statPercent = getStatPercent;
+	public getSoundMuted: any = getSoundMuted;
+	public toggleSoundMuted: any = toggleSoundMuted;
 	public statsList = {
 		grammatikk: {
 			text: 'Grammatikk',
@@ -62,6 +66,10 @@ export class GameInfoPage implements OnInit {
 				throw new Error('Game not found');
 			} else {
 				this.item = game[0];
+				
+				if (PLAYER_STATS.level < this.item.levelReq) {
+					this.router.navigate(['/']);
+				}
 			}
 		});
 	}
@@ -86,7 +94,7 @@ export class GameInfoPage implements OnInit {
 		return getDifficultyPercent(this.item.id);
 	}
 
-	addFavorite() {
+	gotoHighscore() {
 		if (GAME_HISTORY[this.item.id].length > 0) {
 			let data: NavigationExtras = {
 				state: {
@@ -96,11 +104,7 @@ export class GameInfoPage implements OnInit {
 				}
 			};
 
-			this.router.navigate([`/score-page`], data);
+			this.router.navigate(['/score-page'], data);
 		}
-	}
-
-	go() {
-		this.router.navigate([`game_${this.item.id}`]);
 	}
 }

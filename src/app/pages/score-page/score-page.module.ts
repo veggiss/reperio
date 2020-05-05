@@ -9,6 +9,7 @@ import { ScorePagePage } from './score-page.page';
 import {XpBarModule} from "../../components/xp-bar/xp-bar.module";
 import {StatBarModule} from "../../components/stat-bar/stat-bar.module";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {GameCardModule} from "../../components/game-card/game-card.module";
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     XpBarModule,
     StatBarModule,
     MatExpansionModule,
+    GameCardModule,
     RouterModule.forChild(routes)
   ],
   declarations: [ScorePagePage]

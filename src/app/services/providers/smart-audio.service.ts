@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { Platform } from '@ionic/angular';
+import {Howl, Howler} from 'howler';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,14 @@ export class SmartAudioService {
   preload(key, asset) {
     if(this.audioType === 'html5'){
       let audio = {
-        audio: new Audio(asset),
+        audio: new Howl({
+          src: [asset],
+          onplayerror: function() {
+            this.once('unlock', function() {
+              this.play();
+            });
+          }
+        }),
         key: key,
         asset: asset,
         type: 'html5'
@@ -38,15 +46,29 @@ export class SmartAudioService {
     }
   }
 
-  play(key){
+  play(key, noReset?: boolean, cloneNode?: boolean, rate?: number){
     let audio = this.sounds.find((sound) => {
       return sound.key === key;
     });
 
     if(audio.type === 'html5'){
-      audio.audio.pause();
-      audio.audio.currentTime = 0;
-      audio.audio.play();
+      if (!noReset) {
+        audio.audio.stop();
+      }
+      
+      if (cloneNode) {
+        let sound = new Howl({
+          src: [audio.asset],
+          rate: rate
+        });
+        sound.play();
+
+        sound.on('end', function(){
+          sound.unload();
+        });
+      } else {
+        audio.audio.play();
+      }
     } else {
       this.nativeAudio.play(audio.asset).then((res) => {
         console.log(res);

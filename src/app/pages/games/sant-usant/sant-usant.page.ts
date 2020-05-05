@@ -7,11 +7,14 @@ import {
   getSantUsantData, getStatPoint,
   getTimeBonus, getTimeStat,
   loadImages,
-  tween
+  tween,
+  getSoundMuted,
+  toggleSoundMuted, PLAYER_STATS
 } from "../../../services/globals";
 import {NavigationExtras, Router} from "@angular/router";
 import {CountUp} from "countup.js";
 import {SmartAudioService} from "../../../services/providers/smart-audio.service";
+import {LoadingService} from "../../../services/loader/loading.service";
 
 @Component({
   selector: 'app-sant-usant',
@@ -34,31 +37,54 @@ export class SantUsantPage implements OnInit {
   public timeLeft: number;
   public timerInterval: any;
 
+  public getSoundMuted: any = getSoundMuted;
+  public toggleSoundMuted: any = toggleSoundMuted;
   public statsPoints: any = {};
   public maxTimeTaken: number = 30;
   public gameHistory: any = {};
-  public maxRounds: number = 10;
+  public maxRounds: number = 7;
   
-  constructor(private router: Router, private smartAudio: SmartAudioService) { }
+  constructor(private router: Router, private smartAudio: SmartAudioService, private loader: LoadingService) {}
 
-  async ngOnInit() {   
+  async ngOnInit() {
+    if (PLAYER_STATS.level < 2) {
+      this.router.navigate([`/`]);
+      return;
+    }
+    
+    this.smartAudio.preload('correct_answer', '../../../../assets/audio/fx/correct_answer.mp3');
+    this.smartAudio.preload('countup_tick', '../../../../assets/audio/fx/countup_tick.mp3');
+    this.smartAudio.preload('wrong_answer', '../../../../assets/audio/fx/wrong_answer.mp3');
+    this.smartAudio.preload('clock_tick', '../../../../assets/audio/fx/clock_tick.mp3');
+    this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
+    this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
+    
     this.container = document.getElementById("main-container");
     this.pointsElement = document.getElementById('sant-usant-points');
     this.countUp = new CountUp('sant-usant-points', 0);
   }
 
   async ionViewWillEnter() {
+    if (PLAYER_STATS.level < 2) return;
+    
     this.container.style.visibility = "hidden";
     this.countUp.reset();
     this.round = 0;
     this.points = 0;
+    this.gameHistory = {};
     this.correctAnswers = 0;
-    this.roundData = getSantUsantData(DIFFICULTY[3], this.maxRounds);
+    this.roundData = getSantUsantData(DIFFICULTY[2], this.maxRounds);
     this.precachedRoundData = JSON.parse(JSON.stringify(this.roundData));
-    
+
+    this.loader.loadingPresent();
     await loadImages(this.roundData);
+    this.loader.loadingDismiss();
 
     this.startRound();
+  }
+
+  ionViewWillLeave() {
+    clearInterval(this.timerInterval);
   }
   
   startRound() {
@@ -69,6 +95,8 @@ export class SantUsantPage implements OnInit {
     this.timeLeft = this.maxTimeTaken;
     this.clearSelection();
     this.startTimer();
+
+    this.playAudio('swosh_in');
     
     tween(this.container, "slideInRight", "fast", null, () => {
       this.timeStamp = Date.now();
@@ -83,6 +111,7 @@ export class SantUsantPage implements OnInit {
   }
 
   endRound() {
+    this.playAudio('swosh_out');
     tween(this.container, "slideOutLeft", "fast", "out", () => {
       this.container.style.visibility = "hidden";
       this.round++;
@@ -90,7 +119,7 @@ export class SantUsantPage implements OnInit {
       if (this.round >= this.roundData.length) {
         let data: NavigationExtras = {
           state: {
-            id: 3,
+            id: 2,
             points: this.points,
             correctAnswers: this.correctAnswers,
             rounds: this.roundData.length,
@@ -108,6 +137,10 @@ export class SantUsantPage implements OnInit {
     });
   }
 
+  playAudio(key) {
+    if (!getSoundMuted()) this.smartAudio.play(key);
+  }
+
   clearSelection() {
     document.querySelectorAll('.alternative-btn').forEach(e => e.setAttribute('color', "light"));
   }
@@ -121,12 +154,14 @@ export class SantUsantPage implements OnInit {
       let clickedElement = event.target;
       
       if (answeredCorrect) {
+        this.playAudio('correct_answer');
         clickedElement.setAttribute('color', 'success');
         let timeBonus = getTimeBonus(this.timeStamp, this.maxTimeTaken);
         this.addPoints(30, timeBonus);
         this.correctAnswers++;
         addRoundStats(this.statsPoints, 'hurtighet', this.timeLeft, null);
       } else {
+        this.playAudio('wrong_answer');
         clickedElement.setAttribute('color', 'danger');
       }
 
@@ -156,10 +191,13 @@ export class SantUsantPage implements OnInit {
       console.log('No stats list found for round: ' + this.round);
     }
   }
-  
+
   startTimer() {
-    this.timerInterval = setInterval(() => {      
-      if (this.timeLeft > 0) this.timeLeft--;
+    this.timerInterval = setInterval(() => {
+      if (this.timeLeft > 0) {
+        this.playAudio('clock_tick');
+        this.timeLeft--;
+      }
     }, 1000);
   }
 }

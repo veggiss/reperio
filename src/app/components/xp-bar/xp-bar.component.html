@@ -1,15 +1,17 @@
 <ion-grid>
-	<ion-row>	
+	<ion-row>
+		<ion-col></ion-col>
+		<ion-col #level class="ion-text-center">
+			<ion-label style="font-size: 3vh;">NIVÅ {{PLAYER_STATS.level}}</ion-label>
+		</ion-col>
+		<ion-col></ion-col>
+		
 		<ion-progress-bar color="primary" value="{{PLAYER_STATS.current_xp / PLAYER_STATS.target_xp}}"></ion-progress-bar>
 		
-		<ion-col class="ion-text-start no-mp-top">
-			<ion-label class="no-mp-top">{{PLAYER_STATS.from_xp}}</ion-label>
+		<ion-col></ion-col>
+		<ion-col class="ion-text-center">
+			<ion-label>{{PLAYER_STATS.target_xp - PLAYER_STATS.current_xp}} POENG TIL NESTE NIVÅ</ion-label>
 		</ion-col>
-		<ion-col #level class="ion-text-center no-mp-top">
-			<ion-label class="no-mp-top" style="font-size: 3vh;">Nivå {{PLAYER_STATS.level}}</ion-label>
-		</ion-col>
-		<ion-col class="ion-text-end no-mp-top">
-			<ion-label class="no-mp-top">{{PLAYER_STATS.target_xp}}</ion-label>
-		</ion-col>
+		<ion-col></ion-col>
 	</ion-row>
 </ion-grid>

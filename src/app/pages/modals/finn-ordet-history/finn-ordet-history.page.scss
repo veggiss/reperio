@@ -4,3 +4,14 @@
     --inner-padding-end: 0;
   }
 }
+
+.labelFullWidth {
+  ion-label {
+    width: 100%;
+  }
+
+  hr {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}

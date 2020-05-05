@@ -18,6 +18,10 @@
   color: #CD7F32;
 }
 
+.toast-exit-button {
+  --button-color: red !important;
+}
+
 .scoreText {
   font-size: 2rem;
 }

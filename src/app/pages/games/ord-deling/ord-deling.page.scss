@@ -39,7 +39,15 @@ ion-title{
 }
 
 .alternative-btn {
-  font-size: 2.4vh;
+  font-size: 5.2vw;
   margin: 0;
   padding: 0;
+}
+
+@media all and (min-width: 600px) {
+  .alternative-btn {
+    font-size: 2.5vw;
+    margin: 0;
+    padding: 0;
+  }
 }

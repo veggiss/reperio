@@ -13,12 +13,15 @@ import {
   STATS_LIST,
   PLAYER_STATS,
   addPlayerStats,
-  getAveragePercent, STATS_AVERAGE, updateGoals
+  toggleSoundMuted,
+  getAveragePercent, STATS_AVERAGE, getSoundMuted, printFunction, GAMES_LIST, GOALS_LIST, getDailyGoalsDone
 } from "../../services/globals";
 import {XpBarComponent} from "../../components/xp-bar/xp-bar.component";
 import {CountUp} from "countup.js";
 import {StatBarComponent} from "../../components/stat-bar/stat-bar.component";
 import {FirebaseService} from "../../services/firebase/firebase.service";
+import {SmartAudioService} from "../../services/providers/smart-audio.service";
+import {ToastController} from "@ionic/angular";
 
 @Component({
   selector: 'app-score-page',
@@ -35,7 +38,9 @@ export class ScorePagePage implements OnInit {
   public countUp: any;
   public rounds;
   public winPercent;
-  
+
+  public getSoundMuted: any = getSoundMuted;
+  public toggleSoundMuted: any = toggleSoundMuted;
   public statPercent: any = getStatPercent;
   public statsList = STATS_LIST;
   public statsKeys: any = [];
@@ -44,6 +49,7 @@ export class ScorePagePage implements OnInit {
   public difficultyPercent = 50;
   public lesePercent = getAveragePercent(STATS_AVERAGE.lese);
   public forstoelsePercent = getAveragePercent(STATS_AVERAGE.forsoelse);
+  public playbackRate = 0.5;
   public data: any = {
     id: 1,
     points: 0,
@@ -52,7 +58,7 @@ export class ScorePagePage implements OnInit {
     statPoints: {}
   };
 
-  constructor(private route: ActivatedRoute, private router: Router, public firebaseService: FirebaseService) {    
+  constructor(private route: ActivatedRoute, private router: Router, public firebaseService: FirebaseService, private smartAudio: SmartAudioService, public toastController: ToastController) {    
     this.route.queryParams.subscribe(() => {
       if (this.router.getCurrentNavigation().extras.state) {
         let data = this.router.getCurrentNavigation().extras.state;
@@ -69,26 +75,42 @@ export class ScorePagePage implements OnInit {
           this.statsKeys = Object.keys(this.data.statPoints);
         }
       } else {
-        //this.router.navigate([`/`]);
+        this.router.navigate([`/`]);
       }
     });
   }
   
   ngOnInit() {
+    this.smartAudio.preload('countup_points', '../../../../assets/audio/fx/countup_points.mp3');
+    this.smartAudio.preload('level_up', '../../../../assets/audio/fx/level_up.mp3');
     this.winPercent = Math.round((this.data.correctAnswers / this.data.rounds) * 100);
     this.highscores = HIGHSCORES[this.data.id];
     this.rounds = this.data.rounds;
+    this.playbackRate = 0.5;
+    
     
     if (this.history) document.getElementById('score-page-points-label').innerText = this.data.points;
+  }
+
+  playAudio(key, noReset?, cloneNode?, rate?) {
+    if (!getSoundMuted()) this.smartAudio.play(key, noReset, cloneNode, rate);
   }
 
   ionViewDidEnter() {    
     if (this.data) {      
       if (!this.history) {
         this.countUp = new CountUp('score-page-points-label', 0);
+        
+        let playrate = 0.75;
+        this.countUp.updateCallback = () => this.playAudio('countup_tick', true, true, playrate += 0.05);
+        
+        this.countUp.printValue = printFunction;
+        //this.playAudio('countup_points');
         this.countUp.update(this.data.points);
         this.highscores = [...HIGHSCORES[this.data.id]];
         let newRecord = addToHighscores(this.data.points, this.data.id);
+        let dailyGoalsDone = getDailyGoalsDone();
+        let unlockedGame = false;
 
         Array.from(document.getElementsByClassName('fadeIn')).forEach(element => {
           tween(element, "fadeInUp", "fast", null, null);
@@ -98,7 +120,16 @@ export class ScorePagePage implements OnInit {
           let leveledUp = correctDifficulty(this.data.correctAnswers, this.data.rounds, this.data.category, this.data.points, this.data.id);
           let xpBarElements = this.xpBar.getElements();
 
-          if (leveledUp.main) tween(xpBarElements.main, 'heartBeat', 'slow', null, null);
+          if (leveledUp) {
+            let newGame = GAMES_LIST.filter(game => game.levelReq == PLAYER_STATS.level);
+            if (newGame.length > 0) {
+              unlockedGame = true;
+              this.showNewGameToast(newGame[0]);
+            }
+            
+            tween(xpBarElements.main, 'heartBeat', 'slow', null, null);
+            this.playAudio('level_up');
+          }
 
           if (newRecord != undefined) {
             this.highscores = HIGHSCORES[this.data.id];
@@ -115,10 +146,63 @@ export class ScorePagePage implements OnInit {
             if (PLAYER_STATS.stats[stat]) addPlayerStats(stat, this.data.statPoints[stat]);
           });
           
+          // Correct bar and add history
           this.correctStatBars();
+          
+          // Check if daily goals are met after adding game history
+          if (dailyGoalsDone < getDailyGoalsDone()) {
+            this.showDailyGoalsToast(unlockedGame);
+          }
         });
       }
     }
+  }
+
+  async ionViewWillLeave() {
+    let dismiss = await this.toastController.getTop();
+    if (dismiss) this.toastController.dismiss();
+  }
+
+  async showNewGameToast(item) {
+    const toast = await this.toastController.create({
+      message: `<b>NYTT SPILL: ${item.title}</b>`,
+      color: 'dark',
+      position: 'bottom',
+      cssClass: ['toast-class', 'toast-bottom'],
+      buttons: [
+        {
+          text: 'GÅ TIL SPILL',
+          handler: () => {
+            this.router.navigate(['game-info', item.id]);
+          }
+        }, {
+          side: 'end',
+          icon: 'close-circle-outline',
+          role: 'cancel'
+        }
+      ]
+    });
+    
+    toast.present();
+  }
+
+  async showDailyGoalsToast(top) {
+    let classes = top ? ['toast-class', 'toast-top'] : ['toast-class', 'toast-bottom'];
+    
+    const toast = await this.toastController.create({
+      message: `<b>DAGLIGE MÅL FULLFØRT: ${getDailyGoalsDone()} AV ${GOALS_LIST.list.length}</b>`,
+      color: 'dark',
+      position: 'bottom',
+      cssClass: classes,
+      buttons: [{
+          side: 'end',
+          icon: 'close-circle-outline',
+          role: 'cancel'
+        }
+      ]
+    });
+    
+    toast.present();
   }
   
   correctStatBars() {
@@ -144,7 +228,6 @@ export class ScorePagePage implements OnInit {
     this.data.difficulty = DIFFICULTY[this.data.id];
 
     addGameHistory(this.data);
-    updateGoals(this.data);
     this.firebaseService.addGameHistory(this.data);
   }
 }

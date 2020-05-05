@@ -12,6 +12,8 @@ import { Chart } from 'chart.js';
 import {ModalController} from "@ionic/angular";
 import {FinnOrdetHistoryPage} from "../modals/finn-ordet-history/finn-ordet-history.page";
 import moment from 'moment';
+import {NavigationEnd, Router} from "@angular/router";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-stats',
@@ -25,9 +27,9 @@ export class StatsPage implements OnInit {
   
   public barChartData: any;
   public lineChartData: any;
-  public reperioRate: number;
   public selectedOption: string;
   public subSelectedOption: string;
+  private subscription: Subscription;
   
   public statPercent = getStatPercent;
   public statsList = STATS_LIST;
@@ -35,15 +37,15 @@ export class StatsPage implements OnInit {
   public statsKeys = Object.keys(PLAYER_STATS.stats);
   public lesePercent = getAveragePercent(STATS_AVERAGE.lese);
   public forstoelsePercent = getAveragePercent(STATS_AVERAGE.forsoelse);
-  public gameList: any = ['finn-ordet', 'ord-par', 'sant-usant', 'finn-bildet'];
+  public gameList: any = ['finn-ordet', 'sant-usant', 'finn-bildet', 'ord-par'];
   public gameHistory: any = {
     'finn-ordet': [],
-    'ord-par': [],
     'sant-usant': [],
-    'finn-bildet': []
+    'finn-bildet': [],
+    'ord-par': []
   };
   
-  constructor(public modalController: ModalController) {
+  constructor(public modalController: ModalController, private router: Router) {
     Chart.defaults.global.legend.display = false;
     Chart.pluginService.register({
       beforeDraw: function (chart) {
@@ -86,6 +88,12 @@ export class StatsPage implements OnInit {
         }
       }
     });
+
+    this.subscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd && (event.url === '/tabs/stats')) {
+        this.updateHistoryList(this.dateSelection.value);
+      }
+    });
   }
   
   ngOnInit(): void {
@@ -110,7 +118,6 @@ export class StatsPage implements OnInit {
     this.forstoelsePercent = getAveragePercent(['benevning', 'semantikk', 'hurtighet', 'auditiv']);
 
     this.updateBarChart();
-    this.updateHistoryList('day');
   }
   
   getGameHistoryLabels() {
@@ -121,27 +128,23 @@ export class StatsPage implements OnInit {
     return [...this.getGameHistoryLabels()]
   }
   
-  updateHistoryList(day) {
+  updateHistoryList(day) {    
     let d = new Date();
-    d.setHours(3,0,0,0);
+    d.setHours(0,0,0,0);
     if (day == 'week') d.setDate(d.getDate() - 7);
     else if (day == 'month') d.setDate(d.getDate() - 30);
     else if (day == 'all') d.setTime(0);
-    
-    let testingdate = new Date();
-    testingdate.setHours(Math.floor(Math.random() * 24), Math.floor(Math.random() * 60), Math.floor(Math.random() * 60), Math.floor(Math.random() * 60));
-    testingdate.setDate(testingdate.getDate() - 7);
 
     this.gameHistory['finn-ordet'] = GAME_HISTORY[1].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
-    this.gameHistory['ord-par'] = GAME_HISTORY[2].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
-    this.gameHistory['sant-usant'] = GAME_HISTORY[3].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
-    this.gameHistory['finn-bildet'] = GAME_HISTORY[4].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
+    this.gameHistory['sant-usant'] = GAME_HISTORY[2].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
+    this.gameHistory['finn-bildet'] = GAME_HISTORY[3].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
+    this.gameHistory['ord-par'] = GAME_HISTORY[4].filter(game => game.date > d.getTime()).sort((a, b) => a.date - b.date);
     
     this.updateLineChart();
   }
   
   updateBarChart() {
-    this.reperioRate = getReperioRate();
+    this.barChartData.options.elements.center.text = getReperioRate();
     let grammatikkList = ['verb', 'adjektiv', 'substantiv'].map(stat => PLAYER_STATS.stats[stat]);
     let grammatikkAverage = convertToSingleDecimal(grammatikkList.reduce((n, v) => n + v) / 3);
 
@@ -159,7 +162,7 @@ export class StatsPage implements OnInit {
   updateLineChart() {    
     if (this.selectedOption) {
       this.lineChartData.data = {
-        labels: this.gameHistory[this.selectedOption.toLowerCase()].map(game => moment(game.date).format('DD.MMM')),
+        labels: this.gameHistory[this.selectedOption.toLowerCase()].map(game => this.getDate(game.date)/*moment(game.date).format('DD.MMM')*/),
         datasets: [this.getDataSet()]
       };
   
@@ -167,7 +170,7 @@ export class StatsPage implements OnInit {
     }
   }
   
-  getDataSet() {    
+  getDataSet() {
     if (this.subSelectedOption == 'SVARTID') {
       this.lineChartData.options.scales.yAxes = [{
         ticks: {
@@ -179,6 +182,13 @@ export class StatsPage implements OnInit {
         }
       }];
       
+      let data = this.gameHistory[this.selectedOption.toLowerCase()].map(game => {
+        return {
+          x: game.date,
+          y: this.getAverageTimeTaken(game)
+        }
+      });
+      
       return {
         label: "Gjennomsnittlig svartid",
         borderColor: "#a554bc",
@@ -186,12 +196,7 @@ export class StatsPage implements OnInit {
         pointBackgroundColor: "#ffffff",
         pointRadius: 4,
         borderWidth: 2,
-        data: this.gameHistory[this.selectedOption.toLowerCase()].map(game => {
-          return {
-            x: game.date,
-            y: this.getAverageTimeTaken(game)
-          }
-        })
+        data: data
       }
     } else if (this.subSelectedOption == 'VANSKELIGHETSGRAD') {
       this.lineChartData.options.scales.yAxes = [{
@@ -201,6 +206,13 @@ export class StatsPage implements OnInit {
         }
       }];
       
+      let data = this.gameHistory[this.selectedOption.toLowerCase()].map(game => {
+        return {
+          x: game.date,
+          y: game.data.difficulty
+        }
+      });
+      
       return {
         label: "Vanskelighetsgrad",
         borderColor: "#39BCA3",
@@ -208,12 +220,7 @@ export class StatsPage implements OnInit {
         pointBackgroundColor: "#ffffff",
         pointRadius: 4,
         borderWidth: 2,
-        data: this.gameHistory[this.selectedOption.toLowerCase()].map(game => {
-          return {
-            x: game.date,
-            y: game.data.difficulty
-          }
-        })
+        data: data
       }
     } else if (this.subSelectedOption == 'RIKTIGE SVAR') {
       this.lineChartData.options.scales.yAxes = [{
@@ -226,6 +233,13 @@ export class StatsPage implements OnInit {
         }
       }];
       
+      let data = this.gameHistory[this.selectedOption.toLowerCase()].map(game => {
+        return {
+          x: game.date,
+          y: Math.round((game.data.correctAnswers / game.data.rounds) * 100)
+        }
+      });
+      
       return {
         label: "Riktige svar",
         borderColor: "#bcaf27",
@@ -233,12 +247,7 @@ export class StatsPage implements OnInit {
         pointBackgroundColor: "#ffffff",
         pointRadius: 4,
         borderWidth: 2,
-        data: this.gameHistory[this.selectedOption.toLowerCase()].map(game => {
-          return {
-            x: game.date,
-            y: Math.round((game.data.correctAnswers / game.data.rounds) * 100)
-          }
-        })
+        data: data
       }
     } else {
       return {};
@@ -259,17 +268,6 @@ export class StatsPage implements OnInit {
     
     return averageTime > 30 ? 30 : convertToSingleDecimal(averageTime);
   }
-  
-  sumRoundTimeTaken(game) {
-    let sumList = [];
-    
-    Object.values(game.data.gameHistory).forEach(round => Object.values(round).forEach(guess => sumList.push(guess.timeTaken)));
-    
-    let result = sumList.reduce((a, b) => a + b);
-    console.log(result);
-    
-    return result;
-  }
 
   createBarChart() {
     this.barChartData = new Chart(this.barChart.nativeElement, {
@@ -281,22 +279,7 @@ export class StatsPage implements OnInit {
             sidePadding: 40
           }
         },
-        aspectRatio: 1,
-        /*tooltips: {
-          callbacks: {
-            label: function(tooltipItem, data) {
-              let dataset = data.datasets[tooltipItem.datasetIndex];
-              let total = dataset.data.reduce((previousValue, currentValue) => {
-                return previousValue + currentValue;
-              });
-              
-              let currentValue = dataset.data[tooltipItem.index];
-              let percentage = Math.floor(((currentValue/total) * 100)+0.5);
-
-              return `${data.labels[tooltipItem.index]} - ${percentage}%`;
-            }
-          }
-        }*/
+        aspectRatio: 1
       }
     });
   }
@@ -305,7 +288,14 @@ export class StatsPage implements OnInit {
     this.lineChartData = new Chart(this.lineChart.nativeElement, {
       type: 'line',
       options: {
-        onClick: (a, b, c) => console.log(a, b, c), 
+        onClick: (a, b) => {
+          if (b[0]) {
+            let data = this.gameHistory[this.selectedOption.toLowerCase()][b[0]._index];
+            if (data) {
+              this.presentModal(data);
+            }
+          }
+        }, 
         legend: {
           display: false,
           position: "top"
@@ -313,9 +303,17 @@ export class StatsPage implements OnInit {
         scales: {
           xAxes: [{
             ticks: {
-              display: true
+              display: false,
             }
           }]
+        },
+        layout: {
+          padding: {
+            left: 10,
+            right: 10,
+            top: 0,
+            bottom: 0
+          }
         }
       }
     });

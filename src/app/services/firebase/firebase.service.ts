@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFireDatabase, AngularFireList} from "@angular/fire/database";
-import {GAME_HISTORY, getUserGuid, PLAYER_STATS, setUserGuid} from "../globals";
+import {GAME_HISTORY, getUserGuid, GOALS_LIST, PLAYER_STATS, setUserGuid} from "../globals";
 import {AngularFireAnalytics} from "@angular/fire/analytics";
 
 @Injectable({
@@ -18,8 +18,11 @@ export class FirebaseService {
     
     if (GUID) {
       let playerStatsRef = await this.db.database.ref(`/users/${GUID}/player_stats/`);
+      let playerGoalsRef = await this.db.database.ref(`/users/${GUID}/player_goals/`);
       let gameHistoryRef = await this.db.database.ref(`/users/${GUID}/game_history/${data.id}/`);
+      
       playerStatsRef.set(PLAYER_STATS);
+      playerGoalsRef.child(`${GOALS_LIST.date}`).set(GOALS_LIST.list);
       gameHistoryRef.child('date').set(Date.now());
       gameHistoryRef.child(`data/${GAME_HISTORY[data.id].length - 1}`).set(data);
     } else {

@@ -1,16 +1,18 @@
-<ion-content fullscreen>
-	<ion-card color="primary" class="ion-no-margin ion-no-padding">
+<ion-content>
+	<ion-card style="border-radius: 0;" color="primary" class="ion-no-margin ion-no-padding">
 		<mat-expansion-panel class="ion-padding-vertical">
 			<mat-expansion-panel-header collapsedHeight="6vh">
 				<mat-panel-title class="ion-align-items-center">
 					<img style="height: 5vh;" src="../../../assets/img/brain.png" />
 				</mat-panel-title>
-				<mat-panel-description><ion-label class="vertical-align-content" style="font-size: 3vh;">DAGLIGE MÅL</ion-label></mat-panel-description>
+				<mat-panel-description>
+					<ion-label class="vertical-align-content" style="font-size: 3vh;">DAGLIGE MÅL&nbsp;&nbsp;&nbsp;{{sumGoals}} / 3&nbsp;&nbsp;&nbsp;<ion-icon [hidden]="sumGoals !== 3" slot="end" class="ion-no-margin ion-no-padding" name="checkmark-circle-outline"></ion-icon></ion-label>
+				</mat-panel-description>
 			</mat-expansion-panel-header>
 
 			<ion-grid>
-				<ion-row>	
-					<ion-item *ngFor="let goal of GOALS_LIST; let i = index" color="primary" class="ion-no-margin ion-no-padding daily-goals-text">
+				<ion-row>
+					<ion-item *ngFor="let goal of goalsList; let i = index" color="primary" class="ion-no-margin ion-no-padding daily-goals-text">
 						<ion-text slot="end" class="ion-text-end">{{goal.progress}} / {{goal.max}}</ion-text>
 						<ion-icon [hidden]="!goal.finished" slot="end" class="ion-no-margin ion-no-padding" name="checkmark-circle-outline"></ion-icon>
 						<ion-label>{{goal.text}}</ion-label>
@@ -21,12 +23,9 @@
 	</ion-card>
 	
 	<ion-grid>
-		<ion-row>
+		<ion-row class="ion-padding-vertical">
 			<ion-col>
-				<ion-button class="ion-text-center" expand="block" color="dark" (click)="openSurvey()"><ion-label style="font-size: 2.2vh;" color="light">UNDERSØKELSE 1</ion-label></ion-button>
-			</ion-col>
-			<ion-col>
-				<ion-button class="ion-text-center" expand="block" color="dark" (click)="openSurvey()"><ion-label style="font-size: 2.2vh;" color="light">UNDERSØKELSE 2</ion-label></ion-button>
+				<ion-button class="ion-text-center" expand="block" color="primary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')"><ion-label style="font-size: 2.2vh;" color="dark">Brukerundersøkelse</ion-label></ion-button>
 			</ion-col>
 		</ion-row>
 		
@@ -34,15 +33,21 @@
 			<app-xp-bar style="width: 100%;"></app-xp-bar>
 		</ion-row>
 		
-		<ion-row>
+		<ion-row class="ion-padding-vertical">
 			<ion-label class="ion-padding-horizontal" style="font-size: 2.5vh;">
 				<ion-icon class="icon" name="rocket-outline"></ion-icon> SPILL
 			</ion-label>
 		</ion-row>
 		
-		<ion-row>
-			<ion-slides #slides [options]="sliderConfig" (click)="$event.preventDefault()">
-				<ion-slide *ngFor="let item of GAMES_LIST" style="padding: 1rem">
+		<ion-row style="position: relative;">
+			<div class="sliderPos vertical-align-content" style="left: 3%;" (click)="slidePrev()">
+				<ion-icon [hidden]="this.slideBeginning" name="chevron-back-outline"></ion-icon>
+			</div>
+			<div class="sliderPos vertical-align-content" style="right: 3%;" (click)="slideNext()">
+				<ion-icon [hidden]="this.slideEnd" name="chevron-forward-outline"></ion-icon>
+			</div>
+			<ion-slides class="ion-no-margin ion-no-padding" #slides [options]="sliderConfig" (click)="$event.preventDefault()">
+				<ion-slide class="ion-padding-horizontal" *ngFor="let item of gamesList">
 					<app-game-card [item]="item"></app-game-card>
 				</ion-slide>
 			</ion-slides>

@@ -7,6 +7,19 @@ ion-item {
 	margin-bottom: -3px;
 }
 
+.center-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sliderPos {
+	position: absolute;
+	font-size: 2rem;
+	z-index: 2;
+	height: 85%;
+}
+
 .gameCards {
 	display: inline-block;
 }

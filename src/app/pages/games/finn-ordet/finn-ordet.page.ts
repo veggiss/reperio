@@ -5,10 +5,12 @@ import {
   loadImages,
   getFinnOrdetData,
   getTimeBonus,
-  getOrddelingData, getStatPoint, getTimeStat, addRoundStats
+  getOrddelingData, getStatPoint, getTimeStat, addRoundStats, toggleSoundMuted, getSoundMuted, printFunction
 } from "../../../services/globals";
 import { CountUp } from 'countup.js';
 import {ActivatedRoute, NavigationExtras, Router} from "@angular/router";
+import {SmartAudioService} from "../../../services/providers/smart-audio.service";
+import {LoadingService} from "../../../services/loader/loading.service"
 
 @Component({
   selector: 'app-finn-ordet',
@@ -31,7 +33,9 @@ export class FinnOrdetPage implements OnInit {
   public roundData: any;
   public precachedRoundData: any;
 
-  public maxRounds: number = 10;
+  public getSoundMuted: any = getSoundMuted;
+  public toggleSoundMuted: any = toggleSoundMuted;
+  public maxRounds: number = 7;
   public questionImageSrc: string = "";
   public alternativeBtns: any = [];
   public maxTimeTaken: number = 30;
@@ -40,13 +44,16 @@ export class FinnOrdetPage implements OnInit {
   public roundTextAlternatives = ["", "", "", ""];
   public gameHistory: any = {};
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private smartAudio: SmartAudioService, private loader: LoadingService) {}
 
   async ngOnInit() {
-    //let orientation = window.screen.orientation;
-    //await orientation.lock("portrait");
-
-    //TODO: Change these to using local id #variable
+    this.smartAudio.preload('correct_answer', '../../../../assets/audio/fx/correct_answer.mp3');
+    this.smartAudio.preload('countup_tick', '../../../../assets/audio/fx/countup_tick.mp3');
+    this.smartAudio.preload('wrong_answer', '../../../../assets/audio/fx/wrong_answer.mp3');
+    this.smartAudio.preload('clock_tick', '../../../../assets/audio/fx/clock_tick.mp3');
+    this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
+    this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
+    
     this.container = document.getElementById("main-container");
     this.pointsElement = document.getElementById("finn-ordet-points");
     this.questionImageElement = document.getElementById("question-image");
@@ -66,15 +73,23 @@ export class FinnOrdetPage implements OnInit {
     this.roundData = getFinnOrdetData(DIFFICULTY[1], this.maxRounds);
     this.precachedRoundData = JSON.parse(JSON.stringify(this.roundData));
     this.countUp.reset();
+    this.gameHistory = {};
     
+    this.loader.loadingPresent();    
     await loadImages(this.roundData);
-    
+    this.loader.loadingDismiss();
+
     this.startRound();
+  }
+
+  ionViewWillLeave() {
+    clearInterval(this.timerInterval);
   }
   
   addPoints(points, timeBonus) {
     this.points += Math.round((points * DIFFICULTY[1]) + timeBonus);
     this.countUp.update(this.points);
+    
     tween(this.pointsElement, "tada", "slow", null, null);
   }
   
@@ -82,6 +97,7 @@ export class FinnOrdetPage implements OnInit {
     this.container.style.visibility = "visible";
     this.questionImageSrc = this.roundData[this.round].image.src;
     this.timeLeft = this.maxTimeTaken;
+    this.playAudio('swosh_in');
     
     this.startTimer();
     
@@ -97,6 +113,7 @@ export class FinnOrdetPage implements OnInit {
   }
   
   endRound() {
+    this.playAudio('swosh_out');
     tween(this.container, "slideOutLeft", "fast", "out", () => {
       this.container.style.visibility = "hidden";
       this.round++;
@@ -122,6 +139,10 @@ export class FinnOrdetPage implements OnInit {
     });
   }
   
+  playAudio(key) {
+    if (!getSoundMuted()) this.smartAudio.play(key);
+  }
+  
   answer(evt) {    
     if (this.allowInput) {
       clearInterval(this.timerInterval);
@@ -132,11 +153,13 @@ export class FinnOrdetPage implements OnInit {
       let answeredCorrect = answer.toUpperCase() == this.roundData[this.round].answer.toUpperCase();
       
       if (answeredCorrect) {
+        this.playAudio('correct_answer');
         this.correctAnswers++;
         target.color = 'success';
         this.addPoints(10, getTimeBonus(this.timeStamp, this.maxTimeTaken));
         addRoundStats(this.statsPoints, 'hurtighet', this.timeLeft, null);
       } else {
+        this.playAudio('wrong_answer');
         target.color = "danger";
       }
       
@@ -169,7 +192,10 @@ export class FinnOrdetPage implements OnInit {
 
   startTimer() {
     this.timerInterval = setInterval(() => {
-      if (this.timeLeft > 0) this.timeLeft--;
+      if (this.timeLeft > 0) {
+        this.playAudio('clock_tick');
+        this.timeLeft--;
+      }
     }, 1000);
   }
 }

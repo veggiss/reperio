@@ -1,8 +1,14 @@
-<div (click)="go(item.id)" routerDirection="forward" (mousedown)="$event.preventDefault()">
+<div (click)="go(item.id)" class="ion-no-margin ion-no-padding" (mousedown)="$event.preventDefault()">
     <ion-card style="margin-left: 0; margin-right: 0;">
-        <img [src]="item.thumbnail"/>
+        <img [class]="isAboveLevelReq() ? '' : 'blur'" [src]="item.thumbnail"/>
         
-        <ion-icon color="light" class="topright" [name]="item.icon"></ion-icon>
+        <ion-label *ngIf="!isAboveLevelReq()" class="lockIcon vertical-align-content">
+            <ion-icon color="dark" name="lock-closed"></ion-icon>
+        </ion-label>
+
+        <ion-label *ngIf="!isAboveLevelReq()" color="light" class="levelReq vertical-align-content">
+            {{item.levelReq}}
+        </ion-label>
     </ion-card>
     <ion-card-subtitle class="ion-text-left" color="dark">
         {{item.title}}

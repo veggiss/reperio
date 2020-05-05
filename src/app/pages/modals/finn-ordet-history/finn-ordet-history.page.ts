@@ -11,10 +11,10 @@ export class FinnOrdetHistoryPage implements OnInit {
 
   constructor(public modalController: ModalController) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   async closeModal() {
+    console.log(this.gameData);
     await this.modalController.dismiss();
   }
 

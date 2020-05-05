@@ -205,7 +205,7 @@
         "id": 13,
         "category": "musikk",
         "src": "069-50.png",
-        "complexity": 1,
+        "complexity": 3,
         "answer": 1,
         "question": [
             "En stor gruppe musikere"
@@ -960,6 +960,548 @@
             "semantikk",
             "benevning",
             "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 61,
+        "category": "musikk",
+        "src": "019-48.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Blå hodetelefoner"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 62,
+        "category": "musikk",
+        "src": "038-52.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "To damer spiller gitar"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 63,
+        "category": "musikk",
+        "src": "012-17.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Et treverk"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 64,
+        "category": "musikk",
+        "src": "007-16.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Syngende baby"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 65,
+        "category": "musikk",
+        "src": "039-22.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Notisblokk"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 66,
+        "category": "musikk",
+        "src": "059-33.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Røde bær"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 67,
+        "category": "musikk",
+        "src": "008-13.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Gitarist"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 68,
+        "category": "musikk",
+        "src": "017-4.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Tromme"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 69,
+        "category": "musikk",
+        "src": "042-34.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Stropper"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 70,
+        "category": "musikk",
+        "src": "018-5.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Gjøgler"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 71,
+        "category": "musikk",
+        "src": "leo-wieling-pEEHFSX1vak-unsplash-1.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Platetopp"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 72,
+        "category": "musikk",
+        "src": "086-23.png",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Orkester"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 73,
+        "category": "dyr",
+        "src": "michael-romanov-7_yA24RSeF4-unsplash-58.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Grønn firfirlse"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 74,
+        "category": "dyr",
+        "src": "scott-stephens-IeTl49KsMqo-unsplash-65.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Ku"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 75,
+        "category": "dyr",
+        "src": "ricky-kharawala-adK3Vu70DEQ-unsplash-54.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Oransje pusekatt"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 76,
+        "category": "dyr",
+        "src": "uriel-soberanes-uYcEkcREK7E-unsplash-23.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Svart tiger"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 77,
+        "category": "dyr",
+        "src": "wolfgang-hasselmann-iYfGDUEJvO0-unsplash-82.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Liggende kamel"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 78,
+        "category": "dyr",
+        "src": "david-clode-RAfIk-ZKbPk-unsplash-60.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Hageslange"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 79,
+        "category": "dyr",
+        "src": "freddie-marriage-iYQC9xWMvw4-unsplash-49.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Hårete tiger"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 80,
+        "category": "dyr",
+        "src": "marvin-heilemann-hhwxgGPWg-A-unsplash-15.png",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Flygende pingviner"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 81,
+        "category": "mat",
+        "src": "eaters-collective-vOdK_eih7B0-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Saftig hamburger"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 82,
+        "category": "mat",
+        "src": "eiliv-sonas-aceron-An6cTgmC8yk-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Eggerøre og bacon"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 83,
+        "category": "mat",
+        "src": "victoria-aleksandrova-n56ZKeW9bVM-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Pesto pasta"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 84,
+        "category": "mat",
+        "src": "jonathan-pielmayer-eFFnKMiDMGc-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Oransje gulrøtter"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 85,
+        "category": "mat",
+        "src": "stefano-alemani-RISb03J0GK0-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Fruktmarked"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 86,
+        "category": "mat",
+        "src": "anastasiia-vasileva-SLE08nqpEbk-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Fersk sjømat"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 87,
+        "category": "mat",
+        "src": "fallon-travels-W01Qwuhb_l4-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Italiensk pizza"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 88,
+        "category": "mat",
+        "src": "foodism360-JkmLbfRvi8w-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Røde rødbeter"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 89,
+        "category": "sport",
+        "src": "vince-fleming-aZVpxRydiJk-unsplash.jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Lagsport"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 90,
+        "category": "sport",
+        "src": "chris-chow-DCqXIFXoqr0-unsplash(1).jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Brytere"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 91,
+        "category": "sport",
+        "src": "yoav-hornung-kQ55djHUcEY-unsplash(1).jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Tennisnett"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 92,
+        "category": "sport",
+        "src": "sherise-Atohf63B8Dg-unsplash(1).jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Maraton"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 93,
+        "category": "sport",
+        "src": "solal-ohayon-5QIPyaDT1V0-unsplash(1).jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Kickboksing"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 94,
+        "category": "sport",
+        "src": "chris-liverani-JK23vG5t9FQ-unsplash(1).jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Ishockeybane"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 95,
+        "category": "sport",
+        "src": "sebastian-staines-xZIFEPtRsRI-unsplash(1).jpg",
+        "complexity": 3,
+        "answer": 1,
+        "question": [
+            "Frikjører"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
             "substantiv"
         ]
     }
