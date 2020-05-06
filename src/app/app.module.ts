@@ -24,7 +24,9 @@ import {AngularFireAnalyticsModule, ScreenTrackingService, UserTrackingService} 
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      mode: 'ios'
+    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),

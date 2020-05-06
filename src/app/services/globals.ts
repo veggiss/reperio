@@ -626,3 +626,20 @@ export const printFunction = function(val: number) {
 	
 	if (oldValue != result) this.updateCallback();
 };
+
+export const updateScrollBar = (content) => {
+	const styles = document.createElement('style');
+
+	styles.textContent = `
+		::-webkit-scrollbar {
+		  display: none;
+		}
+		
+		* {
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+		}
+	`;
+	
+	if (content) content.shadowRoot.appendChild(styles);
+};

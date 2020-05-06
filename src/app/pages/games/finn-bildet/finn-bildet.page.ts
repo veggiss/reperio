@@ -167,7 +167,6 @@ export class FinnBildetPage implements OnInit {
 
             tween(evt.target, "pulse", "slow", null, () => {
                 setTimeout(() => {
-                    this.allowInput = true;
                     this.endRound();
                 }, 500);
             });

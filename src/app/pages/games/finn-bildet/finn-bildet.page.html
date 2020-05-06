@@ -1,10 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/game-info/3" text=""></ion-back-button>
+      <ion-menu-button [routerLink]="'/game-info/3'" routerDirection="back" auto-hide="false">
+        <ion-icon color="secondary" name="arrow-back-outline"></ion-icon>
+      </ion-menu-button>
     </ion-buttons>
+
     <ion-buttons slot="end">
-      <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false"><ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon></ion-menu-button>
+      <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false">
+        <ion-icon color="secondary" [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon>
+      </ion-menu-button>
     </ion-buttons>
 
     <ion-title>

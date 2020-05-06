@@ -13,6 +13,10 @@ ion-item {
 	margin-right: auto;
 }
 
+.line-through {
+	text-decoration: line-through;
+}
+
 .sliderPos {
 	position: absolute;
 	font-size: 2rem;
@@ -24,10 +28,6 @@ ion-item {
 	display: inline-block;
 }
 
-.bgColor {
-	--background: url("../../../assets/img/games/match/bg.png");
-}
-
 .daily-goals-text {
 	width: 100%; font-size: 2vh;
 }
@@ -35,4 +35,11 @@ ion-item {
 .mp-bottom {
 	padding-bottom: 0;
 	margin-bottom: 0;
+}
+
+.goal-title {
+	position: absolute; 
+	margin-top: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%)
 }

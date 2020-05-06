@@ -1,0 +1,55 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="dark" (click)="closeModal()"><ion-icon name="close-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [color]="selected > 0 ? 'secondary' : 'medium'" (click)="selectPrev()">FORRIGE</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [color]="selected < infoList.length - 1 ? 'secondary' : 'medium'" (click)="selectNext()">NESTE</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding container" scroll-y="true">
+  <ion-grid class="overflow-control fh">
+    <div *ngIf="infoList[selected].position === 'center'">
+      <ion-row class="ion-justify-content-center">
+        <ion-img style="max-height: 200px;" [src]="infoList[selected].src"></ion-img>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <h2 class="ion-no-padding" [class]="infoList[selected].align == 'left' ? 'ion-text-start' : 'ion-text-center'">{{infoList[selected].title}}</h2>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <p class="ion-no-margin" [class]="infoList[selected].align == 'left' ? 'ion-text-start' : 'ion-text-center'" [innerHTML]="infoList[selected].text"></p>
+      </ion-row>
+    </div>
+
+    <div *ngIf="infoList[selected].position === 'left'">
+      <ion-row>
+        <ion-col class="vertical-align-content" style="max-width: 300px;">
+          <ion-img style="max-width: 300px;" [src]="infoList[selected].src"></ion-img>
+        </ion-col>
+        
+        <ion-col style="overflow: auto;">
+          <div class="fw">
+            <h2 class="ion-no-padding" [class]="infoList[selected].align == 'left' ? 'ion-text-start' : 'ion-text-center'" [innerHTML]="infoList[selected].title"></h2>
+          </div>
+          <div class="fw">
+            <p class="ion-no-margin" [class]="infoList[selected].align == 'left' ? 'ion-text-start' : 'ion-text-center'" [innerHTML]="infoList[selected].text"></p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+    
+    
+
+    <ion-row class="ion-justify-content-center dot-container fw">
+      <div *ngFor="let item of infoList; let i = index">
+        <ion-icon (click)="setSelected(i)" class="dot" [color]="i == selected ? 'secondary' : 'medium'" name="ellipse"></ion-icon>
+      </div>
+    </ion-row>
+  </ion-grid>
+</ion-content>

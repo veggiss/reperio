@@ -1504,5 +1504,418 @@
             "benevning",
             "substantiv"
         ]
+    },
+    {
+        "id": 96,
+        "category": "vost",
+        "src": "image-103.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Åpne døra"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 97,
+        "category": "vost",
+        "src": "image-102.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Vanne blomster"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 98,
+        "category": "vost",
+        "src": "image-101.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Vaske opp"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 99,
+        "category": "vost",
+        "src": "image-100.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Koke pølser"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 100,
+        "category": "vost",
+        "src": "image-98.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Høyt opp i fjellet"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 101,
+        "category": "vost",
+        "src": "image-96.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Båten er rett"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 102,
+        "category": "vost",
+        "src": "image-95.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Motorist i farta"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 103,
+        "category": "vost",
+        "src": "image-94.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Nåla i veggen"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 104,
+        "category": "vost",
+        "src": "image-93.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Redd for vannet"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 105,
+        "category": "vost",
+        "src": "image-88.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Jordbær fra benken"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 106,
+        "category": "vost",
+        "src": "image-87.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Ikke stikk meg!"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 107,
+        "category": "vost",
+        "src": "image-83.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Mellommåltid"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 108,
+        "category": "vost",
+        "src": "image-82.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Øver på gitar"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 109,
+        "category": "vost",
+        "src": "image-81.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Hammer og spiker"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 110,
+        "category": "vost",
+        "src": "image-79.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Søvnig"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 111,
+        "category": "vost",
+        "src": "image-79.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Våken"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 112,
+        "category": "vost",
+        "src": "image-80.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Grave i jorda"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 113,
+        "category": "vost",
+        "src": "image-80.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Grave i fjellet"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 114,
+        "category": "vost",
+        "src": "image-78.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Male veggene"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 115,
+        "category": "vost",
+        "src": "image-78.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Arbeider"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 116,
+        "category": "vost",
+        "src": "image-76.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Huset brenner!"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 117,
+        "category": "vost",
+        "src": "image-76.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Trykt å gå inn i huset"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 118,
+        "category": "vost",
+        "src": "image-68.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Mer vind øker farten"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 119,
+        "category": "vost",
+        "src": "image-75.jpg",
+        "complexity": 1,
+        "answer": 0,
+        "question": [
+            "Skli på snøen"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 120,
+        "category": "vost",
+        "src": "image-75.jpg",
+        "complexity": 1,
+        "answer": 1,
+        "question": [
+            "Stå på skøyter"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 121,
+        "category": "vost",
+        "src": "image-67.jpg",
+        "complexity": 2,
+        "answer": 0,
+        "question": [
+            "Digitalt arbeid"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 122,
+        "category": "vost",
+        "src": "image-67.jpg",
+        "complexity": 2,
+        "answer": 1,
+        "question": [
+            "Håndverker i arbeid"
+        ],
+        "stats": [
+            "semantikk",
+            "benevning",
+            "verb",
+            "adjektiv"
+        ]
     }
 ]

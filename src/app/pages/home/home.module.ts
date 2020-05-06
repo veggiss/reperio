@@ -8,6 +8,7 @@ import { XpBarModule } from '../../components/xp-bar/xp-bar.module';
 import { GameCardModule } from '../../components/game-card/game-card.module';
 import {HostListenerModule} from "../../services/directive/host-listener.module";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {InfoModalPage} from "../modals/info-modal/info-modal.page";
 
 @NgModule({
     imports: [
@@ -20,6 +21,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
         HostListenerModule,
         RouterModule.forChild([{path: '', component: HomePage}]),
     ],
-  declarations: [HomePage]
+    declarations: [HomePage, InfoModalPage], 
+    entryComponents: [InfoModalPage]
 })
 export class HomePageModule {}

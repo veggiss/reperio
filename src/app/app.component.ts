@@ -4,7 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {FirebaseService} from "./services/firebase/firebase.service";
-import {getUserGuid} from "./services/globals";
+import {getUserGuid, updateScrollBar} from "./services/globals";
 import {NavigationEnd, Router} from "@angular/router";
 import moment from 'moment';
 import localization from 'moment/locale/nb';
@@ -34,6 +34,8 @@ export class AppComponent {
       this.splashScreen.hide();
       this.firebaseService.initiateGuid();
       moment.updateLocale('nb', localization);
+      
+      
     });
   }
 

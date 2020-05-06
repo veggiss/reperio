@@ -343,13 +343,14 @@
     {
         "id": 21,
         "category": "musikk",
-        "answer": "Svevende mikrofon",
+        "answer": "Mikrofon",
         "src": "043-56.png",
-        "complexity": 2,
+        "complexity": 1,
         "alternatives": [
-            "Liggende mikrofon",
-            "Stående mikroskop",
-            "Flytende høytaler"
+            "Hårføner",
+            "Mikroskop",
+            "Telefon",
+            "Høytaler"
         ],
         "stats": [
             "benevning",
@@ -377,13 +378,13 @@
     {
         "id": 23,
         "category": "musikk",
-        "answer": "Fallende tuba",
+        "answer": "Tuba i lufta",
         "src": "098-69.png",
         "complexity": 2,
         "alternatives": [
-            "Svevende tube",
-            "Flytende turbulens",
-            "Stående tuba"
+            "Tuba på bakken",
+            "Tuba i skyene",
+            "Luftig tuba"
         ],
         "stats": [
             "benevning",
@@ -445,7 +446,7 @@
     {
         "id": 27,
         "category": "musikk",
-        "answer": "Sittende sitarspiller",
+        "answer": "Sittende musikker",
         "src": "023-72.png",
         "complexity": 3,
         "alternatives": [
@@ -479,13 +480,13 @@
     {
         "id": 29,
         "category": "musikk",
-        "answer": "Svevende hvite hodetelefoner",
+        "answer": "Hvite hodetelefoner",
         "src": "019-48.png",
         "complexity": 3,
         "alternatives": [
-            "Stående høytalere",
-            "Fallende hender",
-            "Hvit mikrofon"
+            "Hvit høytalere",
+            "Hvite telefoner",
+            "Hvite mikrofoner"
         ],
         "stats": [
             "benevning",
@@ -734,13 +735,13 @@
     {
         "id": 44,
         "category": "dyr",
-        "answer": "Rådyr i gresset",
+        "answer": "Hjort i gresset",
         "src": "vincent-van-zalinge-77e-HYqBcMs-unsplash-39.png",
         "complexity": 3,
         "alternatives": [
-            "Rådyr i gata",
+            "Rådyr i skogen",
             "Hest i gresset",
-            "Hjort i i fjellet"
+            "Hjort i fjellet"
         ],
         "stats": [
             "benevning",
@@ -1010,6 +1011,446 @@
             "Fektere i tasker",
             "Vektere i hallen",
             "Nektere i drakter"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 61,
+        "category": "sport",
+        "answer": "På fjellet",
+        "src": "kasya-shahovskaya-hTd7AEBfn_U-unsplash.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "I skogen",
+            "Langrenn",
+            "Mørk himmel"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 62,
+        "category": "vost",
+        "answer": "Kamerater",
+        "src": "image-10.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Uvenner",
+            "Skulder",
+            "Kjærester"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 63,
+        "category": "vost",
+        "answer": "Ake",
+        "src": "image-1.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Bake",
+            "Lake",
+            "Rake"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 64,
+        "category": "vost",
+        "answer": "Baby",
+        "src": "image-2.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Lady",
+            "Raring",
+            "Vannkopp"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 65,
+        "category": "vost",
+        "answer": "Bakverk",
+        "src": "image-3.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Mekker",
+            "Knutring",
+            "Knapring"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 66,
+        "category": "vost",
+        "answer": "Balanse",
+        "src": "image-4.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Sjenanse",
+            "Falle",
+            "Sveve"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 67,
+        "category": "vost",
+        "answer": "Bite",
+        "src": "image-5.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Bate",
+            "Kokle",
+            "Gape"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 68,
+        "category": "vost",
+        "answer": "Blåse",
+        "src": "image-6.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Vifte",
+            "Bluse",
+            "Vind"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 69,
+        "category": "vost",
+        "answer": "Svart hvit",
+        "src": "image-7.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Blå mørk",
+            "Mørk hvit",
+            "Lyse mørk"
+        ],
+        "stats": [
+            "benevning",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 70,
+        "category": "vost",
+        "answer": "Reine klær",
+        "src": "image-8.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Skittentøy",
+            "Oppvask",
+            "Vaske klær"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 71,
+        "category": "vost",
+        "answer": "Snekkerarbeid",
+        "src": "image-9.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Mekkearbeid",
+            "Hamrearbeid",
+            "Husarbeid"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 72,
+        "category": "vost",
+        "answer": "Bolle med tomater",
+        "src": "image-11.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Bolle med jerry",
+            "Røde rundinger",
+            "Frokost bolle"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 73,
+        "category": "vost",
+        "answer": "Drikke fra kartong",
+        "src": "image-12.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Lekke fra flaske",
+            "Drikke fra flaske",
+            "Melkeglass"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 74,
+        "category": "vost",
+        "answer": "Dusj utendørs",
+        "src": "image-13.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Hodepleie",
+            "Kaldt vann",
+            "Innendørs dusj"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 75,
+        "category": "vost",
+        "answer": "Feie",
+        "src": "image-15.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Leie",
+            "Meie",
+            "Heie"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 76,
+        "category": "vost",
+        "answer": "Pleie hesten",
+        "src": "image-17.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Leie hesten",
+            "Meie hesten",
+            "Heie hesten"
+        ],
+        "stats": [
+            "benevning",
+            "verb",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 77,
+        "category": "vost",
+        "answer": "Kamera",
+        "src": "image-18.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Bilde",
+            "Stativ",
+            "Mikrofon"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 78,
+        "category": "vost",
+        "answer": "Fiske",
+        "src": "image-20.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Smiske",
+            "Bøye",
+            "Stang"
+        ],
+        "stats": [
+            "benevning",
+            "verb"
+        ]
+    },
+    {
+        "id": 79,
+        "category": "vost",
+        "answer": "Fjell",
+        "src": "image-22.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Bred",
+            "Lange",
+            "Høye"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 80,
+        "category": "vost",
+        "answer": "Ape",
+        "src": "image-23.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Gjeit",
+            "Pels",
+            "Kanin"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 81,
+        "category": "vost",
+        "answer": "Frisør",
+        "src": "image-24.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Risør",
+            "Hårjobber",
+            "Kutte"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 82,
+        "category": "vost",
+        "answer": "Presang",
+        "src": "image-25.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Jul",
+            "Boks",
+            "Ball"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 83,
+        "category": "vost",
+        "answer": "Prikkete tiger",
+        "src": "image-26.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Pirkette tiger",
+            "Gjespende løve",
+            "Prikkete løve"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv",
+            "adjektiv"
+        ]
+    },
+    {
+        "id": 84,
+        "category": "vost",
+        "answer": "Grave i sanden",
+        "src": "image-27.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Male i sanden",
+            "Hullet i sanden",
+            "Finne i sanden"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv",
+            "verb"
+        ]
+    },
+    {
+        "id": 85,
+        "category": "vost",
+        "answer": "Gangoverfelt",
+        "src": "image-30.jpg",
+        "complexity": 2,
+        "alternatives": [
+            "Gåoverfelt",
+            "Strekoverfelt",
+            "Beinoverfelt"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 86,
+        "category": "vost",
+        "answer": "Basketball",
+        "src": "image-36.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Fotball",
+            "Håndball",
+            "Baseball"
+        ],
+        "stats": [
+            "benevning",
+            "substantiv"
+        ]
+    },
+    {
+        "id": 87,
+        "category": "vost",
+        "answer": "Veps",
+        "src": "image-87.jpg",
+        "complexity": 1,
+        "alternatives": [
+            "Stikke",
+            "Mygg",
+            "Flue"
         ],
         "stats": [
             "benevning",

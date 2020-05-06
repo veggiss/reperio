@@ -2,39 +2,32 @@
 	<ion-toolbar>
 		<ion-buttons slot="start">
 			<ion-menu-button [routerLink]="'/'" routerDirection="back" auto-hide="false">
-				<ion-icon name="arrow-back-outline"></ion-icon>
+				<ion-icon color="secondary" name="arrow-back-outline"></ion-icon>
 			</ion-menu-button>
 		</ion-buttons>
 
 		<ion-buttons slot="end">
 			<ion-menu-button (click)="toggleSoundMuted()" auto-hide="false">
-				<ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon>
+				<ion-icon color="secondary" [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon>
 			</ion-menu-button>
 		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
 
 <ion-content>
-	<div class="screenWidth bg-image">
-		<img class="titleImg bg-image" [src]="item.thumbnail"/>
+	<div class="screenWidth">
+		<div class="ion-text-center bgColor" style="width: 100%;">
+			<img class="titleImg" [src]="item.thumbnail"/>
+		</div>
 		
-        <ion-item color="dark" style="margin-top: -5px;">
-			<!--<ion-icon color="favorite" (click)="addFavorite()" slot="end" name="trophy"></ion-icon>-->
-			<ion-label color="light">{{ item.title.toUpperCase() }}</ion-label>
-			
-			<div slot="end" style="width: 30%;">
-				<div [style.width]="getDifficulty() + '%'">
-					<ion-icon class="ion-float-end" style="transform: translate(50%)" name="caret-down-outline"></ion-icon>
-				</div>
-				
-				<ion-progress-bar color="tertiary" value="1" class="progressBar difficultyBar"></ion-progress-bar>
-			</div>
+        <ion-item color="dark">
+			<ion-label color="light" style="font-size: 4vh;">{{ item.title.toUpperCase() }}</ion-label>
+			<ion-button (click)="playSound()" size="large" fill="outline" color="light" class="ion-no-margin"><ion-icon color="light" name="ear" class="ion-no-margin ion-no-padding"></ion-icon></ion-button>
         </ion-item>
 		
 		<ion-grid>
 			<ion-row>
 				<ion-col>
-					<ion-button (click)="playSound()" size="large" fill="outline" color="primary"><ion-icon color="dark" name="ear-outline" class="ion-no-margin ion-no-padding"></ion-icon></ion-button>
 					<h2 class="ion-no-padding ion-no-margin"><ion-label>
 						Beskrivelse:
 					</ion-label></h2>
@@ -53,8 +46,8 @@
 <ion-footer>
 	<ion-grid class="ion-no-padding">
 		<ion-row>
-			<ion-col size="4" class="ion-no-padding">
-				<ion-button (click)="gotoHighscore()" routerDirection="forward" expand="full" class="ion-no-margin" color="success"><ion-label color="light">RESULTAT</ion-label>&nbsp;<ion-icon size="large" color="light" name="trophy"></ion-icon></ion-button>
+			<ion-col class="ion-no-padding">
+				<ion-button (click)="gotoHighscore()" routerDirection="forward" expand="full" class="ion-no-margin" color="secondary"><ion-label color="light">RESULTAT</ion-label>&nbsp;<ion-icon size="large" color="light" name="trophy"></ion-icon></ion-button>
 			</ion-col>
 			<ion-col class="ion-no-padding">
 				<ion-button [routerLink]="'/game_' + item.id" routerDirection="forward" expand="full" class="ion-no-margin" color="primary"><ion-label color="light">SPILL</ion-label>&nbsp;<ion-icon size="large" color="light" name="play"></ion-icon></ion-button>

@@ -14,7 +14,14 @@ import {
   PLAYER_STATS,
   addPlayerStats,
   toggleSoundMuted,
-  getAveragePercent, STATS_AVERAGE, getSoundMuted, printFunction, GAMES_LIST, GOALS_LIST, getDailyGoalsDone
+  getAveragePercent,
+  STATS_AVERAGE,
+  getSoundMuted,
+  printFunction,
+  GAMES_LIST,
+  GOALS_LIST,
+  getDailyGoalsDone,
+  updateScrollBar
 } from "../../services/globals";
 import {XpBarComponent} from "../../components/xp-bar/xp-bar.component";
 import {CountUp} from "countup.js";
@@ -34,10 +41,10 @@ export class ScorePagePage implements OnInit {
   @ViewChild('difficultyBar', null) difficultyBar: StatBarComponent;
   @ViewChild('forstoelseBar', null) forstoelseBar: StatBarComponent;
   @ViewChild('leseBar', null) leseBar: StatBarComponent;
+  @ViewChild('ionContent', null) ionContent;
   
   public countUp: any;
   public rounds;
-  public winPercent;
 
   public getSoundMuted: any = getSoundMuted;
   public toggleSoundMuted: any = toggleSoundMuted;
@@ -75,7 +82,7 @@ export class ScorePagePage implements OnInit {
           this.statsKeys = Object.keys(this.data.statPoints);
         }
       } else {
-        this.router.navigate([`/`]);
+        //this.router.navigate([`/`]);
       }
     });
   }
@@ -83,7 +90,6 @@ export class ScorePagePage implements OnInit {
   ngOnInit() {
     this.smartAudio.preload('countup_points', '../../../../assets/audio/fx/countup_points.mp3');
     this.smartAudio.preload('level_up', '../../../../assets/audio/fx/level_up.mp3');
-    this.winPercent = Math.round((this.data.correctAnswers / this.data.rounds) * 100);
     this.highscores = HIGHSCORES[this.data.id];
     this.rounds = this.data.rounds;
     this.playbackRate = 0.5;
@@ -96,7 +102,9 @@ export class ScorePagePage implements OnInit {
     if (!getSoundMuted()) this.smartAudio.play(key, noReset, cloneNode, rate);
   }
 
-  ionViewDidEnter() {    
+  ionViewDidEnter() {
+    updateScrollBar(this.ionContent.el);
+    
     if (this.data) {      
       if (!this.history) {
         this.countUp = new CountUp('score-page-points-label', 0);

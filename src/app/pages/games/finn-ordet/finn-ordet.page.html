@@ -1,10 +1,15 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button defaultHref="/game-info/1" text=""></ion-back-button>
+            <ion-menu-button [routerLink]="'/game-info/1'" routerDirection="back" auto-hide="false">
+                <ion-icon color="secondary" name="arrow-back-outline"></ion-icon>
+            </ion-menu-button>
         </ion-buttons>
+
         <ion-buttons slot="end">
-            <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false"><ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon></ion-menu-button>
+            <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false">
+                <ion-icon color="secondary" [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon>
+            </ion-menu-button>
         </ion-buttons>
         
         <ion-title>
@@ -24,7 +29,7 @@
             <img id="question-image" class="question-image box-shadow" [src]="questionImageSrc">
         </ion-row>
 
-        <ion-row style="height: 40%">
+        <ion-row style="height: 40%" class="ion-justify-content-center">
             <ion-button (click)="answer($event)" id="alternative1" class="question-btn" mode="md" expand="block" size="small" color="light">{{roundTextAlternatives[0]}}</ion-button>
             <ion-button (click)="answer($event)" id="alternative2" class="question-btn" mode="md" expand="block" size="small" color="light">{{roundTextAlternatives[1]}}</ion-button>
             <ion-button (click)="answer($event)" id="alternative3" class="question-btn" mode="md" expand="block" size="small" color="light">{{roundTextAlternatives[2]}}</ion-button>

@@ -658,5 +658,236 @@
         "stats": [
             "semantikk"
         ]
+    },
+    {
+        "id": 60,
+        "type": "MB",
+        "answer": [
+            "Bukke",
+            "Bøye seg"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 61,
+        "type": "LB",
+        "answer": [
+            "Forvente",
+            "Anta"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 62,
+        "type": "LB",
+        "answer": [
+            "Friste",
+            "Lokke"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 63,
+        "type": "MB",
+        "answer": [
+            "Henge",
+            "Dingle"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 64,
+        "type": "LB",
+        "answer": [
+            "Endre",
+            "Justere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 65,
+        "type": "MB",
+        "answer": [
+            "Hjelpe",
+            "Bistå"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 66,
+        "type": "LB",
+        "answer": [
+            "Ignorere",
+            "Forsømme"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 67,
+        "type": "MB",
+        "answer": [
+            "Krympe",
+            "Redusere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 68,
+        "type": "MB",
+        "answer": [
+            "Legge",
+            "Plassere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 69,
+        "type": "LB",
+        "answer": [
+            "Lide",
+            "Sørge"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 70,
+        "type": "MB",
+        "answer": [
+            "Lytte",
+            "Høre"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 71,
+        "type": "MB",
+        "answer": [
+            "Sende",
+            "Frakte"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 72,
+        "type": "MB",
+        "answer": [
+            "Skille",
+            "Splitte"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 73,
+        "type": "MB",
+        "answer": [
+            "Skjenne",
+            "Kjefte"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 74,
+        "type": "MB",
+        "answer": [
+            "Skrike",
+            "Rope"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 75,
+        "type": "MB",
+        "answer": [
+            "Skru",
+            "Rotere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 76,
+        "type": "MB",
+        "answer": [
+            "Slåss",
+            "Kjempe"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 77,
+        "type": "MB",
+        "answer": [
+            "Snakkes",
+            "Prate"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 78,
+        "type": "MB",
+        "answer": [
+            "Spre",
+            "Distribuere"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 79,
+        "type": "MB",
+        "answer": [
+            "Spørre",
+            "Anmode"
+        ],
+        "stats": [
+            "semantikk"
+        ]
+    },
+    {
+        "id": 80,
+        "type": "LB",
+        "answer": [
+            "Uvikle",
+            "Bearbeide"
+        ],
+        "stats": [
+            "semantikk"
+        ]
     }
 ]

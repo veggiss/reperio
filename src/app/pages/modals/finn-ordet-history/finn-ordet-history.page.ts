@@ -14,7 +14,6 @@ export class FinnOrdetHistoryPage implements OnInit {
   ngOnInit() {}
 
   async closeModal() {
-    console.log(this.gameData);
     await this.modalController.dismiss();
   }
 

@@ -1,21 +1,22 @@
-<ion-content>
-	<ion-card style="border-radius: 0;" color="primary" class="ion-no-margin ion-no-padding">
+<ion-content #ionContent style="overflow-y: hidden;">
+	<ion-card style="border-radius: 0;" color="secondary" class="ion-no-margin ion-no-padding">
 		<mat-expansion-panel class="ion-padding-vertical">
 			<mat-expansion-panel-header collapsedHeight="6vh">
 				<mat-panel-title class="ion-align-items-center">
 					<img style="height: 5vh;" src="../../../assets/img/brain.png" />
 				</mat-panel-title>
 				<mat-panel-description>
-					<ion-label class="vertical-align-content" style="font-size: 3vh;">DAGLIGE MÅL&nbsp;&nbsp;&nbsp;{{sumGoals}} / 3&nbsp;&nbsp;&nbsp;<ion-icon [hidden]="sumGoals !== 3" slot="end" class="ion-no-margin ion-no-padding" name="checkmark-circle-outline"></ion-icon></ion-label>
+					<ion-label class="ion-text-center no-white-space goal-title" style="font-size: 2.4vh;">DAGLIGE MÅL&nbsp;&nbsp;&nbsp;{{sumGoals}} AV 3
+					</ion-label>
 				</mat-panel-description>
 			</mat-expansion-panel-header>
 
 			<ion-grid>
 				<ion-row>
-					<ion-item *ngFor="let goal of goalsList; let i = index" color="primary" class="ion-no-margin ion-no-padding daily-goals-text">
-						<ion-text slot="end" class="ion-text-end">{{goal.progress}} / {{goal.max}}</ion-text>
-						<ion-icon [hidden]="!goal.finished" slot="end" class="ion-no-margin ion-no-padding" name="checkmark-circle-outline"></ion-icon>
-						<ion-label>{{goal.text}}</ion-label>
+					<ion-item *ngFor="let goal of goalsList; let i = index" color="primary-purple" class="ion-no-margin ion-no-padding daily-goals-text">
+						<ion-text slot="end" class="ion-text-end">{{goal.progress}} av {{goal.max}}</ion-text>&nbsp;&nbsp;
+						<ion-icon [hidden]="!goal.finished" slot="end" color="success" class="ion-no-margin ion-no-padding" name="checkmark-outline"></ion-icon>
+						<ion-label [class]="goal.finished ? 'line-through' : ''">{{goal.text}}</ion-label>
 					</ion-item>
 				</ion-row>
 			</ion-grid>
@@ -23,9 +24,21 @@
 	</ion-card>
 	
 	<ion-grid>
-		<ion-row class="ion-padding-vertical">
+		<ion-row>
+			<ion-col size="2" style="min-width: 120px;">
+				<ion-button class="ion-text-center ion-padding-horizontal" expand="block" color="secondary" (click)="openInfoModal()">
+					<ion-icon style="font-size: 4vh;" color="light" name="help-circle-outline"></ion-icon>
+				</ion-button>
+			</ion-col>
+			<ion-col size="2" style="min-width: 120px;">
+				<ion-button class="ion-text-center ion-padding-horizontal" expand="block" color="secondary">
+					<ion-icon style="font-size: 4vh;" color="light" name="help-circle-outline"></ion-icon>
+				</ion-button>
+			</ion-col>
 			<ion-col>
-				<ion-button class="ion-text-center" expand="block" color="primary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')"><ion-label style="font-size: 2.2vh;" color="dark">Brukerundersøkelse</ion-label></ion-button>
+				<ion-button class="ion-text-center ion-margin-horizontal" expand="block" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')">
+					<ion-label style="font-size: 2vh;" color="light">BRUKERUNDERSØKELSE</ion-label>
+				</ion-button>
 			</ion-col>
 		</ion-row>
 		

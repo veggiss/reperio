@@ -6,7 +6,7 @@ import {
   getReperioRate,
   getStatPercent,
   PLAYER_STATS, STATS_AVERAGE,
-  STATS_LIST
+  STATS_LIST, updateScrollBar
 } from "../../services/globals";
 import { Chart } from 'chart.js';
 import {ModalController} from "@ionic/angular";
@@ -24,6 +24,7 @@ export class StatsPage implements OnInit {
   @ViewChild('barChart', null) barChart;
   @ViewChild('lineChart', null) lineChart;
   @ViewChild('dateSelection', null) dateSelection;
+  @ViewChild('ionContent', null) ionContent;
   
   public barChartData: any;
   public lineChartData: any;
@@ -111,6 +112,10 @@ export class StatsPage implements OnInit {
     });
     
     return await modal.present();
+  }
+
+  ionViewDidEnter() {
+    updateScrollBar(this.ionContent.el);
   }
 
   ionViewWillEnter() {

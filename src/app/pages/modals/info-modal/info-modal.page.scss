@@ -1,0 +1,31 @@
+.container {
+  --background: var(--ion-color-light);
+}
+
+ion-slides {
+  height: 100%;
+}
+
+.dot {
+  margin: 0.2rem;
+  font-size: 1rem;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.dot-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.2rem;
+}
+
+.overflow-control {
+  overflow-y: auto;
+  height: calc(100% - 30px);
+  margin: 0;
+}
+
+.small-width {
+  max-width: 200px;
+}
