@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFireDatabase, AngularFireList} from "@angular/fire/database";
-import {GAME_HISTORY, getUserGuid, GOALS_LIST, PLAYER_STATS, setUserGuid} from "../globals";
+import {GAME_HISTORY, getUserGuid, GOALS_LIST, PLAYER_STATS, setRatingQuestion, setUserGuid} from "../globals";
 import {AngularFireAnalytics} from "@angular/fire/analytics";
 
 @Injectable({
@@ -32,6 +32,23 @@ export class FirebaseService {
   
   logUserEvent(name, event) {
     this.analytics.logEvent(name, event);
+  }
+  
+  async addUserRating(rate, gameId) {
+    let GUID = getUserGuid();
+    
+    if (GUID && rate && gameId) {
+      let playerRateRef = await this.db.database.ref(`/users/${GUID}/ratings/`);
+      setRatingQuestion(gameId);
+
+      playerRateRef.push({
+        date: Date.now(),
+        gameId: gameId,
+        rate: rate
+      });
+    } else {
+      console.log(GUID, rate, gameId, "SOME OF THESE ARE NOT VALID");
+    }
   }
   
   async addConsent() {

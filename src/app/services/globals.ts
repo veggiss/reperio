@@ -164,9 +164,23 @@ export const DIFFICULTY = JSON.parse(localStorage.getItem('DIFFICULTY')) || {
 	4: 1.0
 };
 
+export const RATING_QUESTION = JSON.parse(localStorage.getItem('RATING_QUESTION')) || {
+	1: false,
+	2: false,
+	3: false,
+	4: false
+};
+
 export let SOUND_MUTED = JSON.parse(localStorage.getItem('SOUND_MUTED')) || false;
 
 export const getUserGuid = () => localStorage.getItem('USER_GUID');
+
+export const setRatingQuestion = id => {
+	if (RATING_QUESTION[id] !== undefined) {
+		RATING_QUESTION[id] = true;
+		localStorage.setItem('RATING_QUESTION', RATING_QUESTION);
+	}
+}
 
 export const setUserGuid = key => localStorage.setItem('USER_GUID', key);
 

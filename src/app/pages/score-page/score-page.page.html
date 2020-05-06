@@ -2,12 +2,14 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button [routerLink]="'/game-info/' + data.id.toString()" routerDirection="back" auto-hide="false">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-icon color="secondary" name="arrow-back-outline"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
 
     <ion-buttons slot="end">
-      <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false"><ion-icon [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon></ion-menu-button>
+      <ion-menu-button (click)="toggleSoundMuted()" auto-hide="false">
+        <ion-icon color="secondary" [name]="getSoundMuted() ? 'volume-mute-outline' : 'volume-high-outline'"></ion-icon>
+      </ion-menu-button>
     </ion-buttons>
 
     <ion-title class="ion-text-center">Du fikk {{data.correctAnswers}} av {{data.rounds}} riktige</ion-title>

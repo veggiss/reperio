@@ -46,7 +46,7 @@ export class InfoModalPage implements OnInit {
         '<i>Tips: sveip med finger (eller musepeker) i spill kolonnen for å navigere igjennom spill.</i>'
   },{
     src: '../../../../assets/img/info/resultat.gif',
-    title: 'Resultatsiden',
+    title: 'Resultat siden',
     position: 'left',
     align: 'left',
     text: 'Denne siden gir deg en oversikt over de tre beste resultatene oppnådd i spillet. I tillegg ser man siste poengsum oppnådd.'

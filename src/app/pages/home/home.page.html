@@ -26,17 +26,12 @@
 	<ion-grid>
 		<ion-row>
 			<ion-col size="2" style="min-width: 120px;">
-				<ion-button class="ion-text-center ion-padding-horizontal" expand="block" color="secondary" (click)="openInfoModal()">
+				<ion-button class="ion-text-center ion-padding-horizontal ion-float-start" expand="block" color="secondary" (click)="openInfoModal()">
 					<ion-icon style="font-size: 4vh;" color="light" name="help-circle-outline"></ion-icon>
 				</ion-button>
 			</ion-col>
-			<ion-col size="2" style="min-width: 120px;">
-				<ion-button class="ion-text-center ion-padding-horizontal" expand="block" color="secondary">
-					<ion-icon style="font-size: 4vh;" color="light" name="help-circle-outline"></ion-icon>
-				</ion-button>
-			</ion-col>
-			<ion-col>
-				<ion-button class="ion-text-center ion-margin-horizontal" expand="block" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')">
+			<ion-col class="ion-align-items-center">
+				<ion-button size="4" class="ion-text-center ion-margin-horizontal" expand="block" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')">
 					<ion-label style="font-size: 2vh;" color="light">BRUKERUNDERSØKELSE</ion-label>
 				</ion-button>
 			</ion-col>

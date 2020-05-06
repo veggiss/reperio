@@ -21,14 +21,14 @@ import {
   GAMES_LIST,
   GOALS_LIST,
   getDailyGoalsDone,
-  updateScrollBar
+  updateScrollBar, RATING_QUESTION
 } from "../../services/globals";
 import {XpBarComponent} from "../../components/xp-bar/xp-bar.component";
 import {CountUp} from "countup.js";
 import {StatBarComponent} from "../../components/stat-bar/stat-bar.component";
 import {FirebaseService} from "../../services/firebase/firebase.service";
 import {SmartAudioService} from "../../services/providers/smart-audio.service";
-import {ToastController} from "@ionic/angular";
+import {AlertController, ToastController} from "@ionic/angular";
 
 @Component({
   selector: 'app-score-page',
@@ -65,7 +65,12 @@ export class ScorePagePage implements OnInit {
     statPoints: {}
   };
 
-  constructor(private route: ActivatedRoute, private router: Router, public firebaseService: FirebaseService, private smartAudio: SmartAudioService, public toastController: ToastController) {    
+  constructor(private route: ActivatedRoute, 
+              private router: Router, 
+              public firebaseService: FirebaseService, 
+              private smartAudio: SmartAudioService, 
+              public toastController: ToastController,
+              public alertController: AlertController) {    
     this.route.queryParams.subscribe(() => {
       if (this.router.getCurrentNavigation().extras.state) {
         let data = this.router.getCurrentNavigation().extras.state;
@@ -161,6 +166,16 @@ export class ScorePagePage implements OnInit {
           if (dailyGoalsDone < getDailyGoalsDone()) {
             this.showDailyGoalsToast(unlockedGame);
           }
+          
+          if (GAME_HISTORY[this.data.id]) {
+            let gameHistory = GAME_HISTORY[this.data.id];
+            
+            if (gameHistory.length === 3) {
+              if (RATING_QUESTION[this.data.id] !== undefined && RATING_QUESTION[this.data.id] === false) {
+                setTimeout(() => this.showRatingAlert(this.data.id), 1000);
+              }
+            }
+          }
         });
       }
     }
@@ -170,6 +185,58 @@ export class ScorePagePage implements OnInit {
     let dismiss = await this.toastController.getTop();
     if (dismiss) this.toastController.dismiss();
   }
+
+  async showRatingAlert(gameId) {
+    const alert = await this.alertController.create({
+      header: 'Hva synes du om dette spillet?',
+      cssClass: 'rating_alert',
+      buttons: [
+        { text: '',
+          handler: () => this.firebaseService.addUserRating(1, gameId),
+          cssClass: 'rate-icon-button'
+        },
+        { text: '',
+          handler: () => this.firebaseService.addUserRating(2, gameId),
+          cssClass: 'rate-icon-button'
+        },
+        { text: '',
+          handler: () => this.firebaseService.addUserRating(3, gameId),
+          cssClass: 'rate-icon-button'
+        },
+        { text: '',
+          handler: () => this.firebaseService.addUserRating(4, gameId),
+          cssClass: 'rate-icon-button'
+        },
+        { text: '',
+          handler: () => this.firebaseService.addUserRating(5, gameId),
+          cssClass: 'rate-icon-button'
+        }
+      ],
+    });
+
+    await alert.present();
+
+    // add event listener for icon buttons in ask rating alert popup
+    setTimeout(()=>{
+      const buttonElms: NodeList = document.querySelectorAll('.rating_alert .alert-button-group .rate-icon-button');
+
+      for(let index = 0; index < buttonElms.length; index++) {
+        buttonElms[index].addEventListener('click', this.selectedRatingHandler);
+      }
+    }, 500);
+  }
+
+
+  selectedRatingHandler = (event: MouseEvent)=>{
+    // handler for clicked rating icon button
+    let target: any = event.target; // target element
+    let siblings: HTMLCollection = target.parentElement.children; // list of all siblings
+
+    for(let index = 0; index < siblings.length; index++){
+      siblings[index].classList.remove('selected-rating'); // remove selected class from all siblings
+    }
+    target.classList.add('selected-rating'); // add selected class to currently selected item
+  };
 
   async showNewGameToast(item) {
     const toast = await this.toastController.create({
