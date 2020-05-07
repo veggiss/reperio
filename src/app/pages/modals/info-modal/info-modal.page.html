@@ -14,9 +14,14 @@
 
 <ion-content fullscreen class="ion-padding container" scroll-y="true">
   <ion-grid class="overflow-control fh">
+    <ion-icon (click)="playInfoSpeech()" class="top-right-corner" name="ear-outline" color="medium"></ion-icon>
+    
     <div *ngIf="infoList[selected].position === 'center'">
       <ion-row class="ion-justify-content-center">
-        <ion-img style="max-height: 200px;" [src]="infoList[selected].src"></ion-img>
+        <img style="max-height: 35vh; max-width: 100%;" *ngIf="infoList[selected].src.src; else loader" [src]="infoList[selected].src.src">
+        <ng-template #loader>
+          <ion-spinner name="dots"></ion-spinner>
+        </ng-template>
       </ion-row>
       <ion-row class="ion-justify-content-center">
         <h2 class="ion-no-padding" [class]="infoList[selected].align == 'left' ? 'ion-text-start' : 'ion-text-center'">{{infoList[selected].title}}</h2>
@@ -29,7 +34,7 @@
     <div *ngIf="infoList[selected].position === 'left'">
       <ion-row>
         <ion-col class="vertical-align-content" style="max-width: 300px;">
-          <ion-img style="max-width: 300px;" [src]="infoList[selected].src"></ion-img>
+          <img style="max-width: 300px;" [src]="infoList[selected].src.src">
         </ion-col>
         
         <ion-col style="overflow: auto;">
@@ -41,10 +46,7 @@
           </div>
         </ion-col>
       </ion-row>
-    </div>
-    
-    
-    
+    </div>    
 
     <ion-row class="ion-justify-content-center dot-container fw">
       <div *ngFor="let item of infoList; let i = index">

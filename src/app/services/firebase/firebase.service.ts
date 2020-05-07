@@ -1,6 +1,14 @@
 import { Injectable } from '@angular/core';
 import {AngularFireDatabase, AngularFireList} from "@angular/fire/database";
-import {GAME_HISTORY, getUserGuid, GOALS_LIST, PLAYER_STATS, setRatingQuestion, setUserGuid} from "../globals";
+import {
+  GAME_HISTORY,
+  getIsAfatiker,
+  getUserGuid,
+  GOALS_LIST,
+  PLAYER_STATS,
+  setRatingQuestion,
+  setUserGuid
+} from "../globals";
 import {AngularFireAnalytics} from "@angular/fire/analytics";
 
 @Injectable({
@@ -53,11 +61,51 @@ export class FirebaseService {
   
   async addConsent() {
     let GUID = getUserGuid();
+    
     if (GUID) {
       let ref = await this.db.database.ref(`/users/${GUID}/`);
       ref.child('consent').set(Date.now());
-    } {
-      console.log("COULD NOT GET GUID");
+    } else {
+      console.log("COULD NOT GET GUID WHEN ADDING CONSENT");
+    }
+  }
+  
+  async disableAnalytics() {
+    this.setAfatikerProp(false);
+    
+    await this.analytics.setAnalyticsCollectionEnabled(false);
+    await this.analytics.setUserProperties({
+      is_afatiker: 'false'
+    });
+  }
+  
+  async enableAnalytics() {
+    this.setAfatikerProp(true);
+    
+    await this.analytics.setAnalyticsCollectionEnabled(true);
+    await this.analytics.setUserProperties({
+      isAfatiker: 'true'
+    });
+  }
+  
+  async setAfatikerProp(prop) {
+    let GUID = getUserGuid();
+
+    if (GUID) {
+      let userAfatikerRef = await this.db.database.ref(`/users/${GUID}/`);
+      userAfatikerRef.child('afatiker').set(prop);
+    } else {
+      console.log('COULD GET GUID SETTING PROP');
+    }
+  }
+  
+  async initiateAnalytics() {
+    let isAfatiker = getIsAfatiker();
+    
+    if (isAfatiker) {
+      this.enableAnalytics();
+    } else {
+      this.disableAnalytics();
     }
   }
   

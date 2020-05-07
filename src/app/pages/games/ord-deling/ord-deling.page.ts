@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {
   addRoundStats,
   DIFFICULTY,
@@ -21,10 +21,11 @@ import {SmartAudioService} from "../../../services/providers/smart-audio.service
   styleUrls: ['./ord-deling.page.scss'],
 })
 export class OrdDelingPage implements OnInit {
-  public container: HTMLElement;
+  @ViewChild('container', null) container;
+  @ViewChild('pointsElement', null) pointsElement;
+  
   public sideLocked: string;
   public lastClickedElement: HTMLElement;
-  public pointsElement: HTMLElement;
   public countUp: any;
   public timeStamp: number;
   public round: number;
@@ -61,9 +62,9 @@ export class OrdDelingPage implements OnInit {
     this.smartAudio.preload('clock_tick', '../../../../assets/audio/fx/clock_tick.mp3');
     this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
     this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
-    
-    this.container = document.getElementById("main-container");
-    this.pointsElement = document.getElementById('ord-deling-points');
+
+    this.container = this.container.el;
+    this.pointsElement = this.pointsElement.el;
     this.countUp = new CountUp('ord-deling-points', 0);
   }
 

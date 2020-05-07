@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import {
   addRoundStats,
@@ -22,8 +22,9 @@ import {LoadingService} from "../../../services/loader/loading.service";
   styleUrls: ['./sant-usant.page.scss'],
 })
 export class SantUsantPage implements OnInit {
-  public container: HTMLElement;
-  public pointsElement: HTMLElement;
+  @ViewChild('container', null) container;
+  @ViewChild('pointsElement', null) pointsElement;
+  
   public questionImageSrc: any;
   public questionText: string;
   public timeStamp: number;
@@ -58,9 +59,9 @@ export class SantUsantPage implements OnInit {
     this.smartAudio.preload('clock_tick', '../../../../assets/audio/fx/clock_tick.mp3');
     this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
     this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
-    
-    this.container = document.getElementById("main-container");
-    this.pointsElement = document.getElementById('sant-usant-points');
+
+    this.container = this.container.nativeElement;
+    this.pointsElement = this.pointsElement.el;
     this.countUp = new CountUp('sant-usant-points', 0);
   }
 
@@ -88,7 +89,6 @@ export class SantUsantPage implements OnInit {
   }
   
   startRound() {
-    
     this.container.style.visibility = "visible";
     this.questionImageSrc = this.roundData[this.round].image.src;
     this.questionText = this.roundData[this.round].question;

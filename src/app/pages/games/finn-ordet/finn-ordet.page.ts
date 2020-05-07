@@ -19,10 +19,10 @@ import {LoadingService} from "../../../services/loader/loading.service"
 })
 
 export class FinnOrdetPage implements OnInit {  
-  public questionImageElement: HTMLElement;  
-  public container: HTMLElement;
+  @ViewChild('container', null) container;
+  @ViewChild('pointsElement', null) pointsElement;
+  
   public allowInput: boolean = false;
-  public pointsElement: HTMLElement;
   public countUp: any;
   public timeLeft: number;
   public timeStamp: number;
@@ -54,18 +54,17 @@ export class FinnOrdetPage implements OnInit {
     this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
     this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
     
-    this.container = document.getElementById("main-container");
-    this.pointsElement = document.getElementById("finn-ordet-points");
-    this.questionImageElement = document.getElementById("question-image");
     [1, 2, 3, 4].forEach((i) => {
       let alternativeBtn = document.getElementById('alternative' + i);
       this.alternativeBtns.push(alternativeBtn);
     });
 
+    this.container = this.container.el;
+    this.pointsElement = this.pointsElement.el;
     this.countUp = new CountUp('finn-ordet-points', 0);
   }
 
-  async ionViewWillEnter() {
+  async ionViewWillEnter() {    
     this.container.style.visibility = "hidden";
     this.points = 0;
     this.correctAnswers = 0;

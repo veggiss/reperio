@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {NavigationExtras, Router} from "@angular/router";
 import {SmartAudioService} from "../../../services/providers/smart-audio.service";
 import {CountUp} from "countup.js";
@@ -21,9 +21,9 @@ import {LoadingService} from "../../../services/loader/loading.service";
   styleUrls: ['./finn-bildet.page.scss'],
 })
 export class FinnBildetPage implements OnInit {
-    //public roundData: any;
-    public container: HTMLElement;
-    public pointsElement: HTMLElement;
+    @ViewChild('container', null) container;
+    @ViewChild('pointsElement', null) pointsElement;
+    
     public roundData: any;
     public precachedRoundData: any;
     public countUp: any;
@@ -58,9 +58,9 @@ export class FinnBildetPage implements OnInit {
         this.smartAudio.preload('clock_tick', '../../../../assets/audio/fx/clock_tick.mp3');
         this.smartAudio.preload('swosh_out', '../../../../assets/audio/fx/swosh_out.mp3');
         this.smartAudio.preload('swosh_in', '../../../../assets/audio/fx/swosh_in.mp3');
-        
-        this.container = document.getElementById("main-container");
-        this.pointsElement = document.getElementById('finn-bildet-points');
+
+        this.container = this.container.nativeElement;
+        this.pointsElement = this.pointsElement.el;
         this.countUp = new CountUp('finn-bildet-points', 0); 
     }
 

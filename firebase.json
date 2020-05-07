@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "reperio-preview",
+    "site": "reperio-uia",
     "public": "www",
     "ignore": [
       "firebase.json",

@@ -15,7 +15,7 @@
     <ion-title>
       <ion-buttons class="ion-align-items-center ion-justify-content-center">
         <ion-icon name="star" color="primary"></ion-icon>
-        <ion-text id="sant-usant-points" color="dark"></ion-text>
+        <ion-text #pointsElement id="sant-usant-points" color="dark"></ion-text>
       </ion-buttons>
     </ion-title>
   </ion-toolbar>
@@ -24,9 +24,9 @@
 <ion-content>
   <ion-progress-bar color="tertiary" style="height: 2vh;" value="{{timeLeft / maxTimeTaken}}"></ion-progress-bar>
 
-  <div class="ion-text-center" id="main-container">
+  <div #container class="ion-text-center">
     <ion-card style="display: inline-block; max-width: 450px;">
-      <img [src]="questionImageSrc">
+      <img *ngIf="questionImageSrc" [src]="questionImageSrc">
       <ion-card-header>
         <ion-card-title style="font-size: 3.5vh">{{questionText}}</ion-card-title>
       </ion-card-header>

@@ -29,13 +29,12 @@ export class AppComponent {
   }
 
   async initializeApp() {
-    this.platform.ready().then(() => {
+    this.platform.ready().then(async () => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.firebaseService.initiateGuid();
+      await this.firebaseService.initiateGuid();
+      await this.firebaseService.initiateAnalytics();
       moment.updateLocale('nb', localization);
-      
-      
     });
   }
 

@@ -28,7 +28,7 @@ import {CountUp} from "countup.js";
 import {StatBarComponent} from "../../components/stat-bar/stat-bar.component";
 import {FirebaseService} from "../../services/firebase/firebase.service";
 import {SmartAudioService} from "../../services/providers/smart-audio.service";
-import {AlertController, ToastController} from "@ionic/angular";
+import {AlertController, NavController, ToastController} from "@ionic/angular";
 
 @Component({
   selector: 'app-score-page',
@@ -70,7 +70,8 @@ export class ScorePagePage implements OnInit {
               public firebaseService: FirebaseService, 
               private smartAudio: SmartAudioService, 
               public toastController: ToastController,
-              public alertController: AlertController) {    
+              public alertController: AlertController,
+              public navCtrl: NavController) {    
     this.route.queryParams.subscribe(() => {
       if (this.router.getCurrentNavigation().extras.state) {
         let data = this.router.getCurrentNavigation().extras.state;
@@ -181,7 +182,15 @@ export class ScorePagePage implements OnInit {
     }
   }
 
-  async ionViewWillLeave() {
+  async ionViewDidLeave() {
+    this.data = {
+      id: 1,
+      points: 0,
+      correctAnswers: 0,
+      rounds: 1,
+      statPoints: {}
+    };
+    
     let dismiss = await this.toastController.getTop();
     if (dismiss) this.toastController.dismiss();
   }
@@ -248,7 +257,7 @@ export class ScorePagePage implements OnInit {
         {
           text: 'GÅ TIL SPILL',
           handler: () => {
-            this.router.navigate(['game-info', item.id]);
+            this.navCtrl.navigateBack('/game-info/' + item.id);
           }
         }, {
           side: 'end',

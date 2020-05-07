@@ -12,7 +12,8 @@ export class LoadingService {
     this.isLoading = true;
     return await this.loadingController.create({
       message: 'Laster spill ...',
-      spinner: 'circles'
+      spinner: 'circles',
+      duration: 10000
     }).then(a => {
       a.present().then(() => {
         if (!this.isLoading) {

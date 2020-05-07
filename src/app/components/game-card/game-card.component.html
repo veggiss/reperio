@@ -3,7 +3,7 @@
         <img [class]="isAboveLevelReq() ? '' : 'blur'" [src]="item.thumbnail"/>
         
         <ion-label *ngIf="!isAboveLevelReq()" class="lockIcon vertical-align-content">
-            <ion-icon color="dark" name="lock-closed"></ion-icon>
+            <ion-icon color="primary" name="lock-closed"></ion-icon>
         </ion-label>
 
         <ion-label *ngIf="!isAboveLevelReq()" color="light" class="levelReq vertical-align-content">

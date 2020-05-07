@@ -25,15 +25,30 @@
 	
 	<ion-grid>
 		<ion-row>
-			<ion-col size="2" style="min-width: 120px;">
-				<ion-button class="ion-text-center ion-padding-horizontal ion-float-start" expand="block" color="secondary" (click)="openInfoModal()">
-					<ion-icon style="font-size: 4vh;" color="light" name="help-circle-outline"></ion-icon>
+			<ion-col>
+				<ion-button class="ion-text-center ion-margin-start ion-float-start" color="medium" (click)="showQuestion()">
+					<ion-icon style="font-size: 2vh;" color="light" name="help-outline"></ion-icon>
 				</ion-button>
-			</ion-col>
-			<ion-col class="ion-align-items-center">
-				<ion-button size="4" class="ion-text-center ion-margin-horizontal" expand="block" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')">
-					<ion-label style="font-size: 2vh;" color="light">BRUKERUNDERSØKELSE</ion-label>
-				</ion-button>
+				
+				<div *ngIf="isAfatiker; else notAfatiker">
+					<ion-button class="ion-text-center ion-margin-end ion-float-end" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=6KLM7ZY2L531')">
+						<ion-label style="font-size: 2vh;" color="light">SPØRRESKJEMA 2</ion-label>
+					</ion-button>
+
+					<ion-button class="ion-text-center ion-margin-end ion-float-end" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=M6185UQPUPCN')">
+						<ion-label style="font-size: 2vh;" color="light">SPØRRESKJEMA 1</ion-label>
+					</ion-button>
+				</div>
+
+				<ng-template #notAfatiker>
+					<ion-button class="ion-text-center ion-margin-end ion-float-end" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=D8LV8QY5UN15')">
+						<ion-label style="font-size: 2vh;" color="light">SPØRRESKJEMA LOGOPED</ion-label>
+					</ion-button>
+	
+					<ion-button class="ion-text-center ion-margin-end ion-float-end" color="secondary" (click)="openLink('https://www.survey-xact.dk/LinkCollector?key=XUUQ7DN2SN95')">
+						<ion-label style="font-size: 2vh;" color="light">SPØRRESKJEMA BRUKER</ion-label>
+					</ion-button>
+				</ng-template>
 			</ion-col>
 		</ion-row>
 		

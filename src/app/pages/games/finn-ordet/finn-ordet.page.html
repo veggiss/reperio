@@ -15,7 +15,7 @@
         <ion-title>
             <ion-buttons class="ion-align-items-center ion-justify-content-center">
                 <ion-icon name="star" color="primary"></ion-icon>
-                <ion-text id="finn-ordet-points" color="dark"></ion-text>
+                <ion-text #pointsElement id="finn-ordet-points" color="dark"></ion-text>
             </ion-buttons>
         </ion-title>
     </ion-toolbar>
@@ -24,9 +24,9 @@
 <ion-content>
     <ion-progress-bar color="tertiary" style="height: 2vh;" value="{{timeLeft / maxTimeTaken}}"></ion-progress-bar>
     
-    <ion-grid id="main-container" style="height: 98%; visibility: hidden;">
+    <ion-grid #container style="height: 98%; visibility: hidden;">
         <ion-row style="height: 60%">
-            <img id="question-image" class="question-image box-shadow" [src]="questionImageSrc">
+            <img id="question-image" class="question-image box-shadow" *ngIf="questionImageSrc" [src]="questionImageSrc">
         </ion-row>
 
         <ion-row style="height: 40%" class="ion-justify-content-center">

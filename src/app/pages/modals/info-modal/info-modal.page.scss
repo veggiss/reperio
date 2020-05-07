@@ -13,6 +13,34 @@ ion-slides {
   cursor: pointer;
 }
 
+.ear {
+  border: solid var(--ion-color-medium-tint);
+  border-radius: 50%;
+  background-color: var(--ion-color-light);
+  padding: 2px;
+  cursor: pointer;
+  //-webkit-transform: scaleX(-1);
+  //transform: scaleX(-1);
+}
+
+.top-right-corner {
+  border: solid var(--ion-color-medium-tint);
+  border-radius: 50%;
+  background-color: var(--ion-color-light);
+  border-collapse: separate;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  position: absolute;
+  left: 0.25rem;
+  top: 3rem;
+  cursor: pointer;
+  z-index: 3;
+  //-webkit-transform: scaleX(-1);
+  //transform: scaleX(-1);
+}
+
 .dot-container {
   position: absolute;
   left: 50%;

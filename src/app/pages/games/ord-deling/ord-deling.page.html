@@ -15,7 +15,7 @@
     <ion-title>
       <ion-buttons class="ion-align-items-center ion-justify-content-center">
         <ion-icon name="star" color="primary"></ion-icon>
-        <ion-text id="ord-deling-points" color="dark"></ion-text>
+        <ion-text #pointsElement id='ord-deling-points' color="dark"></ion-text>
       </ion-buttons>
     </ion-title>
   </ion-toolbar>
@@ -24,7 +24,7 @@
 <ion-content>
   <ion-progress-bar color="tertiary" style="height: 2vh;" value="{{timeLeft / maxTimeTaken}}"></ion-progress-bar>
   
-  <ion-grid id="main-container" style="height: 100%;">
+  <ion-grid #container style="height: 100%;">
     <ion-row class="vertical-align-content" style="height: 100%;">
       <ion-grid *ngIf="roundData">
         <div *ngIf="roundData[round]">
